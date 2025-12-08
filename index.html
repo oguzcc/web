@@ -73,6 +73,13 @@
             height: 50px;
         }
 
+        .store-badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         /* Screenshots */
         .screenshots {
             padding: 60px 0;
@@ -232,9 +239,14 @@
             <div class="container">
                 <h1>Master Math with Fun</h1>
                 <p>Practice exponents, square roots, and algebraic expressions. Challenge yourself with flashcards or compete with friends in real-time multiplayer!</p>
-                <a href="#" class="app-store-badge">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-                </a>
+                <div class="store-badges">
+                    <a href="https://apps.apple.com/us/app/nerdy-math/id6450151568" class="app-store-badge" target="_blank" rel="noopener">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.oguzcc.nerdy" class="app-store-badge" target="_blank" rel="noopener">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -297,6 +309,7 @@
 
     <footer>
         <div class="container">
+            <p>Developed by Oguz Can</p>
             <p>&copy; 2025 Nerdy. All rights reserved.</p>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
