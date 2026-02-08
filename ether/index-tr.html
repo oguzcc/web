@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ether - İç Işığını Uyandır</title>
+    <meta name="description" content="Ether, meditasyon, farkındalık uygulamaları, manevi okumalar ve anlamlı alışkanlıklar oluşturma için yol arkadaşınız. Gelişimi ilham veren bir toplulukla bağlanın.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #9b59b6;
+        }
+
+        .back-to-apps {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9b59b6;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-to-apps:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #9b59b6, #c39bd3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: rgba(155, 89, 182, 0.2);
+            color: #9b59b6;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #9b59b6;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: #888;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            color: #888;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-btn {
+            padding: 5px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #888;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            color: #9b59b6;
+        }
+
+        .lang-btn.active {
+            background: rgba(155, 89, 182, 0.2);
+            color: #9b59b6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .back-to-apps {
+                position: static;
+                transform: none;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container" style="position: relative;">
+            <a href="../index-tr.html" class="back-to-apps">&larr; Tüm Uygulamalar</a>
+            <div class="lang-switcher">
+                <a href="index.html" class="lang-btn">EN</a>
+                <a href="index-tr.html" class="lang-btn active">TR</a>
+            </div>
+            <div class="logo">Ether</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>İç Işığını Uyandır</h1>
+                <p>Meditasyon, farkındalık uygulamaları, manevi okumalar ve anlamlı alışkanlıklar oluşturma için yol arkadaşınız. Gelişimi ilham veren bir toplulukla bağlanın.</p>
+                <div class="coming-soon-badge">Yakında App Store ve Google Play'de</div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Özellikler</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">&#128591;</div>
+                        <h3>Rehberli Meditasyon</h3>
+                        <p>Çeşitli meditasyon pratikleri ve farkındalık egzersizleri keşfedin. Günlük hayatınızda huzur ve netlik bulun.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#128336;</div>
+                        <h3>Pratik Takibi</h3>
+                        <p>Günlük manevi pratiklerinizi ve farkındalık alışkanlıklarınızı takip edin. Hatırlatıcılar ve ilerleme bilgileriyle tutarlı kalın.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#128214;</div>
+                        <h3>Bilgelik Okumaları</h3>
+                        <p>Seçilmiş manevi okumalara ve olumlamalara erişin. Çeşitli bilgelik geleneklerinden ilham alın.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#9997;</div>
+                        <h3>Şükür Günlüğü</h3>
+                        <p>Günlük kayıt ve yansıtma araçlarıyla şükür geliştirin. İç yolculuğunuzu ve gelişiminizi takip edin.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#128101;</div>
+                        <h3>Topluluk</h3>
+                        <p>Hikayeler paylaşın, arkadaşlarla bağlanın ve manevi yolculuğunuzda birbirinize ilham verin.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#127793;</div>
+                        <h3>21 Günlük Yolculuklar</h3>
+                        <p>Rehberli 21 günlük programlarla kalıcı manevi alışkanlıklar oluşturun. Zincirinizi takip edin ve motive kalın.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Geliştirici: Oğuz Can</p>
+            <p>&copy; 2026 Ether. Tüm hakları saklıdır.</p>
+            <div class="footer-links">
+                <a href="privacy-tr.html">Gizlilik Politikası</a>
+                <a href="terms-tr.html">Kullanım Koşulları</a>
+                <a href="delete-account-tr.html">Hesap Silme</a>
+                <a href="mailto:oguzcc@icloud.com">İletişim</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

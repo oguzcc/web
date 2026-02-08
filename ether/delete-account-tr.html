@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Silme Talebi - Ether</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .lang-switcher {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+        }
+
+        .lang-btn {
+            padding: 5px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #888;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            color: #9b59b6;
+        }
+
+        .lang-btn.active {
+            background: rgba(78, 205, 196, 0.2);
+            color: #9b59b6;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            color: #9b59b6;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            background: linear-gradient(90deg, #9b59b6, #c39bd3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #9b59b6;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            color: #b0b0b0;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #9b59b6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #9b59b6, #c39bd3);
+            color: #1a1a2e;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
+            color: #1a1a2e;
+        }
+
+        .warning-box {
+            background: rgba(78, 205, 196, 0.1);
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box p {
+            color: #c39bd3;
+            margin: 0;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        footer p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+            color: #9b59b6;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .lang-switcher {
+                top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a href="delete-account.html" class="lang-btn">EN</a>
+            <a href="delete-account-tr.html" class="lang-btn active">TR</a>
+        </div>
+
+        <header>
+            <a href="index-tr.html" class="back-link">&larr; Ana Sayfaya Dön</a>
+            <h1>Hesap Silme Talebi</h1>
+            <p class="subtitle">Ether hesabınızı kalıcı olarak silmek için aşağıdaki adımları takip edin.</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Hesap Silme Süreci</h2>
+                <p>Hesabınızı silmek için aşağıdaki butona tıklayarak bize bir e-posta gönderin. Talebiniz 30 gün içinde işlenecektir.</p>
+            </section>
+
+            <section>
+                <h2>Silinecek Veriler</h2>
+                <p>Hesabınız silindiğinde, aşağıdaki veriler kalıcı olarak kaldırılacaktır:</p>
+                <ul>
+                    <li><strong>Hesap bilgileri:</strong> Ad, e-posta adresi ve profil fotoğrafı</li>
+                    <li><strong>Pratik takip verileri:</strong> Tüm pratik takip kayıtları ve geçmişi</li>
+                    <li><strong>Meditasyon geçmişi ve ilerlemesi:</strong> Seans kayıtları ve meditasyon istatistikleri</li>
+                    <li><strong>Bilgelik okuma ilerlemesi:</strong> Okuma yer imleri ve ilerleme verileri</li>
+                    <li><strong>Topluluk gönderileri, hikayeler ve yorumlar:</strong> Oluşturduğunuz tüm içerik</li>
+                    <li><strong>Doğrudan mesajlar:</strong> Tüm özel konuşmalarınız</li>
+                    <li><strong>Zikir sayıları ve alışkanlık takip verileri:</strong> Sayaç kayıtları ve alışkanlık yolculuğu ilerlemesi</li>
+                    <li><strong>Başarılar ve seviyeler:</strong> Kazanılan tüm başarılar ve seviye ilerlemesi</li>
+                    <li><strong>Abonelik bilgileri:</strong> Abonelik durumunuz ve tercihleriniz</li>
+                </ul>
+            </section>
+
+            <div class="warning-box">
+                <p><strong>Önemli:</strong> Bu işlem geri alınamaz. Hesabınız silindikten sonra verilerinizi kurtarmak mümkün değildir.</p>
+            </div>
+
+            <section>
+                <h2>Talep Gönder</h2>
+                <p>Hesabınızı silmek için aşağıdaki butona tıklayın. E-posta uygulamanız, talebinizi göndermek için önceden doldurulmuş bir şablonla açılacaktır.</p>
+                <a href="mailto:oguzcc@icloud.com?subject=Hesap%20Silme%20Talebi%20-%20Ether&body=Merhaba,%0A%0AEther%20uygulamasindaki%20hesabimin%20silinmesini%20talep%20ediyorum.%0A%0AKayitli%20e-posta%20adresim:%20%0A%0ATesekkurler." class="cta-button">Hesap Silme Talebi Gönder</a>
+            </section>
+
+            <section>
+                <h2>Sorularınız mı Var?</h2>
+                <p>Hesap silme süreci hakkında herhangi bir sorunuz varsa, bize <a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a> adresinden ulaşabilirsiniz.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Ether. Tüm hakları saklıdır.</p>
+            <div class="footer-links">
+                <a href="privacy-tr.html">Gizlilik Politikası</a>
+                <a href="terms-tr.html">Kullanım Koşulları</a>
+                <a href="delete-account-tr.html">Hesap Silme</a>
+                <a href="mailto:oguzcc@icloud.com">İletişim</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

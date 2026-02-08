@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oğuz Can - Uygulamalar</title>
-    <meta name="description" content="Oğuz Can uygulamaları. Nerdy, Nerdy Lang ve Meva dahil eğitim ve manevi mobil uygulamalar.">
+    <meta name="description" content="Oğuz Can uygulamaları. Nerdy, Nerdy Lang, Huzur ve Ether dahil eğitim ve manevi mobil uygulamalar.">
     <style>
         * {
             margin: 0;
@@ -64,7 +64,7 @@
 
         .app-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
 
@@ -184,6 +184,15 @@
         .app-card.meva .learn-more { background: linear-gradient(90deg, #4ecdc4, #8ee8e0); color: #1a1a2e; }
         .app-card.meva .learn-more:hover { box-shadow: 0 8px 20px rgba(78, 205, 196, 0.3); }
 
+        .app-card.ether { border-color: rgba(155, 89, 182, 0.2); }
+        .app-card.ether:hover { border-color: rgba(155, 89, 182, 0.4); }
+        .app-card.ether h3 { color: #9b59b6; }
+        .app-card.ether .tagline { color: #c39bd3; }
+        .app-card.ether .features-list li::before { background: #9b59b6; }
+        .app-card.ether .store-info { background: rgba(155, 89, 182, 0.15); color: #c39bd3; }
+        .app-card.ether .learn-more { background: linear-gradient(90deg, #9b59b6, #c39bd3); color: #1a1a2e; }
+        .app-card.ether .learn-more:hover { box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3); }
+
         footer {
             padding: 40px 0;
             text-align: center;
@@ -301,8 +310,8 @@
                     </div>
 
                     <div class="app-card meva">
-                        <img src="assets/images/meva-logo.png" alt="Meva" class="app-logo">
-                        <h3>Meva</h3>
+                        <img src="assets/images/meva-logo.png" alt="Huzur" class="app-logo">
+                        <h3>Huzur</h3>
                         <p class="tagline">Ruhunun Sığınağı</p>
                         <p class="description">Meditasyon, namaz takibi, Kuran okuma ve anlamlı alışkanlıklar oluşturma için manevi yol arkadaşınız.</p>
                         <ul class="features-list">
@@ -315,6 +324,23 @@
                             <span class="store-info">Yakında</span>
                         </div>
                         <a href="meva/" class="learn-more">Daha Fazla</a>
+                    </div>
+
+                    <div class="app-card ether">
+                        <img src="assets/images/ether-logo.png" alt="Ether" class="app-logo">
+                        <h3>Ether</h3>
+                        <p class="tagline">İç Işığını Uyandır</p>
+                        <p class="description">Meditasyon, farkındalık uygulamaları, manevi okumalar ve anlamlı alışkanlıklar oluşturma için yol arkadaşınız.</p>
+                        <ul class="features-list">
+                            <li>Rehberli meditasyon ve farkındalık egzersizleri</li>
+                            <li>Günlük manevi pratikler takibi</li>
+                            <li>Bilgelik okumaları ve olumlamalar</li>
+                            <li>Topluluk hikayeleri ve ilham</li>
+                        </ul>
+                        <div style="margin-bottom: 15px;">
+                            <span class="store-info">Yakında</span>
+                        </div>
+                        <a href="ether/" class="learn-more">Daha Fazla</a>
                     </div>
                 </div>
             </div>

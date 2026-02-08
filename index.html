@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oguz Can - Apps</title>
-    <meta name="description" content="Apps by Oguz Can. Educational and spiritual mobile applications including Nerdy, Nerdy Lang, and Meva.">
+    <meta name="description" content="Apps by Oguz Can. Educational and spiritual mobile applications including Nerdy, Nerdy Lang, Iman Daily, and Ether.">
     <style>
         * {
             margin: 0;
@@ -74,7 +74,7 @@
 
         .app-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
 
@@ -197,6 +197,16 @@
         .app-card.meva .learn-more { background: linear-gradient(90deg, #4ecdc4, #8ee8e0); color: #1a1a2e; }
         .app-card.meva .learn-more:hover { box-shadow: 0 8px 20px rgba(78, 205, 196, 0.3); }
 
+        /* Ether - Purple */
+        .app-card.ether { border-color: rgba(155, 89, 182, 0.2); }
+        .app-card.ether:hover { border-color: rgba(155, 89, 182, 0.4); }
+        .app-card.ether h3 { color: #9b59b6; }
+        .app-card.ether .tagline { color: #c39bd3; }
+        .app-card.ether .features-list li::before { background: #9b59b6; }
+        .app-card.ether .store-info { background: rgba(155, 89, 182, 0.15); color: #c39bd3; }
+        .app-card.ether .learn-more { background: linear-gradient(90deg, #9b59b6, #c39bd3); color: #1a1a2e; }
+        .app-card.ether .learn-more:hover { box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3); }
+
         /* Footer */
         footer {
             padding: 40px 0;
@@ -317,8 +327,8 @@
                     </div>
 
                     <div class="app-card meva">
-                        <img src="assets/images/meva-logo.png" alt="Meva" class="app-logo">
-                        <h3>Meva</h3>
+                        <img src="assets/images/meva-logo.png" alt="Iman Daily" class="app-logo">
+                        <h3>Iman Daily</h3>
                         <p class="tagline">The Shelter of Your Soul</p>
                         <p class="description">Your spiritual companion for meditation, prayer tracking, Quran reading, and building meaningful habits.</p>
                         <ul class="features-list">
@@ -331,6 +341,23 @@
                             <span class="store-info">Coming Soon</span>
                         </div>
                         <a href="meva/" class="learn-more">Learn More</a>
+                    </div>
+
+                    <div class="app-card ether">
+                        <img src="assets/images/ether-logo.png" alt="Ether" class="app-logo">
+                        <h3>Ether</h3>
+                        <p class="tagline">Awaken Your Inner Light</p>
+                        <p class="description">Your companion for meditation, mindfulness practices, spiritual readings, and building meaningful habits.</p>
+                        <ul class="features-list">
+                            <li>Guided meditation and mindfulness exercises</li>
+                            <li>Daily spiritual practices tracking</li>
+                            <li>Wisdom readings and affirmations</li>
+                            <li>Community stories and inspiration</li>
+                        </ul>
+                        <div style="margin-bottom: 15px;">
+                            <span class="store-info">Coming Soon</span>
+                        </div>
+                        <a href="ether/" class="learn-more">Learn More</a>
                     </div>
                 </div>
             </div>
