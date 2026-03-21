@@ -1,101 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nerdy Lang - Eğlenerek İngilizce Öğren</title>
-    <meta name="description" content="Nerdy Lang eğlenceli bir İngilizce öğrenme uygulamasıdır. Bilgi kartları, video dersler ve çok oyunculu yarışlarla kelime haznenizi geliştirin!">
+    <meta
+      name="description"
+      content="Nerdy Lang eğlenceli bir İngilizce öğrenme uygulamasıdır. Bilgi kartları, video dersler ve çok oyunculu yarışlarla kelime haznenizi geliştirin!"
+    />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #fff; min-height: 100vh; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { padding: 20px 0; text-align: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #2ec4b6; }
-        .back-to-apps { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #2ec4b6; text-decoration: none; font-size: 0.9rem; }
-        .back-to-apps:hover { text-decoration: underline; }
-        .hero { padding: 60px 0; text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; background: linear-gradient(90deg, #2ec4b6, #6ee4d8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero p { font-size: 1.25rem; color: #b0b0b0; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
-        .coming-soon { display: inline-block; background: rgba(46, 196, 182, 0.15); border: 1px solid rgba(46, 196, 182, 0.3); color: #6ee4d8; padding: 12px 30px; border-radius: 8px; font-size: 1rem; font-weight: 600; }
-        .features { padding: 60px 0; }
-        .features h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #2ec4b6; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .feature-card { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 30px; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease, background 0.3s ease; }
-        .feature-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
-        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
-        .feature-card h3 { font-size: 1.25rem; margin-bottom: 10px; color: #fff; }
-        .feature-card p { color: #888; line-height: 1.6; }
-        footer { padding: 40px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 60px; }
-        footer p { color: #666; margin-bottom: 15px; }
-        footer a { color: #2ec4b6; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        .footer-links { margin-top: 20px; }
-        .footer-links a { margin: 0 15px; color: #888; }
-        .lang-switcher { position: absolute; top: 20px; right: 20px; }
-        .lang-btn { padding: 5px 12px; border-radius: 4px; text-decoration: none; color: #888; font-size: 0.9rem; transition: all 0.3s ease; }
-        .lang-btn:hover { color: #2ec4b6; }
-        .lang-btn.active { background: rgba(46, 196, 182, 0.2); color: #2ec4b6; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .hero p { font-size: 1rem; } .back-to-apps { position: static; transform: none; display: block; margin-bottom: 10px; } }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          sans-serif;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        color: #fff;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header {
+        padding: 20px 0;
+        text-align: center;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #2ec4b6;
+      }
+      .back-to-apps {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #2ec4b6;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+      .back-to-apps:hover {
+        text-decoration: underline;
+      }
+      .hero {
+        padding: 60px 0;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #2ec4b6, #6ee4d8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        color: #b0b0b0;
+        max-width: 600px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+      }
+      .app-store-badge {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+      .app-store-badge:hover {
+        transform: scale(1.05);
+      }
+      .app-store-badge img {
+        height: 50px;
+      }
+      .store-badges {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .features {
+        padding: 60px 0;
+      }
+      .features h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #2ec4b6;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+      .feature-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition:
+          transform 0.3s ease,
+          background 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      .feature-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+      .feature-card p {
+        color: #888;
+        line-height: 1.6;
+      }
+      footer {
+        padding: 40px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 60px;
+      }
+      footer p {
+        color: #666;
+        margin-bottom: 15px;
+      }
+      footer a {
+        color: #2ec4b6;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .footer-links {
+        margin-top: 20px;
+      }
+      .footer-links a {
+        margin: 0 15px;
+        color: #888;
+      }
+      .lang-switcher {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+      .lang-btn {
+        padding: 5px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #888;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+      .lang-btn:hover {
+        color: #2ec4b6;
+      }
+      .lang-btn.active {
+        background: rgba(46, 196, 182, 0.2);
+        color: #2ec4b6;
+      }
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+        .back-to-apps {
+          position: static;
+          transform: none;
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container" style="position: relative;">
-            <a href="../index-tr.html" class="back-to-apps">&larr; Tüm Uygulamalar</a>
-            <div class="lang-switcher">
-                <a href="index.html" class="lang-btn">EN</a>
-                <a href="index-tr.html" class="lang-btn active">TR</a>
-            </div>
-            <div class="logo">Nerdy Lang</div>
+      <div class="container" style="position: relative">
+        <a href="../index-tr.html" class="back-to-apps"
+          >&larr; Tüm Uygulamalar</a
+        >
+        <div class="lang-switcher">
+          <a href="index.html" class="lang-btn">EN</a>
+          <a href="index-tr.html" class="lang-btn active">TR</a>
         </div>
+        <div class="logo">Nerdy Lang</div>
+      </div>
     </header>
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Eğlenerek İngilizce Öğren</h1>
-                <p>İnteraktif bilgi kartları, video dersler ve gerçek zamanlı çok oyunculu yarışlarla İngilizce kelime haznenizi geliştirin. Kendinize meydan okuyun ve arkadaşlarınızla yarışın!</p>
-                <div class="coming-soon">Yakında App Store ve Google Play'de</div>
+      <section class="hero">
+        <div class="container">
+          <h1>Eğlenerek İngilizce Öğren</h1>
+          <p>
+            İnteraktif bilgi kartları, video dersler ve gerçek zamanlı çok
+            oyunculu yarışlarla İngilizce kelime haznenizi geliştirin. Kendinize
+            meydan okuyun ve arkadaşlarınızla yarışın!
+          </p>
+          <div class="store-badges">
+            <a
+              href="https://apps.apple.com/us/app/language-vocabulary-game/id6757562797"
+              class="app-store-badge"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="App Store'dan İndirin"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.oguzcc.nerdy.language"
+              class="app-store-badge"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Google Play'den Alın"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <h2>Özellikler</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">&#128218;</div>
+              <h3>300+ Kelime Kartı</h3>
+              <p>
+                İnteraktif bilgi kartlarıyla yeni kelimeler öğrenin. Kendi
+                hızınızda kartları kaydırın ve kelime haznenizi geliştirin.
+              </p>
             </div>
-        </section>
-        <section class="features">
-            <div class="container">
-                <h2>Özellikler</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128218;</div>
-                        <h3>300+ Kelime Kartı</h3>
-                        <p>İnteraktif bilgi kartlarıyla yeni kelimeler öğrenin. Kendi hızınızda kartları kaydırın ve kelime haznenizi geliştirin.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#127909;</div>
-                        <h3>Video Dersler</h3>
-                        <p>İlgi çekici video içeriklerle izleyin ve öğrenin. Telaffuzunuzu ve anlayışınızı doğal yollarla geliştirin.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128101;</div>
-                        <h3>Çok Oyunculu Yarış</h3>
-                        <p>Gerçek zamanlı kelime yarışlarında arkadaşlarınızla yarışın! Odalar oluşturun ve en hızlı cevap vermek için yarışın.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#127942;</div>
-                        <h3>Oyunlaştırma</h3>
-                        <p>Öğrendikçe puan, yıldız ve seviye kazanın. Liderlik tablosunda yükselip ilerlemenizi takip edin!</p>
-                    </div>
-                </div>
+            <div class="feature-card">
+              <div class="feature-icon">&#127909;</div>
+              <h3>Video Dersler</h3>
+              <p>
+                İlgi çekici video içeriklerle izleyin ve öğrenin. Telaffuzunuzu
+                ve anlayışınızı doğal yollarla geliştirin.
+              </p>
             </div>
-        </section>
+            <div class="feature-card">
+              <div class="feature-icon">&#128101;</div>
+              <h3>Çok Oyunculu Yarış</h3>
+              <p>
+                Gerçek zamanlı kelime yarışlarında arkadaşlarınızla yarışın!
+                Odalar oluşturun ve en hızlı cevap vermek için yarışın.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">&#127942;</div>
+              <h3>Oyunlaştırma</h3>
+              <p>
+                Öğrendikçe puan, yıldız ve seviye kazanın. Liderlik tablosunda
+                yükselip ilerlemenizi takip edin!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="container">
-            <p>Geliştirici: Oğuz Can</p>
-            <p>&copy; 2026 Nerdy Lang. Tüm hakları saklıdır.</p>
-            <div class="footer-links">
-                <a href="privacy-tr.html">Gizlilik Politikası</a>
-                <a href="terms-tr.html">Kullanım Koşulları</a>
-                <a href="delete-account-tr.html">Hesap Silme</a>
-                <a href="mailto:oguzcc@icloud.com">İletişim</a>
-            </div>
+      <div class="container">
+        <p>Geliştirici: Oğuz Can</p>
+        <p>&copy; 2026 Nerdy Lang. Tüm hakları saklıdır.</p>
+        <div class="footer-links">
+          <a href="privacy-tr.html">Gizlilik Politikası</a>
+          <a href="terms-tr.html">Kullanım Koşulları</a>
+          <a href="delete-account-tr.html">Hesap Silme</a>
+          <a href="mailto:oguzcc@icloud.com">İletişim</a>
         </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

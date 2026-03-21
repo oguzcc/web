@@ -1,358 +1,481 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oğuz Can - Uygulamalar</title>
-    <meta name="description" content="Oğuz Can uygulamaları. Nerdy, Nerdy Lang, Huzur ve Ether dahil eğitim ve manevi mobil uygulamalar.">
+    <meta
+      name="description"
+      content="Oğuz Can uygulamaları. Nerdy, Nerdy Lang, Huzur ve Ether dahil eğitim ve manevi mobil uygulamalar."
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-        }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          sans-serif;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        color: #fff;
+        min-height: 100vh;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-        header {
-            padding: 20px 0;
-            text-align: center;
-        }
+      header {
+        padding: 20px 0;
+        text-align: center;
+      }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #f5a623;
-        }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #f5a623;
+      }
 
-        .hero {
-            padding: 80px 0 60px;
-            text-align: center;
-        }
+      .hero {
+        padding: 80px 0 60px;
+        text-align: center;
+      }
 
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #f5a623, #f7c56e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: #b0b0b0;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .apps {
+        padding: 60px 0;
+      }
+
+      .app-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .app-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 40px 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition:
+          transform 0.3s ease,
+          background 0.3s ease;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+      }
+
+      .app-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .app-card img.app-logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 22px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .app-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        color: #fff;
+      }
+
+      .app-card .tagline {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .app-card .description {
+        color: #888;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+      }
+
+      .app-card .features-list {
+        list-style: none;
+        text-align: left;
+        margin-bottom: 25px;
+        padding: 0;
+      }
+
+      .app-card .features-list li {
+        color: #b0b0b0;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+        font-size: 0.9rem;
+      }
+
+      .app-card .features-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+
+      .app-card .store-info {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+
+      .app-card .learn-more {
+        display: inline-block;
+        padding: 10px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .app-card .learn-more:hover {
+        transform: translateY(-2px);
+      }
+
+      .app-card.nerdy {
+        border-color: rgba(245, 166, 35, 0.2);
+      }
+      .app-card.nerdy:hover {
+        border-color: rgba(245, 166, 35, 0.4);
+      }
+      .app-card.nerdy h3 {
+        color: #f5a623;
+      }
+      .app-card.nerdy .tagline {
+        color: #f7c56e;
+      }
+      .app-card.nerdy .features-list li::before {
+        background: #f5a623;
+      }
+      .app-card.nerdy .store-info {
+        background: rgba(245, 166, 35, 0.15);
+        color: #f7c56e;
+      }
+      .app-card.nerdy .learn-more {
+        background: linear-gradient(90deg, #f5a623, #f7c56e);
+        color: #1a1a2e;
+      }
+      .app-card.nerdy .learn-more:hover {
+        box-shadow: 0 8px 20px rgba(245, 166, 35, 0.3);
+      }
+
+      .app-card.nerdy-lang {
+        border-color: rgba(46, 196, 182, 0.2);
+      }
+      .app-card.nerdy-lang:hover {
+        border-color: rgba(46, 196, 182, 0.4);
+      }
+      .app-card.nerdy-lang h3 {
+        color: #2ec4b6;
+      }
+      .app-card.nerdy-lang .tagline {
+        color: #6ee4d8;
+      }
+      .app-card.nerdy-lang .features-list li::before {
+        background: #2ec4b6;
+      }
+      .app-card.nerdy-lang .store-info {
+        background: rgba(46, 196, 182, 0.15);
+        color: #6ee4d8;
+      }
+      .app-card.nerdy-lang .learn-more {
+        background: linear-gradient(90deg, #2ec4b6, #6ee4d8);
+        color: #1a1a2e;
+      }
+      .app-card.nerdy-lang .learn-more:hover {
+        box-shadow: 0 8px 20px rgba(46, 196, 182, 0.3);
+      }
+
+      .app-card.meva {
+        border-color: rgba(78, 205, 196, 0.2);
+      }
+      .app-card.meva:hover {
+        border-color: rgba(78, 205, 196, 0.4);
+      }
+      .app-card.meva h3 {
+        color: #4ecdc4;
+      }
+      .app-card.meva .tagline {
+        color: #8ee8e0;
+      }
+      .app-card.meva .features-list li::before {
+        background: #4ecdc4;
+      }
+      .app-card.meva .store-info {
+        background: rgba(78, 205, 196, 0.15);
+        color: #8ee8e0;
+      }
+      .app-card.meva .learn-more {
+        background: linear-gradient(90deg, #4ecdc4, #8ee8e0);
+        color: #1a1a2e;
+      }
+      .app-card.meva .learn-more:hover {
+        box-shadow: 0 8px 20px rgba(78, 205, 196, 0.3);
+      }
+
+      .app-card.ether {
+        border-color: rgba(155, 89, 182, 0.2);
+      }
+      .app-card.ether:hover {
+        border-color: rgba(155, 89, 182, 0.4);
+      }
+      .app-card.ether h3 {
+        color: #9b59b6;
+      }
+      .app-card.ether .tagline {
+        color: #c39bd3;
+      }
+      .app-card.ether .features-list li::before {
+        background: #9b59b6;
+      }
+      .app-card.ether .store-info {
+        background: rgba(155, 89, 182, 0.15);
+        color: #c39bd3;
+      }
+      .app-card.ether .learn-more {
+        background: linear-gradient(90deg, #9b59b6, #c39bd3);
+        color: #1a1a2e;
+      }
+      .app-card.ether .learn-more:hover {
+        box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3);
+      }
+
+      footer {
+        padding: 40px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 60px;
+      }
+
+      footer p {
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      footer a {
+        color: #f5a623;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .lang-switcher {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .lang-btn {
+        padding: 5px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #888;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .lang-btn:hover {
+        color: #f5a623;
+      }
+
+      .lang-btn.active {
+        background: rgba(245, 166, 35, 0.2);
+        color: #f5a623;
+      }
+
+      @media (max-width: 768px) {
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #f5a623, #f7c56e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+          font-size: 2rem;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            color: #b0b0b0;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .apps {
-            padding: 60px 0;
+          font-size: 1rem;
         }
 
         .app-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+          grid-template-columns: 1fr;
         }
-
-        .app-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 40px 30px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s ease, background 0.3s ease;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-        }
-
-        .app-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255,255,255,0.08);
-        }
-
-        .app-card img.app-logo {
-            width: 100px;
-            height: 100px;
-            border-radius: 22px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .app-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-
-        .app-card .tagline {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .app-card .description {
-            color: #888;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-
-        .app-card .features-list {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 25px;
-            padding: 0;
-        }
-
-        .app-card .features-list li {
-            color: #b0b0b0;
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-            font-size: 0.9rem;
-        }
-
-        .app-card .features-list li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-        }
-
-        .app-card .store-info {
-            font-size: 0.85rem;
-            padding: 8px 20px;
-            border-radius: 20px;
-            display: inline-block;
-        }
-
-        .app-card .learn-more {
-            display: inline-block;
-            padding: 10px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .app-card .learn-more:hover {
-            transform: translateY(-2px);
-        }
-
-        .app-card.nerdy { border-color: rgba(245, 166, 35, 0.2); }
-        .app-card.nerdy:hover { border-color: rgba(245, 166, 35, 0.4); }
-        .app-card.nerdy h3 { color: #f5a623; }
-        .app-card.nerdy .tagline { color: #f7c56e; }
-        .app-card.nerdy .features-list li::before { background: #f5a623; }
-        .app-card.nerdy .store-info { background: rgba(245, 166, 35, 0.15); color: #f7c56e; }
-        .app-card.nerdy .learn-more { background: linear-gradient(90deg, #f5a623, #f7c56e); color: #1a1a2e; }
-        .app-card.nerdy .learn-more:hover { box-shadow: 0 8px 20px rgba(245, 166, 35, 0.3); }
-
-        .app-card.nerdy-lang { border-color: rgba(46, 196, 182, 0.2); }
-        .app-card.nerdy-lang:hover { border-color: rgba(46, 196, 182, 0.4); }
-        .app-card.nerdy-lang h3 { color: #2ec4b6; }
-        .app-card.nerdy-lang .tagline { color: #6ee4d8; }
-        .app-card.nerdy-lang .features-list li::before { background: #2ec4b6; }
-        .app-card.nerdy-lang .store-info { background: rgba(46, 196, 182, 0.15); color: #6ee4d8; }
-        .app-card.nerdy-lang .learn-more { background: linear-gradient(90deg, #2ec4b6, #6ee4d8); color: #1a1a2e; }
-        .app-card.nerdy-lang .learn-more:hover { box-shadow: 0 8px 20px rgba(46, 196, 182, 0.3); }
-
-        .app-card.meva { border-color: rgba(78, 205, 196, 0.2); }
-        .app-card.meva:hover { border-color: rgba(78, 205, 196, 0.4); }
-        .app-card.meva h3 { color: #4ecdc4; }
-        .app-card.meva .tagline { color: #8ee8e0; }
-        .app-card.meva .features-list li::before { background: #4ecdc4; }
-        .app-card.meva .store-info { background: rgba(78, 205, 196, 0.15); color: #8ee8e0; }
-        .app-card.meva .learn-more { background: linear-gradient(90deg, #4ecdc4, #8ee8e0); color: #1a1a2e; }
-        .app-card.meva .learn-more:hover { box-shadow: 0 8px 20px rgba(78, 205, 196, 0.3); }
-
-        .app-card.ether { border-color: rgba(155, 89, 182, 0.2); }
-        .app-card.ether:hover { border-color: rgba(155, 89, 182, 0.4); }
-        .app-card.ether h3 { color: #9b59b6; }
-        .app-card.ether .tagline { color: #c39bd3; }
-        .app-card.ether .features-list li::before { background: #9b59b6; }
-        .app-card.ether .store-info { background: rgba(155, 89, 182, 0.15); color: #c39bd3; }
-        .app-card.ether .learn-more { background: linear-gradient(90deg, #9b59b6, #c39bd3); color: #1a1a2e; }
-        .app-card.ether .learn-more:hover { box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3); }
-
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 60px;
-        }
-
-        footer p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        footer a {
-            color: #f5a623;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .lang-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .lang-btn {
-            padding: 5px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #888;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            color: #f5a623;
-        }
-
-        .lang-btn.active {
-            background: rgba(245, 166, 35, 0.2);
-            color: #f5a623;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .app-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container" style="position: relative;">
-            <div class="lang-switcher">
-                <a href="index.html" class="lang-btn">EN</a>
-                <a href="index-tr.html" class="lang-btn active">TR</a>
-            </div>
-            <div class="logo">Oğuz Can</div>
+      <div class="container" style="position: relative">
+        <div class="lang-switcher">
+          <a href="index.html" class="lang-btn">EN</a>
+          <a href="index-tr.html" class="lang-btn active">TR</a>
         </div>
+        <div class="logo">Oğuz Can</div>
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Oğuz Can Uygulamaları</h1>
-                <p>Öğrenmeye, gelişime ve anlamlı bağlantılar kurmaya ilham veren eğitim ve manevi deneyimler oluşturuyoruz.</p>
+      <section class="hero">
+        <div class="container">
+          <h1>Oğuz Can Uygulamaları</h1>
+          <p>
+            Öğrenmeye, gelişime ve anlamlı bağlantılar kurmaya ilham veren
+            eğitim ve manevi deneyimler oluşturuyoruz.
+          </p>
+        </div>
+      </section>
+
+      <section class="apps">
+        <div class="container">
+          <div class="app-grid">
+            <div class="app-card nerdy">
+              <img
+                src="assets/images/nerdy-logo.png"
+                alt="Nerdy"
+                class="app-logo"
+              />
+              <h3>Nerdy</h3>
+              <p class="tagline">Eğlenerek Matematik Öğren</p>
+              <p class="description">
+                Üslü sayılar, karekök ve cebirsel ifadeler çalışın. Bilgi
+                kartlarıyla kendinizi geliştirin veya arkadaşlarınızla yarışın!
+              </p>
+              <ul class="features-list">
+                <li>Birden fazla matematik konusu ve oyun modu</li>
+                <li>İnteraktif bilgi kartlarıyla öğrenme</li>
+                <li>8 kişilik gerçek zamanlı çok oyunculu mod</li>
+                <li>Global liderlik tablosu ve başarılar</li>
+              </ul>
+              <div style="margin-bottom: 15px">
+                <span class="store-info"
+                  >App Store ve Google Play'de Mevcut</span
+                >
+              </div>
+              <a href="nerdy/" class="learn-more">Daha Fazla</a>
             </div>
-        </section>
 
-        <section class="apps">
-            <div class="container">
-                <div class="app-grid">
-                    <div class="app-card nerdy">
-                        <img src="assets/images/nerdy-logo.png" alt="Nerdy" class="app-logo">
-                        <h3>Nerdy</h3>
-                        <p class="tagline">Eğlenerek Matematik Öğren</p>
-                        <p class="description">Üslü sayılar, karekök ve cebirsel ifadeler çalışın. Bilgi kartlarıyla kendinizi geliştirin veya arkadaşlarınızla yarışın!</p>
-                        <ul class="features-list">
-                            <li>Birden fazla matematik konusu ve oyun modu</li>
-                            <li>İnteraktif bilgi kartlarıyla öğrenme</li>
-                            <li>8 kişilik gerçek zamanlı çok oyunculu mod</li>
-                            <li>Global liderlik tablosu ve başarılar</li>
-                        </ul>
-                        <div style="margin-bottom: 15px;">
-                            <span class="store-info">App Store ve Google Play'de Mevcut</span>
-                        </div>
-                        <a href="nerdy/" class="learn-more">Daha Fazla</a>
-                    </div>
-
-                    <div class="app-card nerdy-lang">
-                        <img src="assets/images/nerdy-lang-logo.png" alt="Nerdy Lang" class="app-logo">
-                        <h3>Nerdy Lang</h3>
-                        <p class="tagline">Eğlenerek İngilizce Öğren</p>
-                        <p class="description">İnteraktif bilgi kartları, video dersler ve gerçek zamanlı çok oyunculu yarışlarla İngilizce kelime haznenizi geliştirin.</p>
-                        <ul class="features-list">
-                            <li>300+ kelime kartı</li>
-                            <li>İlgi çekici video dersler</li>
-                            <li>Çok oyunculu yarış modu</li>
-                            <li>Puanlar, yıldızlar, seviyeler ve liderlik tablosu</li>
-                        </ul>
-                        <div style="margin-bottom: 15px;">
-                            <span class="store-info">Yakında</span>
-                        </div>
-                        <a href="nerdy-lang/" class="learn-more">Daha Fazla</a>
-                    </div>
-
-                    <div class="app-card meva">
-                        <img src="assets/images/meva-logo.png" alt="Huzur" class="app-logo">
-                        <h3>Huzur</h3>
-                        <p class="tagline">Ruhunun Sığınağı</p>
-                        <p class="description">Meditasyon, namaz takibi, Kuran okuma ve anlamlı alışkanlıklar oluşturma için manevi yol arkadaşınız.</p>
-                        <ul class="features-list">
-                            <li>Meditasyon ve zikir sayacı</li>
-                            <li>Namaz takibi ve kıble pusulası</li>
-                            <li>Kuran okuma ve dua koleksiyonları</li>
-                            <li>Topluluk, hikayeler ve 21 günlük yolculuklar</li>
-                        </ul>
-                        <div style="margin-bottom: 15px;">
-                            <span class="store-info">App Store ve Google Play'de Mevcut</span>
-                        </div>
-                        <a href="meva/" class="learn-more">Daha Fazla</a>
-                    </div>
-
-                    <div class="app-card ether">
-                        <img src="assets/images/ether-logo.png" alt="Ether" class="app-logo">
-                        <h3>Ether</h3>
-                        <p class="tagline">İç Işığını Uyandır</p>
-                        <p class="description">Meditasyon, farkındalık uygulamaları, manevi okumalar ve anlamlı alışkanlıklar oluşturma için yol arkadaşınız.</p>
-                        <ul class="features-list">
-                            <li>Rehberli meditasyon ve farkındalık egzersizleri</li>
-                            <li>Günlük manevi pratikler takibi</li>
-                            <li>Bilgelik okumaları ve olumlamalar</li>
-                            <li>Topluluk hikayeleri ve ilham</li>
-                        </ul>
-                        <div style="margin-bottom: 15px;">
-                            <span class="store-info">Yakında</span>
-                        </div>
-                        <a href="ether/" class="learn-more">Daha Fazla</a>
-                    </div>
-                </div>
+            <div class="app-card nerdy-lang">
+              <img
+                src="assets/images/nerdy-lang-logo.png"
+                alt="Nerdy Lang"
+                class="app-logo"
+              />
+              <h3>Nerdy Lang</h3>
+              <p class="tagline">Eğlenerek İngilizce Öğren</p>
+              <p class="description">
+                İnteraktif bilgi kartları, video dersler ve gerçek zamanlı çok
+                oyunculu yarışlarla İngilizce kelime haznenizi geliştirin.
+              </p>
+              <ul class="features-list">
+                <li>300+ kelime kartı</li>
+                <li>İlgi çekici video dersler</li>
+                <li>Çok oyunculu yarış modu</li>
+                <li>Puanlar, yıldızlar, seviyeler ve liderlik tablosu</li>
+              </ul>
+              <div style="margin-bottom: 15px">
+                <span class="store-info"
+                  >App Store ve Google Play'de Mevcut</span
+                >
+              </div>
+              <a href="nerdy-lang/" class="learn-more">Daha Fazla</a>
             </div>
-        </section>
+
+            <div class="app-card meva">
+              <img
+                src="assets/images/meva-logo.png"
+                alt="Huzur"
+                class="app-logo"
+              />
+              <h3>Huzur</h3>
+              <p class="tagline">Ruhunun Sığınağı</p>
+              <p class="description">
+                Meditasyon, namaz takibi, Kuran okuma ve anlamlı alışkanlıklar
+                oluşturma için manevi yol arkadaşınız.
+              </p>
+              <ul class="features-list">
+                <li>Meditasyon ve zikir sayacı</li>
+                <li>Namaz takibi ve kıble pusulası</li>
+                <li>Kuran okuma ve dua koleksiyonları</li>
+                <li>Topluluk, hikayeler ve 21 günlük yolculuklar</li>
+              </ul>
+              <div style="margin-bottom: 15px">
+                <span class="store-info"
+                  >App Store ve Google Play'de Mevcut</span
+                >
+              </div>
+              <a href="meva/" class="learn-more">Daha Fazla</a>
+            </div>
+
+            <div class="app-card ether">
+              <img
+                src="assets/images/ether-logo.png"
+                alt="Ether"
+                class="app-logo"
+              />
+              <h3>Ether</h3>
+              <p class="tagline">İç Işığını Uyandır</p>
+              <p class="description">
+                Meditasyon, farkındalık uygulamaları, manevi okumalar ve anlamlı
+                alışkanlıklar oluşturma için yol arkadaşınız.
+              </p>
+              <ul class="features-list">
+                <li>Rehberli meditasyon ve farkındalık egzersizleri</li>
+                <li>Günlük manevi pratikler takibi</li>
+                <li>Bilgelik okumaları ve olumlamalar</li>
+                <li>Topluluk hikayeleri ve ilham</li>
+              </ul>
+              <div style="margin-bottom: 15px">
+                <span class="store-info">Yakında</span>
+              </div>
+              <a href="ether/" class="learn-more">Daha Fazla</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>Geliştirici: Oğuz Can</p>
-            <p>&copy; 2026 Oğuz Can. Tüm hakları saklıdır.</p>
-            <p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
-        </div>
+      <div class="container">
+        <p>Geliştirici: Oğuz Can</p>
+        <p>&copy; 2026 Oğuz Can. Tüm hakları saklıdır.</p>
+        <p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
