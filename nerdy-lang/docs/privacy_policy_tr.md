@@ -4,7 +4,7 @@
 
 ## Giriş
 
-Nerdy Lang ("biz," "bizim," veya "bize"), gizliliğinizi korumayı taahhüt eder. Bu Gizlilik Politikası, Nerdy Lang mobil uygulamamızı ("Uygulama") kullandığınızda bilgilerinizin nasıl toplandığını, kullanıldığını, açıklandığını ve korunduğunu açıklar.
+Language Vocabulary Game ("biz," "bizim," veya "bize"), gizliliğinizi korumayı taahhüt eder. Bu Gizlilik Politikası, Language Vocabulary Game mobil uygulamamızı ("Uygulama") kullandığınızda bilgilerinizin nasıl toplandığını, kullanıldığını, açıklandığını ve korunduğunu açıklar.
 
 Lütfen bu Gizlilik Politikasını dikkatlice okuyun. Uygulamayı kullanarak, bilgilerin bu politikaya uygun olarak toplanmasını ve kullanılmasını kabul etmiş olursunuz.
 

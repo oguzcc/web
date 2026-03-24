@@ -4,11 +4,11 @@
 
 ## Şartların Kabulü
 
-Nerdy Lang ("Uygulama") uygulamasını indirerek, kurarak veya kullanarak bu Kullanım Şartları'na ("Şartlar") bağlı kalmayı kabul etmiş olursunuz. Bu Şartları kabul etmiyorsanız Uygulamayı kullanmayın.
+Language Vocabulary Game ("Uygulama") uygulamasını indirerek, kurarak veya kullanarak bu Kullanım Şartları'na ("Şartlar") bağlı kalmayı kabul etmiş olursunuz. Bu Şartları kabul etmiyorsanız Uygulamayı kullanmayın.
 
 ## Hizmet Açıklaması
 
-Nerdy Lang, kullanıcıların interaktif oyunlar ve zorluklar aracılığıyla İngilizce öğrenmelerine ve kelime bilgilerini geliştirmelerine yardımcı olan bir eğitim uygulamasıdır. Uygulama şunları sunar:
+Language Vocabulary Game, kullanıcıların interaktif oyunlar ve zorluklar aracılığıyla İngilizce öğrenmelerine ve kelime bilgilerini geliştirmelerine yardımcı olan bir eğitim uygulamasıdır. Uygulama şunları sunar:
 
 - Çeşitli öğrenme modları (Flashcards, Word Scramble, Memory Match vb.)
 - Seviyeler ve ilerleme takibi
