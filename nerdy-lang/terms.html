@@ -1,314 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms of Use - Nerdy Lang</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-            line-height: 1.8;
-        }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          sans-serif;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        color: #fff;
+        min-height: 100vh;
+        line-height: 1.8;
+      }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-        }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        position: relative;
+      }
 
-        .lang-switcher {
-            position: absolute;
-            top: 40px;
-            right: 20px;
-        }
+      .lang-switcher {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+      }
 
-        .lang-btn {
-            padding: 5px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #888;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
+      .lang-btn {
+        padding: 5px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #888;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
 
-        .lang-btn:hover {
-            color: #2ec4b6;
-        }
+      .lang-btn:hover {
+        color: #2ec4b6;
+      }
 
-        .lang-btn.active {
-            background: rgba(46, 196, 182, 0.2);
-            color: #2ec4b6;
-        }
+      .lang-btn.active {
+        background: rgba(46, 196, 182, 0.2);
+        color: #2ec4b6;
+      }
 
-        header {
-            margin-bottom: 40px;
-        }
+      header {
+        margin-bottom: 40px;
+      }
 
-        .back-link {
-            color: #2ec4b6;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+      .back-link {
+        color: #2ec4b6;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
 
-        .back-link:hover {
-            text-decoration: underline;
-        }
+      .back-link:hover {
+        text-decoration: underline;
+      }
 
-        h1 {
-            font-size: 2.5rem;
-            margin: 20px 0;
-            background: linear-gradient(90deg, #2ec4b6, #6ee4d8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      h1 {
+        font-size: 2.5rem;
+        margin: 20px 0;
+        background: linear-gradient(90deg, #2ec4b6, #6ee4d8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
 
-        .last-updated {
-            color: #666;
-            font-size: 0.9rem;
-        }
+      .last-updated {
+        color: #666;
+        font-size: 0.9rem;
+      }
 
-        section {
-            margin-bottom: 40px;
-        }
+      section {
+        margin-bottom: 40px;
+      }
 
-        h2 {
-            color: #2ec4b6;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
+      h2 {
+        color: #2ec4b6;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
 
-        h3 {
-            color: #6ee4d8;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            margin-top: 20px;
-        }
+      h3 {
+        color: #6ee4d8;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
 
-        p {
-            color: #b0b0b0;
-            margin-bottom: 15px;
-        }
+      p {
+        color: #b0b0b0;
+        margin-bottom: 15px;
+      }
 
-        ul {
-            color: #b0b0b0;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
+      ul {
+        list-style-type: none;
+        margin-bottom: 20px;
+      }
 
-        li {
-            margin-bottom: 8px;
-        }
+      li {
+        color: #b0b0b0;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+      }
 
-        a {
-            color: #2ec4b6;
-        }
+      li::before {
+        content: "•";
+        color: #2ec4b6;
+        position: absolute;
+        left: 0;
+      }
 
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-        }
+      strong {
+        color: #fff;
+      }
 
-        footer p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            margin: 0 15px;
-            color: #888;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-            color: #2ec4b6;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .lang-switcher {
-                top: 20px;
-            }
-        }
+      footer {
+        text-align: center;
+        margin-top: 80px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #666;
+        font-size: 0.8rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="lang-switcher">
-            <a href="terms.html" class="lang-btn active">EN</a>
-            <a href="terms-tr.html" class="lang-btn">TR</a>
-        </div>
+      <div class="lang-switcher">
+        <a href="terms.html" class="lang-btn active">EN</a>
+        <a href="terms-tr.html" class="lang-btn">TR</a>
+      </div>
 
-        <header>
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
-            <h1>Terms of Use</h1>
-            <p class="last-updated">Last Updated: February 2026</p>
-        </header>
+      <header>
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <h1>Terms of Use</h1>
+        <p class="last-updated">Last Updated: March 2026</p>
+      </header>
 
-        <main>
-            <section>
-                <h2>Agreement to Terms</h2>
-                <p>By downloading, installing, or using Nerdy Lang (the "App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, do not use the App.</p>
-            </section>
+      <section>
+        <h2>Agreement to Terms</h2>
+        <p>
+          By downloading, installing, or using Nerdy Lang (the "App"), you agree
+          to be bound by these Terms of Use ("Terms"). If you do not agree to
+          these Terms, do not use the App.
+        </p>
+      </section>
 
-            <section>
-                <h2>Description of Service</h2>
-                <p>Nerdy Lang is a language learning application that helps users improve their English skills through interactive content and challenges. The App offers:</p>
-                <ul>
-                    <li>Vocabulary flashcards with 300+ words across various categories</li>
-                    <li>Video-based English lessons</li>
-                    <li>Solo and multiplayer vocabulary racing gameplay</li>
-                    <li>Progress tracking with points, stars, and levels</li>
-                </ul>
-            </section>
+      <section>
+        <h2>Description of Service</h2>
+        <p>
+          Nerdy Lang is an English vocabulary learning application that helps
+          users master English through interactive games and challenges. The App
+          offers:
+        </p>
+        <ul>
+          <li>
+            Various learning modes (Flashcards, Word Scramble, Memory Match, and
+            more)
+          </li>
+          <li>Levels and progress tracking</li>
+          <li>Achievements and rewards</li>
+          <li>Leaderboards and profile stats</li>
+          <li>Multiplayer gaming modes</li>
+        </ul>
+      </section>
 
-            <section>
-                <h2>User Accounts</h2>
+      <section>
+        <h2>User Accounts</h2>
+        <h3>Account Creation</h3>
+        <p>
+          You may create an account using Google Sign-In, Apple Sign-In, or
+          Anonymous mode (limited functionality).
+        </p>
+        <p>
+          You are responsible for maintaining the confidentiality of your
+          account credentials and for all activities that occur under your
+          account.
+        </p>
 
-                <h3>Account Creation</h3>
-                <p>You may create an account using:</p>
-                <ul>
-                    <li>Google Sign-In</li>
-                    <li>Apple Sign-In</li>
-                    <li>Anonymous mode (limited functionality)</li>
-                </ul>
-                <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+        <h3>Account Linking</h3>
+        <p>
+          Anonymous users may link their account to Google or Apple to preserve
+          their progress and enable additional features.
+        </p>
 
-                <h3>Account Linking</h3>
-                <p>Anonymous users may link their account to Google or Apple to preserve their learning progress and enable additional features.</p>
+        <h3>Account Termination</h3>
+        <p>
+          You may delete your account at any time through the App settings. We
+          reserve the right to suspend or terminate accounts that violate these
+          Terms.
+        </p>
+      </section>
 
-                <h3>Account Termination</h3>
-                <p>You may delete your account at any time through the App settings. We reserve the right to suspend or terminate accounts that violate these Terms.</p>
-            </section>
+      <section>
+        <h2>Subscriptions and Payments</h2>
+        <h3>Premium Subscription</h3>
+        <p>
+          The App offers premium subscription plans: Monthly, Annual, and Gold
+          membership.
+        </p>
+        <h3>Payment Processing</h3>
+        <p>
+          All payments are processed through the Apple App Store or Google Play
+          Store. Subscription terms, including pricing and renewal policies, are
+          governed by the respective app store's terms.
+        </p>
+        <h3>Automatic Renewal</h3>
+        <p>
+          Subscriptions automatically renew unless canceled at least 24 hours
+          before the end of the current period. You can manage subscriptions
+          through your app store account settings.
+        </p>
+        <h3>Refunds</h3>
+        <p>
+          Refund requests are handled by Apple or Google according to their
+          respective refund policies.
+        </p>
+      </section>
 
-            <section>
-                <h2>Subscriptions and Payments</h2>
+      <section>
+        <h2>User Conduct</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the App for any unlawful purpose</li>
+          <li>Attempt to gain unauthorized access to the App or its systems</li>
+          <li>Interfere with or disrupt the App or servers</li>
+          <li>Impersonate another person or entity</li>
+          <li>Use cheats, exploits, or unauthorized modifications</li>
+          <li>
+            Engage in abusive behavior toward other users in multiplayer modes
+          </li>
+        </ul>
+      </section>
 
-                <h3>Premium Subscription</h3>
-                <p>The App offers premium subscription plans:</p>
-                <ul>
-                    <li>Monthly subscription</li>
-                    <li>Annual subscription</li>
-                </ul>
+      <section>
+        <h2>Intellectual Property</h2>
+        <h3>Our Content</h3>
+        <p>
+          The App, including its design, graphics, games, audio, and content, is
+          owned by us and protected by intellectual property laws. You may not
+          copy, modify, distribute, or create derivative works without our
+          permission.
+        </p>
+        <h3>User Content</h3>
+        <p>
+          You retain ownership of any content you create within the App. By
+          using the App, you grant us a license to use your gameplay and
+          learning data to improve our services.
+        </p>
+      </section>
 
-                <h3>Payment Processing</h3>
-                <p>All payments are processed through the Apple App Store or Google Play Store. Subscription terms, including pricing and renewal policies, are governed by the respective app store's terms.</p>
+      <section>
+        <h2>Disclaimer of Warranties</h2>
+        <p>
+          The App is provided "as is" and "as available" without warranties of
+          any kind, either express or implied. We do not guarantee specific
+          educational outcomes or language proficiency levels.
+        </p>
+      </section>
 
-                <h3>Automatic Renewal</h3>
-                <p>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. You can manage subscriptions through your app store account settings.</p>
+      <section>
+        <h2>Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by law, we shall not be liable for any
+          indirect, incidental, special, consequential, or punitive damages
+          arising from your use of the App.
+        </p>
+      </section>
 
-                <h3>Refunds</h3>
-                <p>Refund requests are handled by Apple or Google according to their respective refund policies.</p>
-            </section>
+      <section>
+        <h2>Changes to Terms</h2>
+        <p>
+          We may modify these Terms at any time. Continued use of the App after
+          changes constitutes acceptance of the new Terms. We will notify users
+          of significant changes through the App.
+        </p>
+      </section>
 
-            <section>
-                <h2>User Conduct</h2>
-                <p>You agree not to:</p>
-                <ul>
-                    <li>Use the App for any unlawful purpose</li>
-                    <li>Attempt to gain unauthorized access to the App or its systems</li>
-                    <li>Interfere with or disrupt the App or servers</li>
-                    <li>Impersonate another person or entity</li>
-                    <li>Use cheats, exploits, or unauthorized modifications</li>
-                    <li>Engage in abusive behavior toward other users in multiplayer modes</li>
-                </ul>
-            </section>
+      <section>
+        <h2>Governing Law</h2>
+        <p>
+          These Terms shall be governed by and construed in accordance with
+          applicable laws, without regard to conflict of law principles.
+        </p>
+      </section>
 
-            <section>
-                <h2>Intellectual Property</h2>
-
-                <h3>Our Content</h3>
-                <p>The App, including its design, graphics, vocabulary content, video lessons, audio, and other content, is owned by us and protected by intellectual property laws. You may not copy, modify, distribute, or create derivative works without our permission.</p>
-
-                <h3>User Content</h3>
-                <p>You retain ownership of any content you create within the App. By using the App, you grant us a license to use your gameplay data to improve our services.</p>
-            </section>
-
-            <section>
-                <h2>Multiplayer Features</h2>
-
-                <h3>Room Codes and QR Codes</h3>
-                <p>Multiplayer vocabulary race rooms use unique codes and QR codes for joining. Share these only with intended participants.</p>
-
-                <h3>Fair Play</h3>
-                <p>Users must engage in fair play during multiplayer sessions. Cheating or exploiting bugs may result in account suspension.</p>
-            </section>
-
-            <section>
-                <h2>Disclaimers</h2>
-
-                <h3>"As Is" Basis</h3>
-                <p>The App is provided "as is" and "as available" without warranties of any kind, either express or implied.</p>
-
-                <h3>Educational Purpose</h3>
-                <p>The App is designed for educational entertainment and language learning. We do not guarantee specific educational outcomes or language proficiency improvement.</p>
-
-                <h3>Service Availability</h3>
-                <p>We do not guarantee uninterrupted access to the App. We may modify, suspend, or discontinue any feature at any time.</p>
-            </section>
-
-            <section>
-                <h2>Limitation of Liability</h2>
-                <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App.</p>
-            </section>
-
-            <section>
-                <h2>Indemnification</h2>
-                <p>You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from your use of the App or violation of these Terms.</p>
-            </section>
-
-            <section>
-                <h2>Changes to Terms</h2>
-                <p>We may modify these Terms at any time. Continued use of the App after changes constitutes acceptance of the new Terms. We will notify users of significant changes through the App.</p>
-            </section>
-
-            <section>
-                <h2>Governing Law</h2>
-                <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.</p>
-            </section>
-
-            <section>
-                <h2>Severability</h2>
-                <p>If any provision of these Terms is found unenforceable, the remaining provisions will continue in effect.</p>
-            </section>
-
-            <section>
-                <h2>Entire Agreement</h2>
-                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us regarding the App.</p>
-            </section>
-
-            <section>
-                <h2>Contact Us</h2>
-                <p>If you have questions about these Terms, please contact us at:</p>
-                <p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 Nerdy Lang. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="delete-account.html">Delete Account</a>
-                <a href="mailto:oguzcc@icloud.com">Contact</a>
-            </div>
-        </footer>
+      <footer>
+        <p>&copy; 2026 Nerdy Lang. All rights reserved.</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
