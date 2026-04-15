@@ -6,7 +6,7 @@
     <title>Oguz Can - Apps</title>
     <meta
       name="description"
-      content="Apps by Oguz Can. Educational and spiritual mobile applications including Nerdy, Nerdy Lang, Iman Daily, and Ether."
+      content="Apps by Oguz Can. Educational and spiritual mobile applications including Nerdy, Nerdy Lang, Wordsmith, Iman Daily, and Ether."
     />
     <style>
       * {
@@ -237,6 +237,34 @@
         box-shadow: 0 8px 20px rgba(46, 196, 182, 0.3);
       }
 
+      /* Wordsmith - Blue */
+      .app-card.wordsmith {
+        border-color: rgba(74, 144, 226, 0.2);
+      }
+      .app-card.wordsmith:hover {
+        border-color: rgba(74, 144, 226, 0.4);
+      }
+      .app-card.wordsmith h3 {
+        color: #4a90e2;
+      }
+      .app-card.wordsmith .tagline {
+        color: #7fb3f0;
+      }
+      .app-card.wordsmith .features-list li::before {
+        background: #4a90e2;
+      }
+      .app-card.wordsmith .store-info {
+        background: rgba(74, 144, 226, 0.15);
+        color: #7fb3f0;
+      }
+      .app-card.wordsmith .learn-more {
+        background: linear-gradient(90deg, #4a90e2, #7fb3f0);
+        color: #1a1a2e;
+      }
+      .app-card.wordsmith .learn-more:hover {
+        box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+      }
+
       /* Meva - Green */
       .app-card.meva {
         border-color: rgba(78, 205, 196, 0.2);
@@ -431,6 +459,32 @@
                 >
               </div>
               <a href="nerdy-lang/" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="app-card wordsmith">
+              <img
+                src="assets/images/wordsmith-logo.png"
+                alt="Wordsmith"
+                class="app-logo"
+              />
+              <h3>Wordsmith</h3>
+              <p class="tagline">Drag. Spell. Snatch.</p>
+              <p class="description">
+                Form words on a 4&times;4 grid by dragging across adjacent
+                letters. Play solo or snatch words from opponents in real-time.
+              </p>
+              <ul class="features-list">
+                <li>4&times;4 drag-to-spell word board</li>
+                <li>Snatch mode: steal words by extending them</li>
+                <li>Solo play and real-time multiplayer</li>
+                <li>Leaderboards and progress tracking</li>
+              </ul>
+              <div style="margin-bottom: 15px">
+                <span class="store-info"
+                  >Available on App Store &amp; Google Play</span
+                >
+              </div>
+              <a href="wordsmith/" class="learn-more">Learn More</a>
             </div>
 
             <div class="app-card meva">
