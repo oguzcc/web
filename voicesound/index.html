@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Effect - Real-time Voice Changer &amp; Meme Soundboard</title>
+    <meta
+      name="description"
+      content="Voice Effect is a real-time voice changer and meme soundboard built for content creators, pranksters, and gamers. 15 voice effects, 300+ meme sounds, on-device privacy."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          sans-serif;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        color: #fff;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header {
+        padding: 20px 0;
+        text-align: center;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ec4899;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo img {
+        height: 40px;
+        width: 40px;
+        border-radius: 8px;
+      }
+      .back-to-apps {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ec4899;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+      .back-to-apps:hover {
+        text-decoration: underline;
+      }
+      .hero {
+        padding: 60px 0;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #ec4899, #f9a8d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        color: #b0b0b0;
+        max-width: 640px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+      }
+      .coming-soon-badge {
+        display: inline-block;
+        background: rgba(236, 72, 153, 0.2);
+        color: #ec4899;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 1px solid rgba(236, 72, 153, 0.3);
+      }
+      .screenshots {
+        padding: 60px 0;
+      }
+      .screenshots h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #ec4899;
+      }
+      .screenshot-scroll {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 20px 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        justify-content: center;
+      }
+      .screenshot-scroll::-webkit-scrollbar {
+        height: 8px;
+      }
+      .screenshot-scroll::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+      .screenshot-scroll::-webkit-scrollbar-thumb {
+        background: #ec4899;
+        border-radius: 4px;
+      }
+      .screenshot-item {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        text-align: center;
+      }
+      .screenshot-item img {
+        width: 250px;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+      .screenshot-item p {
+        margin-top: 15px;
+        color: #888;
+        font-size: 0.9rem;
+      }
+      .features {
+        padding: 60px 0;
+      }
+      .features h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #ec4899;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+      .feature-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition:
+          transform 0.3s ease,
+          background 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      .feature-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+      .feature-card p {
+        color: #888;
+        line-height: 1.6;
+      }
+      .privacy-note {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 30px;
+        background: rgba(236, 72, 153, 0.08);
+        border: 1px solid rgba(236, 72, 153, 0.2);
+        border-radius: 16px;
+        text-align: center;
+      }
+      .privacy-note h3 {
+        color: #ec4899;
+        margin-bottom: 12px;
+        font-size: 1.25rem;
+      }
+      .privacy-note p {
+        color: #b0b0b0;
+        line-height: 1.6;
+      }
+      footer {
+        padding: 40px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 60px;
+      }
+      footer p {
+        color: #666;
+        margin-bottom: 15px;
+      }
+      footer a {
+        color: #ec4899;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .footer-links {
+        margin-top: 20px;
+      }
+      .footer-links a {
+        margin: 0 15px;
+        color: #888;
+      }
+      .lang-switcher {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+      .lang-btn {
+        padding: 5px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #888;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+      .lang-btn:hover {
+        color: #ec4899;
+      }
+      .lang-btn.active {
+        background: rgba(236, 72, 153, 0.2);
+        color: #ec4899;
+      }
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+        .back-to-apps {
+          position: static;
+          transform: none;
+          display: block;
+          margin-bottom: 10px;
+        }
+        .screenshot-item img {
+          width: 200px;
+        }
+        .screenshot-scroll {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container" style="position: relative">
+        <a href="../index.html" class="back-to-apps">&larr; All Apps</a>
+        <div class="lang-switcher">
+          <a href="index.html" class="lang-btn active">EN</a>
+          <a href="index-tr.html" class="lang-btn">TR</a>
+        </div>
+        <div class="logo">
+          <img src="../assets/images/voicesound-logo.png" alt="Voice Effect" />
+          Voice Effect
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Voice Effect</h1>
+          <p>
+            A real-time voice changer and meme soundboard built for content
+            creators, pranksters, and gamers who love a little chaos.
+          </p>
+          <div class="coming-soon-badge">Coming Soon to App Store &amp; Google Play</div>
+        </div>
+      </section>
+
+      <section class="screenshots">
+        <div class="container">
+          <h2>App Preview</h2>
+          <div class="screenshot-scroll">
+            <div class="screenshot-item">
+              <img
+                src="screenshots/01-transform-your-voice.jpg"
+                alt="Transform Your Voice"
+              />
+              <p>Transform Your Voice</p>
+            </div>
+            <div class="screenshot-item">
+              <img
+                src="screenshots/02-tap-meme-sounds.jpg"
+                alt="Tap Meme Sounds"
+              />
+              <p>300+ Meme Sounds</p>
+            </div>
+            <div class="screenshot-item">
+              <img
+                src="screenshots/03-record-and-share.jpg"
+                alt="Record and Share"
+              />
+              <p>Record &amp; Share</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <h2>What You Can Do</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">&#127908;</div>
+              <h3>15 Wild Voice Effects</h3>
+              <p>
+                Transform your voice with Robot, Alien, Chipmunk, Helium,
+                Monster, Ghost, Underwater and more. Pick an effect and your
+                mic plays back through the speaker instantly.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">&#128293;</div>
+              <h3>300+ Meme Sounds</h3>
+              <p>
+                Tap meme sounds across 9 categories: Trending, Reactions,
+                Pranks, Animals, Games, Cartoon, Cinematic, Edits and
+                Notifications.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">&#127909;</div>
+              <h3>Record &amp; Share</h3>
+              <p>
+                Save every funny moment with the effect baked in, then send
+                clips straight to TikTok, Reels, or your group chat.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">&#127912;</div>
+              <h3>12+ Material 3 Themes</h3>
+              <p>
+                Pick your vibe with 12+ Material 3 accent themes and 15+
+                supported languages.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">&#128274;</div>
+              <h3>Privacy First</h3>
+              <p>
+                All audio is processed on-device. Your voice never leaves your
+                phone &mdash; nothing is uploaded, nothing is stored on a
+                server.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">&#127911;</div>
+              <h3>Headphone Tip</h3>
+              <p>
+                Plug in headphones to avoid speaker echo while using voice
+                effects live.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>Developed by Oguz Can</p>
+        <p>&copy; 2026 Voice Effect. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="mailto:oguzcc@icloud.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
