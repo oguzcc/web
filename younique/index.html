@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Younique: Life Coach - Your Complete Life Coach</title>
+    <meta name="description" content="Younique is your complete life coach for fitness, nutrition and calorie tracking, breaking bad habits, and building a healthier, happier you.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2ec96b;
+        }
+
+        .back-to-apps {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2ec96b;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-to-apps:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero img.app-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #2ec96b, #ff9472);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: rgba(46, 201, 107, 0.2);
+            color: #2ec96b;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid rgba(46, 201, 107, 0.3);
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2ec96b;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: #888;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: #2ec96b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            color: #888;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-btn {
+            padding: 5px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #888;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            color: #2ec96b;
+        }
+
+        .lang-btn.active {
+            background: rgba(46, 201, 107, 0.2);
+            color: #2ec96b;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .back-to-apps {
+                position: static;
+                transform: none;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container" style="position: relative;">
+            <a href="../index.html" class="back-to-apps">&larr; All Apps</a>
+            <div class="lang-switcher">
+                <a href="index.html" class="lang-btn active">EN</a>
+                <a href="index-tr.html" class="lang-btn">TR</a>
+            </div>
+            <div class="logo">Younique</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="../assets/images/younique-logo.png" alt="Younique: Life Coach" class="app-logo">
+                <h1>Your Complete Life Coach</h1>
+                <p>Younique guides you through fitness, nutrition and calorie tracking, and breaking bad habits &mdash; all in one personal coaching companion built to help you become the best version of yourself.</p>
+                <div class="coming-soon-badge">Coming Soon to App Store &amp; Google Play</div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">&#127939;</div>
+                        <h3>Smart Workout Plans</h3>
+                        <p>Personalized fitness routines tailored to your goals and fitness level. Train at home or the gym with guided exercises and progress tracking.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#129367;</div>
+                        <h3>Nutrition &amp; Calorie Tracking</h3>
+                        <p>Log your meals, track calories and macros, and get personalized nutrition insights to fuel your body the right way.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#128683;</div>
+                        <h3>Break Bad Habits</h3>
+                        <p>Quit smoking, cut down on sugar, or beat any habit holding you back. Track your streaks and stay motivated with daily support.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#127919;</div>
+                        <h3>Goal Setting &amp; Coaching</h3>
+                        <p>Set meaningful goals and receive personalized coaching tips. Your AI life coach helps you stay focused and accountable every day.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#128202;</div>
+                        <h3>Progress Tracking</h3>
+                        <p>Visualize your journey with detailed charts and insights for weight, workouts, calories, and habits. Celebrate every milestone.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">&#128276;</div>
+                        <h3>Reminders &amp; Motivation</h3>
+                        <p>Stay on track with smart reminders, daily motivation, and achievement rewards that keep you moving toward your best self.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Developed by Oguz Can</p>
+            <p>&copy; 2026 Younique. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="delete-account.html">Delete Account</a>
+                <a href="mailto:oguzcc@icloud.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
