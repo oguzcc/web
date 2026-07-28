@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iman Daily - Open in App</title>
-    <meta name="description" content="Open this content in Iman Daily app or download it from your app store.">
+    <title>Taqwa - Open in App</title>
+    <meta name="description" content="Open this content in Taqwa app or download it from your app store.">
     <style>
         * {
             margin: 0;
@@ -178,8 +178,8 @@
 <body>
     <div class="container">
         <div class="app-icon">&#128591;</div>
-        <div class="logo">Iman Daily</div>
-        <p class="subtitle" id="subtitle">Opening content in Iman Daily...</p>
+        <div class="logo">Taqwa</div>
+        <p class="subtitle" id="subtitle">Opening content in Taqwa...</p>
 
         <div class="status-text" id="status">
             <span class="spinner"></span>
@@ -187,7 +187,7 @@
         </div>
 
         <a class="open-btn" id="openBtn" style="display: none;" onclick="tryOpenApp()">
-            Open in Iman Daily
+            Open in Taqwa
         </a>
 
         <div class="divider" id="divider">or download the app</div>
@@ -203,11 +203,11 @@
             </a>
         </div>
 
-        <a class="landing-link" href="../index.html">Learn more about Iman Daily</a>
+        <a class="landing-link" href="../index.html">Learn more about Taqwa</a>
     </div>
 
     <footer>
-        &copy; 2026 Iman Daily. All rights reserved.
+        &copy; 2026 Taqwa. All rights reserved.
     </footer>
 
     <script>
@@ -254,7 +254,7 @@
             var openBtn = document.getElementById('openBtn');
             var subtitle = document.getElementById('subtitle');
 
-            subtitle.textContent = "Download Iman Daily to view this content";
+            subtitle.textContent = "Download Taqwa to view this content";
             openBtn.style.display = 'inline-block';
             divider.classList.add('visible');
             storeButtons.classList.add('visible');
@@ -268,7 +268,7 @@
                 status.innerHTML = "Redirecting to Google Play...";
             } else {
                 // Desktop: show both buttons
-                status.innerHTML = "Iman Daily is available on iOS and Android";
+                status.innerHTML = "Taqwa is available on iOS and Android";
             }
 
             // Auto-redirect to the correct store on mobile
@@ -302,12 +302,12 @@
         } else if (isMobile) {
             // Mobile without params: show download button for correct platform
             document.getElementById('status').innerHTML = '';
-            document.getElementById('subtitle').textContent = 'Download Iman Daily for your spiritual journey';
+            document.getElementById('subtitle').textContent = 'Download Taqwa for your spiritual journey';
             showStoreFallback(false);
         } else {
             // Desktop: show both store links
             document.getElementById('status').innerHTML = '';
-            document.getElementById('subtitle').textContent = 'Iman Daily is available on iOS and Android. Visit the store links below to download.';
+            document.getElementById('subtitle').textContent = 'Taqwa is available on iOS and Android. Visit the store links below to download.';
             showStoreFallback(false);
         }
     </script>
