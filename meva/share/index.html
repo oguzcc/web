@@ -239,15 +239,8 @@
             document.getElementById('playStoreBtn').href = PLAY_STORE_URL;
         }
 
-        // Get the correct store URL for the current platform
-        function getStoreUrl() {
-            if (isIOS) return APP_STORE_URL;
-            if (isAndroid) return PLAY_STORE_URL;
-            return null;
-        }
-
         // Show store fallback UI
-        function showStoreFallback(autoRedirect) {
+        function showStoreFallback() {
             var status = document.getElementById('status');
             var storeButtons = document.getElementById('storeButtons');
             var divider = document.getElementById('divider');
@@ -262,23 +255,13 @@
             // On mobile: show only the relevant store button
             if (isIOS) {
                 document.getElementById('playStoreBtn').style.display = 'none';
-                status.innerHTML = "Redirecting to App Store...";
+                status.innerHTML = "Tap below to download";
             } else if (isAndroid) {
                 document.getElementById('appStoreBtn').style.display = 'none';
-                status.innerHTML = "Redirecting to Google Play...";
+                status.innerHTML = "Tap below to download";
             } else {
                 // Desktop: show both buttons
                 status.innerHTML = "Taqwa is available on iOS and Android";
-            }
-
-            // Auto-redirect to the correct store on mobile
-            if (autoRedirect && isMobile) {
-                var storeUrl = getStoreUrl();
-                if (storeUrl) {
-                    setTimeout(function() {
-                        window.location.href = storeUrl;
-                    }, 1000);
-                }
             }
         }
 
@@ -287,9 +270,9 @@
             var deepLink = getDeepLink();
             window.location.href = deepLink;
 
-            // After timeout: if app didn't open, redirect to store
+            // After timeout: if app didn't open, show store fallback (no auto-redirect)
             setTimeout(function() {
-                showStoreFallback(true);
+                showStoreFallback();
             }, 2500);
         }
 
@@ -303,12 +286,12 @@
             // Mobile without params: show download button for correct platform
             document.getElementById('status').innerHTML = '';
             document.getElementById('subtitle').textContent = 'Download Taqwa for your spiritual journey';
-            showStoreFallback(false);
+            showStoreFallback();
         } else {
             // Desktop: show both store links
             document.getElementById('status').innerHTML = '';
             document.getElementById('subtitle').textContent = 'Taqwa is available on iOS and Android. Visit the store links below to download.';
-            showStoreFallback(false);
+            showStoreFallback();
         }
     </script>
 </body>
