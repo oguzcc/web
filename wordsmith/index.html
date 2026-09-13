@@ -100,13 +100,58 @@
         transform: scale(1.05);
       }
       .app-store-badge img {
+        display: block;
         height: 50px;
       }
       .store-badges {
         display: flex;
+        align-items: center;
         gap: 15px;
         justify-content: center;
         flex-wrap: wrap;
+      }
+      .screenshots {
+        padding: 60px 0;
+      }
+      .screenshots h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #4a90e2;
+      }
+      .screenshot-scroll {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 20px 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .screenshot-scroll::-webkit-scrollbar {
+        height: 8px;
+      }
+      .screenshot-scroll::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+      .screenshot-scroll::-webkit-scrollbar-thumb {
+        background: #4a90e2;
+        border-radius: 4px;
+      }
+      .screenshot-item {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        text-align: center;
+      }
+      .screenshot-item img {
+        width: 250px;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+      .screenshot-item p {
+        margin-top: 15px;
+        color: #888;
+        font-size: 0.9rem;
       }
       .features {
         padding: 60px 0;
@@ -205,6 +250,9 @@
           display: block;
           margin-bottom: 10px;
         }
+        .screenshot-item img {
+          width: 200px;
+        }
       }
 
       .app-store-badge img.badge-play {
@@ -251,6 +299,45 @@
             >
               <img src="../assets/images/badges/google-play.png" class="badge-play" alt="Get it on Google Play" width="191" height="74" />
             </a>
+          </div>
+        </div>
+      </section>
+      <section class="screenshots">
+        <div class="container">
+          <h2>App Preview</h2>
+          <div class="screenshot-scroll">
+            <div class="screenshot-item">
+              <img src="screenshots/1.png" alt="Live round" loading="lazy" />
+              <p>Everyone, Same Board</p>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/2.png" alt="Crossword levels" loading="lazy" />
+              <p>Crosswords, No Clock</p>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/3.png" alt="Swiping letters into words" loading="lazy" />
+              <p>Letters Into Words</p>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/4.png" alt="Global ranking" loading="lazy" />
+              <p>Beat the World</p>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/5.png" alt="Round review" loading="lazy" />
+              <p>Every Word Explained</p>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/6.png" alt="Scoring a word" loading="lazy" />
+              <p>Every Word Counts</p>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/7.png" alt="Round leaderboard" loading="lazy" />
+              <p>Salute Your Rivals</p>
+            </div>
+            <div class="screenshot-item">
+              <img src="screenshots/8.png" alt="Language selection" loading="lazy" />
+              <p>16 Native Dictionaries</p>
+            </div>
           </div>
         </div>
       </section>
