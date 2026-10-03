@@ -19,11 +19,27 @@
     <main id="main" class="solo">
       <div class="solo__card">
         <p class="solo__big" aria-hidden="true">404</p>
-        <h1>Page not found</h1>
-        <p class="solo__text">This page doesn&rsquo;t exist or has moved. Every app is listed on the home page.</p>
-        <a class="btn" href="/web/">Browse all apps</a>
-        <p class="solo__foot">Developed by <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oguz Can</a> · <a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
+        <h1 id="nfTitle">Page not found</h1>
+        <p class="solo__text" id="nfText">This page doesn&rsquo;t exist or has moved. Every app is listed on the home page.</p>
+        <a class="btn" id="nfHome" href="/web/">Browse all apps</a>
+        <p class="solo__foot"><span id="nfDev">Developed by</span> <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oguz Can</a> · <a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
       </div>
     </main>
+    <script>
+      // Turkish copy for a missing Turkish page, or when the browser prefers Turkish.
+      (function () {
+        var preferred = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+        if (!/-tr\.html$/.test(location.pathname) && !/^tr\b/i.test(preferred)) return;
+        document.documentElement.lang = "tr";
+        document.title = "Sayfa bulunamadı - Oğuz Can";
+        document.getElementById("nfTitle").textContent = "Sayfa bulunamadı";
+        document.getElementById("nfText").textContent = "Bu sayfa yok ya da taşınmış. Tüm uygulamalar ana sayfada.";
+        var home = document.getElementById("nfHome");
+        home.textContent = "Tüm uygulamalara göz at";
+        home.href = "/web/index-tr.html";
+        document.getElementById("nfDev").textContent = "Geliştirici:";
+        document.querySelector(".solo__foot a").textContent = "Oğuz Can";
+      })();
+    </script>
   </body>
 </html>

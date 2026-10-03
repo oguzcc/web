@@ -28,19 +28,17 @@
     <main id="main" class="solo">
       <div class="solo__card">
         <img class="solo__icon" src="../../assets/images/icons/meva.webp" alt="" width="96" height="96" />
-        <h1 class="logo">Taqwa</h1>
-        <p class="solo__text subtitle" id="subtitle">Opening content in Taqwa&hellip;</p>
+        <h1 class="logo" data-i18n="name">Taqwa</h1>
+        <p class="solo__text subtitle" id="subtitle" data-i18n="opening">Opening content in Taqwa&hellip;</p>
 
         <div class="status-text" id="status" role="status">
             <span class="spinner" aria-hidden="true"></span>
-            Trying to open the app&hellip;
+            <span data-i18n="trying">Trying to open the app&hellip;</span>
         </div>
 
-        <a class="btn open-btn" id="openBtn" style="display: none;" role="button" tabindex="0" onclick="tryOpenApp()" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); tryOpenApp(); }">
-            Open in Taqwa
-        </a>
+        <a class="btn open-btn" id="openBtn" style="display: none;" role="button" tabindex="0" onclick="tryOpenApp()" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); tryOpenApp(); }" data-i18n="open">Open in Taqwa</a>
 
-        <div class="divider" id="divider">or download the app</div>
+        <div class="divider" id="divider" data-i18n="or">or download the app</div>
 
         <div class="store-buttons" id="storeButtons">
             <a class="btn btn--ghost store-btn" id="appStoreBtn" href="#" target="_blank">
@@ -53,13 +51,60 @@
             </a>
         </div>
 
-        <a class="landing-link" href="../index.html">Learn more about Taqwa</a>
+        <a class="landing-link" id="landingLink" href="../index.html" data-i18n="learn">Learn more about Taqwa</a>
 
-        <footer class="solo__foot">&copy; 2026 Taqwa. All rights reserved.</footer>
+        <footer class="solo__foot" data-i18n="rights">&copy; 2026 Taqwa. All rights reserved.</footer>
       </div>
     </main>
 
     <script>
+        // Copy in the visitor's language: Turkish when the browser prefers it, English otherwise.
+        // The URL stays the same either way because the app generates these links.
+        var STRINGS = {
+            en: {
+                title: 'Taqwa - Open in App',
+                name: 'Taqwa',
+                opening: 'Opening content in Taqwa\u2026',
+                trying: 'Trying to open the app\u2026',
+                open: 'Open in Taqwa',
+                or: 'or download the app',
+                learn: 'Learn more about Taqwa',
+                rights: '\u00a9 2026 Taqwa. All rights reserved.',
+                viewContent: 'Download Taqwa to view this content',
+                tap: 'Tap below to download',
+                available: 'Taqwa is available on iOS and Android',
+                journey: 'Download Taqwa for your spiritual journey',
+                desktop: 'Taqwa is available on iOS and Android. Visit the store links below to download.'
+            },
+            tr: {
+                title: 'Takva - Uygulamada Aç',
+                name: 'Takva',
+                opening: 'İçerik Takva\u2019da açılıyor\u2026',
+                trying: 'Uygulama açılmaya çalışılıyor\u2026',
+                open: 'Takva\u2019da aç',
+                or: 'ya da uygulamayı indirin',
+                learn: 'Takva hakkında daha fazla bilgi',
+                rights: '\u00a9 2026 Takva. Tüm hakları saklıdır.',
+                viewContent: 'Bu içeriği görüntülemek için Takva\u2019yı indirin',
+                tap: 'İndirmek için aşağıya dokunun',
+                available: 'Takva iOS ve Android\u2019de',
+                journey: 'Manevi yolculuğunuz için Takva\u2019yı indirin',
+                desktop: 'Takva iOS ve Android\u2019de. İndirmek için aşağıdaki mağaza bağlantılarını kullanın.'
+            }
+        };
+        var preferred = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+        var LANG = /^tr\b/i.test(preferred) ? 'tr' : 'en';
+        var T = STRINGS[LANG];
+
+        if (LANG === 'tr') {
+            document.documentElement.lang = 'tr';
+            document.title = T.title;
+            document.getElementById('landingLink').href = '../index-tr.html';
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                el.textContent = T[el.getAttribute('data-i18n')];
+            });
+        }
+
         // Parse query parameters
         const params = new URLSearchParams(window.location.search);
         const type = params.get('type');   // 'post' or 'prayer'
@@ -96,7 +141,10 @@
             var openBtn = document.getElementById('openBtn');
             var subtitle = document.getElementById('subtitle');
 
-            subtitle.textContent = "Download Taqwa to view this content";
+            // Only a shared post or prayer has "this content" to point at
+            if (type && id) {
+                subtitle.textContent = T.viewContent;
+            }
             openBtn.style.display = 'inline-block';
             divider.classList.add('visible');
             storeButtons.classList.add('visible');
@@ -104,13 +152,14 @@
             // On mobile: show only the relevant store button
             if (isIOS) {
                 document.getElementById('playStoreBtn').style.display = 'none';
-                status.innerHTML = "Tap below to download";
+                status.textContent = T.tap;
             } else if (isAndroid) {
                 document.getElementById('appStoreBtn').style.display = 'none';
-                status.innerHTML = "Tap below to download";
+                status.textContent = T.tap;
             } else {
                 // Desktop: show both buttons
-                status.innerHTML = "Taqwa is available on iOS and Android";
+                // Without shared content the subtitle already says this
+                status.textContent = (type && id) ? T.available : '';
             }
         }
 
@@ -134,12 +183,12 @@
         } else if (isMobile) {
             // Mobile without params: show download button for correct platform
             document.getElementById('status').innerHTML = '';
-            document.getElementById('subtitle').textContent = 'Download Taqwa for your spiritual journey';
+            document.getElementById('subtitle').textContent = T.journey;
             showStoreFallback();
         } else {
             // Desktop: show both store links
             document.getElementById('status').innerHTML = '';
-            document.getElementById('subtitle').textContent = 'Taqwa is available on iOS and Android. Visit the store links below to download.';
+            document.getElementById('subtitle').textContent = T.desktop;
             showStoreFallback();
         }
     </script>
