@@ -1,14 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gizlilik Politikası - Nerdy</title>
     <meta name="description" content="Nerdy mobil uygulamasının gizlilik politikası. Hangi verilerin işlendiğini ve haklarınızı açıklar." />
     <link rel="canonical" href="https://oguzcc.github.io/web/nerdy/privacy-tr.html" />
+    <link rel="alternate" hreflang="en" href="https://oguzcc.github.io/web/nerdy/privacy.html" />
+    <link rel="alternate" hreflang="tr" href="https://oguzcc.github.io/web/nerdy/privacy-tr.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oguzcc.github.io/web/nerdy/privacy.html" />
     <link rel="icon" type="image/png" href="https://oguzcc.github.io/web/assets/images/favicons/nerdy.png" />
     <meta name="author" content="Oguz Can" />
-    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1014" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Oguz Can — Apps" />
     <meta property="og:locale" content="tr_TR" />
@@ -17,310 +22,158 @@
     <meta property="og:url" content="https://oguzcc.github.io/web/nerdy/privacy-tr.html" />
     <meta property="og:image" content="https://oguzcc.github.io/web/assets/images/og/nerdy.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-            line-height: 1.8;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-        }
-
-        .lang-switcher {
-            position: absolute;
-            top: 40px;
-            right: 20px;
-        }
-
-        .lang-btn {
-            padding: 5px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #888;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            color: #f5a623;
-        }
-
-        .lang-btn.active {
-            background: rgba(245, 166, 35, 0.2);
-            color: #f5a623;
-        }
-
-        header {
-            margin-bottom: 40px;
-        }
-
-        .back-link {
-            color: #f5a623;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin: 20px 0;
-            background: linear-gradient(90deg, #f5a623, #f7c56e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .last-updated {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            color: #f5a623;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            color: #f7c56e;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #b0b0b0;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            color: #b0b0b0;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #f5a623;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-        }
-
-        footer p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            margin: 0 15px;
-            color: #888;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-            color: #f5a623;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .lang-switcher {
-                top: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="lang-switcher">
-            <a href="privacy.html" class="lang-btn">EN</a>
-            <a href="privacy-tr.html" class="lang-btn active">TR</a>
-        </div>
-
-        <header>
-            <a href="../index-tr.html" class="back-link">&larr; Tüm Uygulamalar</a>
-            <br>
-            <a href="index-tr.html" class="back-link">&larr; Ana Sayfaya Dön</a>
-            <h1>Gizlilik Politikası</h1>
-            <p class="last-updated">Son Güncelleme: Aralık 2024</p>
+    <link rel="preload" href="../assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-app="nerdy">
+    <a class="skip-link" href="#main">İçeriğe geç</a>
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <a class="back" href="../index-tr.html"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Tüm uygulamalar</a>
+        <nav class="lang" aria-label="Dil"><a href="privacy.html" hreflang="en" lang="en">EN</a><a href="privacy-tr.html" hreflang="tr" lang="tr" aria-current="page">TR</a></nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="wrap wrap--narrow">
+        <header class="doc-head">
+          <nav class="crumb" aria-label="Breadcrumb">
+            <a href="index-tr.html"><img src="../assets/images/icons/nerdy.webp" alt="" width="32" height="32" /><span>Nerdy</span></a>
+            <span class="crumb__sep" aria-hidden="true">/</span>
+            <span aria-current="page">Gizlilik Politikası</span>
+          </nav>
+          <h1>Gizlilik Politikası</h1>
+          <p class="doc-meta">Son Güncelleme: Aralık 2024</p>
         </header>
-
-        <main>
-            <section>
-                <h2>Giriş</h2>
-                <p>Nerdy ("biz" veya "bizim") gizliliğinizi korumayı taahhüt eder. Bu Gizlilik Politikası, Nerdy mobil uygulamamızı ("Uygulama") kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı, açıkladığımızı ve koruduğumuzu açıklar.</p>
-                <p>Lütfen bu Gizlilik Politikasını dikkatlice okuyun. Uygulamayı kullanarak, bu politikaya uygun olarak bilgilerin toplanmasını ve kullanılmasını kabul etmiş olursunuz.</p>
-            </section>
-
-            <section>
-                <h2>Topladığımız Bilgiler</h2>
-
-                <h3>Bize Sağladığınız Bilgiler</h3>
-                <p><strong>Hesap Bilgileri:</strong> Google ile Giriş veya Apple ile Giriş kullanarak hesap oluşturduğunuzda şunları toplayabiliriz:</p>
-                <ul>
-                    <li>E-posta adresi</li>
-                    <li>Görünen ad</li>
-                    <li>Profil fotoğrafı URL'si</li>
-                </ul>
-
-                <p><strong>Anonim Kullanım:</strong> Uygulamayı hesap oluşturmadan kullanabilirsiniz. Bu durumda, oyun ilerlemenizi yerel olarak ve bulutta kaydetmek için anonim bir kullanıcı tanımlayıcısı oluştururuz.</p>
-
-                <h3>Otomatik Olarak Toplanan Bilgiler</h3>
-                <p><strong>Oyun Verileri:</strong></p>
-                <ul>
-                    <li>Oyun ilerlemesi ve istatistikler</li>
-                    <li>Kazanılan puanlar, yıldızlar ve seviyeler</li>
-                    <li>Tamamlanan oyun kartları ve başarılar</li>
-                    <li>Doğruluk yüzdeleri ve performans metrikleri</li>
-                    <li>Çok oyunculu maç geçmişi</li>
-                </ul>
-
-                <p><strong>Cihaz Bilgileri:</strong></p>
-                <ul>
-                    <li>Cihaz türü ve işletim sistemi</li>
-                    <li>Benzersiz cihaz tanımlayıcıları (Firebase kimlik doğrulaması için)</li>
-                    <li>Ağ bağlantı durumu</li>
-                </ul>
-
-                <h3>Üçüncü Taraflarca Toplanan Bilgiler</h3>
-                <p><strong>RevenueCat (Uygulama İçi Satın Almalar):</strong> Bir satın alma yaptığınızda, RevenueCat şunları toplar:</p>
-                <ul>
-                    <li>İşlem tanımlayıcıları</li>
-                    <li>Abonelik durumu ve yenileme bilgileri</li>
-                    <li>Satın alma geçmişi</li>
-                </ul>
-                <p>RevenueCat'in gizlilik politikası: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">https://www.revenuecat.com/privacy</a></p>
-
-                <p><strong>Firebase (Google):</strong> Kimlik doğrulama ve veri depolama için Firebase kullanıyoruz. Firebase şunları toplayabilir:</p>
-                <ul>
-                    <li>Kimlik doğrulama belirteçleri</li>
-                    <li>Kullanıcı tanımlayıcıları</li>
-                    <li>Çökme raporları (etkinleştirilmişse)</li>
-                </ul>
-                <p>Google'ın gizlilik politikası: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-            </section>
-
-            <section>
-                <h2>Bilgilerinizi Nasıl Kullanıyoruz</h2>
-                <p>Topladığımız bilgileri şunlar için kullanıyoruz:</p>
-                <ul>
-                    <li>Kullanıcı hesabınızı oluşturmak ve yönetmek</li>
-                    <li>Oyun ilerlemenizi cihazlar arasında kaydetmek ve senkronize etmek</li>
-                    <li>Çok oyunculu oyun işlevselliği sağlamak</li>
-                    <li>Uygulama içi satın almaları işlemek ve abonelikleri yönetmek</li>
-                    <li>Uygulamayı geliştirmek ve optimize etmek</li>
-                    <li>Hesabınız veya Uygulama hakkında sizinle iletişim kurmak</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Veri Depolama ve Güvenlik</h2>
-                <p>Verileriniz şu şekilde depolanır:</p>
-                <ul>
-                    <li><strong>Firebase Cloud Firestore:</strong> Google tarafından barındırılan güvenli bulut depolama</li>
-                    <li><strong>Yerel Cihaz Depolama:</strong> Çevrimdışı işlevsellik için önbelleğe alınmış veriler</li>
-                </ul>
-                <p>Kişisel bilgilerinizi korumak için uygun teknik ve organizasyonel güvenlik önlemleri uyguluyoruz. Ancak, İnternet üzerinden iletim veya elektronik depolama yöntemlerinin hiçbiri %100 güvenli değildir.</p>
-            </section>
-
-            <section>
-                <h2>Veri Saklama</h2>
-                <p>Kişisel bilgilerinizi hesabınız aktif olduğu sürece veya size hizmet sağlamak için gerekli olduğu sürece saklarız. Hesabınızı istediğiniz zaman Uygulama ayarlarından silebilirsiniz, bu işlem verilerinizi sistemlerimizden kaldıracaktır.</p>
-            </section>
-
-            <section>
-                <h2>Haklarınız ve Seçenekleriniz</h2>
-                <p><strong>Hesap Silme:</strong> Hesabınızı ve tüm ilişkili verileri Uygulama ayarları menüsünden silebilirsiniz (Ayarlar > Hesabı Sil).</p>
-                <p><strong>Hesap Bağlama:</strong> Anonim kullanıcılar, ilerlemelerini güvence altına almak için hesaplarını Google veya Apple'a bağlayabilir.</p>
-                <p><strong>Veri Erişimi:</strong> Profil bilgilerinizi Uygulama içinde görüntüleyebilirsiniz.</p>
-            </section>
-
-            <section>
-                <h2>Çocukların Gizliliği</h2>
-                <p>Uygulama, çocuklar dahil tüm yaş grupları için tasarlanmıştır. Ebeveyn onayı olmadan 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. Ebeveyn veya veli iseniz ve çocuğunuzun bize kişisel bilgi sağladığına inanıyorsanız, lütfen bizimle iletişime geçin.</p>
-                <p>13 yaş altı kullanıcılar için önerilerimiz:</p>
-                <ul>
-                    <li>Uygulamayı anonim modda kullanma</li>
-                    <li>Hesap oluşturma sırasında ebeveyn gözetimi</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Talep Ettiğimiz İzinler</h2>
-                <p><strong>Kamera İzni:</strong> Yalnızca çok oyunculu oyun odalarına katılmak için QR kodlarını taramak amacıyla kullanılır. Kamera verilerini depolamıyor veya iletmiyoruz.</p>
-                <p><strong>İnternet Erişimi:</strong> Oyun ilerlemesini senkronize etmek, kullanıcıların kimliğini doğrulamak ve çok oyunculu özellikleri etkinleştirmek için gereklidir.</p>
-            </section>
-
-            <section>
-                <h2>Üçüncü Taraf Hizmetleri</h2>
-                <p>Uygulama aşağıdaki üçüncü taraf hizmetleriyle entegre edilmiştir:</p>
-                <ul>
-                    <li><strong>Google ile Giriş:</strong> Hesap kimlik doğrulaması için</li>
-                    <li><strong>Apple ile Giriş:</strong> Hesap kimlik doğrulaması için</li>
-                    <li><strong>Firebase:</strong> Veri depolama ve kimlik doğrulama için</li>
-                    <li><strong>RevenueCat:</strong> Abonelik ve satın alma yönetimi için</li>
-                </ul>
-                <p>Her hizmetin, bilgilerinizin kullanımını düzenleyen kendi gizlilik politikası vardır.</p>
-            </section>
-
-            <section>
-                <h2>Uluslararası Veri Transferleri</h2>
-                <p>Bilgileriniz kendi ülkeniz dışındaki ülkelere aktarılabilir ve orada işlenebilir. Firebase ve diğer üçüncü taraf hizmetleri, verileri dünya çapında çeşitli konumlarda depolayabilir.</p>
-            </section>
-
-            <section>
-                <h2>Bu Gizlilik Politikasındaki Değişiklikler</h2>
-                <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Yeni Gizlilik Politikasını bu sayfada yayınlayarak ve "Son Güncelleme" tarihini güncelleyerek herhangi bir değişikliği size bildireceğiz.</p>
-            </section>
-
-            <section>
-                <h2>Bize Ulaşın</h2>
-                <p>Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
-                <p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
-            </section>
-        </main>
-
-        <footer>
-            <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" target="_blank" rel="noopener noreferrer">Oğuz Can</a> &middot; <a href="https://github.com/oguzcc" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-            <p>&copy; 2026 Nerdy. Tüm hakları saklıdır.</p>
-            <div class="footer-links">
-                <a href="privacy-tr.html">Gizlilik Politikası</a>
-                <a href="terms-tr.html">Kullanım Koşulları</a>
-                <a href="delete-account-tr.html">Hesap Silme</a>
-                <a href="mailto:oguzcc@icloud.com">İletişim</a>
-            </div>
-        </footer>
-    </div>
-</body>
+        <div class="prose">
+<section>
+<h2>Giriş</h2>
+<p>Nerdy ("biz" veya "bizim") gizliliğinizi korumayı taahhüt eder. Bu Gizlilik Politikası, Nerdy mobil uygulamamızı ("Uygulama") kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı, açıkladığımızı ve koruduğumuzu açıklar.</p>
+<p>Lütfen bu Gizlilik Politikasını dikkatlice okuyun. Uygulamayı kullanarak, bu politikaya uygun olarak bilgilerin toplanmasını ve kullanılmasını kabul etmiş olursunuz.</p>
+</section>
+<section>
+<h2>Topladığımız Bilgiler</h2>
+<h3>Bize Sağladığınız Bilgiler</h3>
+<p><strong>Hesap Bilgileri:</strong> Google ile Giriş veya Apple ile Giriş kullanarak hesap oluşturduğunuzda şunları toplayabiliriz:</p>
+<ul>
+<li>E-posta adresi</li>
+<li>Görünen ad</li>
+<li>Profil fotoğrafı URL'si</li>
+</ul>
+<p><strong>Anonim Kullanım:</strong> Uygulamayı hesap oluşturmadan kullanabilirsiniz. Bu durumda, oyun ilerlemenizi yerel olarak ve bulutta kaydetmek için anonim bir kullanıcı tanımlayıcısı oluştururuz.</p>
+<h3>Otomatik Olarak Toplanan Bilgiler</h3>
+<p><strong>Oyun Verileri:</strong></p>
+<ul>
+<li>Oyun ilerlemesi ve istatistikler</li>
+<li>Kazanılan puanlar, yıldızlar ve seviyeler</li>
+<li>Tamamlanan oyun kartları ve başarılar</li>
+<li>Doğruluk yüzdeleri ve performans metrikleri</li>
+<li>Çok oyunculu maç geçmişi</li>
+</ul>
+<p><strong>Cihaz Bilgileri:</strong></p>
+<ul>
+<li>Cihaz türü ve işletim sistemi</li>
+<li>Benzersiz cihaz tanımlayıcıları (Firebase kimlik doğrulaması için)</li>
+<li>Ağ bağlantı durumu</li>
+</ul>
+<h3>Üçüncü Taraflarca Toplanan Bilgiler</h3>
+<p><strong>RevenueCat (Uygulama İçi Satın Almalar):</strong> Bir satın alma yaptığınızda, RevenueCat şunları toplar:</p>
+<ul>
+<li>İşlem tanımlayıcıları</li>
+<li>Abonelik durumu ve yenileme bilgileri</li>
+<li>Satın alma geçmişi</li>
+</ul>
+<p>RevenueCat'in gizlilik politikası: <a href="https://www.revenuecat.com/privacy" rel="noopener" target="_blank">https://www.revenuecat.com/privacy</a></p>
+<p><strong>Firebase (Google):</strong> Kimlik doğrulama ve veri depolama için Firebase kullanıyoruz. Firebase şunları toplayabilir:</p>
+<ul>
+<li>Kimlik doğrulama belirteçleri</li>
+<li>Kullanıcı tanımlayıcıları</li>
+<li>Çökme raporları (etkinleştirilmişse)</li>
+</ul>
+<p>Google'ın gizlilik politikası: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">https://policies.google.com/privacy</a></p>
+</section>
+<section>
+<h2>Bilgilerinizi Nasıl Kullanıyoruz</h2>
+<p>Topladığımız bilgileri şunlar için kullanıyoruz:</p>
+<ul>
+<li>Kullanıcı hesabınızı oluşturmak ve yönetmek</li>
+<li>Oyun ilerlemenizi cihazlar arasında kaydetmek ve senkronize etmek</li>
+<li>Çok oyunculu oyun işlevselliği sağlamak</li>
+<li>Uygulama içi satın almaları işlemek ve abonelikleri yönetmek</li>
+<li>Uygulamayı geliştirmek ve optimize etmek</li>
+<li>Hesabınız veya Uygulama hakkında sizinle iletişim kurmak</li>
+</ul>
+</section>
+<section>
+<h2>Veri Depolama ve Güvenlik</h2>
+<p>Verileriniz şu şekilde depolanır:</p>
+<ul>
+<li><strong>Firebase Cloud Firestore:</strong> Google tarafından barındırılan güvenli bulut depolama</li>
+<li><strong>Yerel Cihaz Depolama:</strong> Çevrimdışı işlevsellik için önbelleğe alınmış veriler</li>
+</ul>
+<p>Kişisel bilgilerinizi korumak için uygun teknik ve organizasyonel güvenlik önlemleri uyguluyoruz. Ancak, İnternet üzerinden iletim veya elektronik depolama yöntemlerinin hiçbiri %100 güvenli değildir.</p>
+</section>
+<section>
+<h2>Veri Saklama</h2>
+<p>Kişisel bilgilerinizi hesabınız aktif olduğu sürece veya size hizmet sağlamak için gerekli olduğu sürece saklarız. Hesabınızı istediğiniz zaman Uygulama ayarlarından silebilirsiniz, bu işlem verilerinizi sistemlerimizden kaldıracaktır.</p>
+</section>
+<section>
+<h2>Haklarınız ve Seçenekleriniz</h2>
+<p><strong>Hesap Silme:</strong> Hesabınızı ve tüm ilişkili verileri Uygulama ayarları menüsünden silebilirsiniz (Ayarlar &gt; Hesabı Sil).</p>
+<p><strong>Hesap Bağlama:</strong> Anonim kullanıcılar, ilerlemelerini güvence altına almak için hesaplarını Google veya Apple'a bağlayabilir.</p>
+<p><strong>Veri Erişimi:</strong> Profil bilgilerinizi Uygulama içinde görüntüleyebilirsiniz.</p>
+</section>
+<section>
+<h2>Çocukların Gizliliği</h2>
+<p>Uygulama, çocuklar dahil tüm yaş grupları için tasarlanmıştır. Ebeveyn onayı olmadan 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. Ebeveyn veya veli iseniz ve çocuğunuzun bize kişisel bilgi sağladığına inanıyorsanız, lütfen bizimle iletişime geçin.</p>
+<p>13 yaş altı kullanıcılar için önerilerimiz:</p>
+<ul>
+<li>Uygulamayı anonim modda kullanma</li>
+<li>Hesap oluşturma sırasında ebeveyn gözetimi</li>
+</ul>
+</section>
+<section>
+<h2>Talep Ettiğimiz İzinler</h2>
+<p><strong>Kamera İzni:</strong> Yalnızca çok oyunculu oyun odalarına katılmak için QR kodlarını taramak amacıyla kullanılır. Kamera verilerini depolamıyor veya iletmiyoruz.</p>
+<p><strong>İnternet Erişimi:</strong> Oyun ilerlemesini senkronize etmek, kullanıcıların kimliğini doğrulamak ve çok oyunculu özellikleri etkinleştirmek için gereklidir.</p>
+</section>
+<section>
+<h2>Üçüncü Taraf Hizmetleri</h2>
+<p>Uygulama aşağıdaki üçüncü taraf hizmetleriyle entegre edilmiştir:</p>
+<ul>
+<li><strong>Google ile Giriş:</strong> Hesap kimlik doğrulaması için</li>
+<li><strong>Apple ile Giriş:</strong> Hesap kimlik doğrulaması için</li>
+<li><strong>Firebase:</strong> Veri depolama ve kimlik doğrulama için</li>
+<li><strong>RevenueCat:</strong> Abonelik ve satın alma yönetimi için</li>
+</ul>
+<p>Her hizmetin, bilgilerinizin kullanımını düzenleyen kendi gizlilik politikası vardır.</p>
+</section>
+<section>
+<h2>Uluslararası Veri Transferleri</h2>
+<p>Bilgileriniz kendi ülkeniz dışındaki ülkelere aktarılabilir ve orada işlenebilir. Firebase ve diğer üçüncü taraf hizmetleri, verileri dünya çapında çeşitli konumlarda depolayabilir.</p>
+</section>
+<section>
+<h2>Bu Gizlilik Politikasındaki Değişiklikler</h2>
+<p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Yeni Gizlilik Politikasını bu sayfada yayınlayarak ve "Son Güncelleme" tarihini güncelleyerek herhangi bir değişikliği size bildireceğiz.</p>
+</section>
+<section>
+<h2>Bize Ulaşın</h2>
+<p>Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
+<p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
+</section>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <nav class="footer-nav" aria-label="Yasal bilgiler ve iletişim">
+          <ul><li><a href="privacy-tr.html" aria-current="page">Gizlilik Politikası</a></li><li><a href="terms-tr.html">Kullanım Koşulları</a></li><li><a href="delete-account-tr.html">Hesap Silme</a></li><li><a href="mailto:oguzcc@icloud.com">İletişim</a></li></ul>
+        </nav>
+        <div class="site-footer__meta">
+          <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oğuz Can</a> · <a href="https://github.com/oguzcc" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+          <p>© 2026 Nerdy. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nerdy - Master Math with Fun</title>
     <link rel="canonical" href="https://oguzcc.github.io/web/nerdy/" />
+    <link rel="alternate" hreflang="en" href="https://oguzcc.github.io/web/nerdy/" />
+    <link rel="alternate" hreflang="tr" href="https://oguzcc.github.io/web/nerdy/index-tr.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oguzcc.github.io/web/nerdy/" />
     <link rel="icon" type="image/png" href="https://oguzcc.github.io/web/assets/images/favicons/nerdy.png" />
     <meta name="author" content="Oguz Can" />
-    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1014" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Oguz Can — Apps" />
     <meta property="og:locale" content="en_US" />
@@ -17,376 +22,70 @@
     <meta property="og:image" content="https://oguzcc.github.io/web/assets/images/og/nerdy.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="description" content="Nerdy is an engaging math learning app. Practice exponents, square roots, algebraic expressions and compete with friends!">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #f5a623;
-        }
-
-        .back-to-apps {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #f5a623;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .back-to-apps:hover {
-            text-decoration: underline;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #f5a623, #f7c56e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: #b0b0b0;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-
-        .app-store-badge {
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-
-        .app-store-badge:hover {
-            transform: scale(1.05);
-        }
-
-        .app-store-badge img {
-            display: block;
-            height: 50px;
-        }
-
-        .store-badges {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Screenshots */
-        .screenshots {
-            padding: 60px 0;
-        }
-
-        .screenshots h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: #f5a623;
-        }
-
-        .screenshot-scroll {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 20px 0;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .screenshot-scroll::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .screenshot-scroll::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-        }
-
-        .screenshot-scroll::-webkit-scrollbar-thumb {
-            background: #f5a623;
-            border-radius: 4px;
-        }
-
-        .screenshot-item {
-            flex: 0 0 auto;
-            scroll-snap-align: center;
-            text-align: center;
-        }
-
-        .screenshot-item img {
-            width: 250px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .screenshot-item p {
-            margin-top: 15px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        /* Features */
-        .features {
-            padding: 60px 0;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: #f5a623;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.08);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .feature-card p {
-            color: #888;
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 60px;
-        }
-
-        footer p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        footer a {
-            color: #f5a623;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            margin: 0 15px;
-            color: #888;
-        }
-
-        /* Language Switcher */
-        .lang-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .lang-btn {
-            padding: 5px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #888;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            color: #f5a623;
-        }
-
-        .lang-btn.active {
-            background: rgba(245, 166, 35, 0.2);
-            color: #f5a623;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .screenshot-item img {
-                width: 200px;
-            }
-
-            .back-to-apps {
-                position: static;
-                transform: none;
-                display: block;
-                margin-bottom: 10px;
-            }
-        }
-
-        .app-store-badge img.badge-play {
-            height: 74px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container" style="position: relative;">
-            <a href="../index.html" class="back-to-apps">&larr; All Apps</a>
-            <div class="lang-switcher">
-                <a href="index.html" class="lang-btn active">EN</a>
-                <a href="index-tr.html" class="lang-btn">TR</a>
-            </div>
-            <div class="logo">Nerdy</div>
-        </div>
+    <link rel="preload" href="../assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-app="nerdy">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <a class="back" href="../index.html"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>All apps</a>
+        <nav class="lang" aria-label="Language"><a href="index.html" hreflang="en" lang="en" aria-current="page">EN</a><a href="index-tr.html" hreflang="tr" lang="tr">TR</a></nav>
+      </div>
     </header>
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Master Math with Fun</h1>
-                <p>Practice exponents, square roots, and algebraic expressions. Challenge yourself with flashcards or compete with friends in real-time multiplayer!</p>
-                <div class="store-badges">
-                    <a href="https://apps.apple.com/us/app/nerdy-math/id6450151568" class="app-store-badge" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/images/badges/app-store.svg" alt="Download on the App Store" width="150" height="50" />
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.oguzcc.nerdy" class="app-store-badge" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/images/badges/google-play.png" class="badge-play" alt="Get it on Google Play" width="191" height="74" />
-                    </a>
-                </div>
+    <main id="main">
+      <section class="app-hero">
+        <div class="wrap app-hero__grid">
+          <div>
+            <div class="app-id">
+              <img src="../assets/images/icons/nerdy.webp" alt="" width="64" height="64" />
+              <div>
+                <p class="app-id__name">Nerdy</p>
+                <p class="eyebrow app-id__kind">Math game</p>
+              </div>
             </div>
-        </section>
-
-        <section class="screenshots">
-            <div class="container">
-                <h2>App Preview</h2>
-                <div class="screenshot-scroll">
-                    <div class="screenshot-item">
-                        <img src="screenshots/home.png" alt="Home Screen">
-                        <p>Browse Topics</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="screenshots/snatch.png" alt="Snatch Mode">
-                        <p>Snatch Cards</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="screenshots/multiplayer.png" alt="Multiplayer">
-                        <p>Multiplayer</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="screenshots/leaderboard.png" alt="Leaderboard">
-                        <p>Leaderboard</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="screenshots/profile.png" alt="Profile">
-                        <p>Your Progress</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
-                <h2>Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">5<sup>2</sup></div>
-                        <h3>Multiple Topics</h3>
-                        <p>Practice exponents, square roots, algebraic expressions, and more. New topics added regularly!</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#127183;</div>
-                        <h3>Flashcard Learning</h3>
-                        <p>Learn at your own pace with interactive flashcards. Swipe through concepts and master them one by one.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128101;</div>
-                        <h3>Multiplayer Mode</h3>
-                        <p>Race against up to 8 friends in real-time! Create rooms and compete to see who solves fastest.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#127942;</div>
-                        <h3>Leaderboard</h3>
-                        <p>Climb the global leaderboard and earn points. Track your progress and compete for the top spot!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>Developed by <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" target="_blank" rel="noopener noreferrer">Oguz Can</a> &middot; <a href="https://github.com/oguzcc" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-            <p>&copy; 2026 Nerdy. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="delete-account.html">Delete Account</a>
-                <a href="mailto:oguzcc@icloud.com">Contact</a>
-            </div>
+            <h1>Master math with fun</h1>
+            <p class="app-hero__lede">Practice exponents, square roots and algebraic expressions. Challenge yourself with flashcards, or compete with friends in real-time multiplayer.</p>
+            <div class="store-badges"><a href="https://apps.apple.com/us/app/nerdy-math/id6450151568" target="_blank" rel="noopener noreferrer"><img src="../assets/images/badges/app-store.svg" alt="Download on the App Store" width="150" height="50" /></a><a href="https://play.google.com/store/apps/details?id=com.oguzcc.nerdy" target="_blank" rel="noopener noreferrer"><img src="../assets/images/badges/google-play.png" class="badge-play" alt="Get it on Google Play" width="191" height="74" /></a></div>
+          </div>
+          <div class="app-hero__visual" aria-hidden="true"><div class="device"><picture><source srcset="screenshots/home.webp" type="image/webp" /><img src="screenshots/home.png" alt="" width="640" height="1391" decoding="async" /></picture></div></div>
         </div>
+      </section>
+      <section class="section" aria-labelledby="shots-title">
+        <div class="wrap">
+          <div class="section__head"><h2 id="shots-title">A look inside</h2></div>
+        </div>
+        <div class="shots" role="region" tabindex="0" aria-label="Nerdy screenshots, scroll sideways">
+            <figure><picture><source srcset="screenshots/home.webp" type="image/webp" /><img src="screenshots/home.png" alt="Home Screen" width="640" height="1391" loading="lazy" decoding="async" /></picture><figcaption>Browse topics</figcaption></figure>
+            <figure><picture><source srcset="screenshots/snatch.webp" type="image/webp" /><img src="screenshots/snatch.png" alt="Snatch Mode" width="640" height="1391" loading="lazy" decoding="async" /></picture><figcaption>Snatch cards</figcaption></figure>
+            <figure><picture><source srcset="screenshots/multiplayer.webp" type="image/webp" /><img src="screenshots/multiplayer.png" alt="Multiplayer" width="640" height="1391" loading="lazy" decoding="async" /></picture><figcaption>Multiplayer</figcaption></figure>
+            <figure><picture><source srcset="screenshots/leaderboard.webp" type="image/webp" /><img src="screenshots/leaderboard.png" alt="Leaderboard" width="640" height="1391" loading="lazy" decoding="async" /></picture><figcaption>Leaderboard</figcaption></figure>
+            <figure><picture><source srcset="screenshots/profile.webp" type="image/webp" /><img src="screenshots/profile.png" alt="Profile" width="640" height="1391" loading="lazy" decoding="async" /></picture><figcaption>Your progress</figcaption></figure>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="features-title">
+        <div class="wrap">
+          <div class="section__head"><h2 id="features-title">What you can do</h2></div>
+          <ul class="features">
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3.28a1 1 0 0 1 .948.684l2.298 7.934a.5.5 0 0 0 .96-.044L13.82 4.771A1 1 0 0 1 14.792 4H21"/></svg></span><h3>Multiple topics</h3><p>Practice exponents, square roots, algebraic expressions and more. New topics are added regularly.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></span><h3>Flashcard learning</h3><p>Learn at your own pace with interactive flashcards. Swipe through concepts and master them one by one.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><h3>Multiplayer mode</h3><p>Race up to 8 friends in real time. Create a room and see who solves fastest.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2"/><path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2"/><path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></svg></span><h3>Leaderboard</h3><p>Earn points and climb the global leaderboard. Track your progress and compete for the top spot.</p></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <nav class="footer-nav" aria-label="Legal and contact">
+          <ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="delete-account.html">Delete Account</a></li><li><a href="mailto:oguzcc@icloud.com">Contact</a></li></ul>
+        </nav>
+        <div class="site-footer__meta">
+          <p>Developed by <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oguz Can</a> · <a href="https://github.com/oguzcc" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+          <p>© 2026 Nerdy. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

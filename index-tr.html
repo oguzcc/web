@@ -5,650 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oğuz Can - Uygulamalar</title>
     <link rel="canonical" href="https://oguzcc.github.io/web/index-tr.html" />
+    <link rel="alternate" hreflang="en" href="https://oguzcc.github.io/web/" />
+    <link rel="alternate" hreflang="tr" href="https://oguzcc.github.io/web/index-tr.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oguzcc.github.io/web/" />
     <link rel="icon" type="image/png" href="https://oguzcc.github.io/web/assets/images/favicons/site.png" />
     <meta name="author" content="Oguz Can" />
-    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1014" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Oguz Can — Apps" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:title" content="Oğuz Can - Uygulamalar" />
-    <meta property="og:description" content="Oğuz Can uygulamaları. Nerdy, Nerdy Lang, Letoria, Takva ve Ether dahil eğitim ve manevi mobil uygulamalar." />
+    <meta property="og:description" content="Bağımsız geliştirici Oğuz Can’ın uygulamaları: Letoria, Takva, Nerdy, Language Vocabulary Game, Voice Effect, Younique ve Ether — öğrenme, inanç, iyi yaşam ve oyun için." />
     <meta property="og:url" content="https://oguzcc.github.io/web/index-tr.html" />
     <meta property="og:image" content="https://oguzcc.github.io/web/assets/images/og/site.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
-      name="description"
-      content="Oğuz Can uygulamaları. Nerdy, Nerdy Lang, Letoria, Takva ve Ether dahil eğitim ve manevi mobil uygulamalar."
+    name="description"
+    content="Bağımsız geliştirici Oğuz Can’ın uygulamaları: Letoria, Takva, Nerdy, Language Vocabulary Game, Voice Effect, Younique ve Ether — öğrenme, inanç, iyi yaşam ve oyun için."
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-          sans-serif;
-        background: linear-gradient(
-          135deg,
-          #1a1a2e 0%,
-          #16213e 50%,
-          #0f3460 100%
-        );
-        color: #fff;
-        min-height: 100vh;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      header {
-        padding: 20px 0;
-        text-align: center;
-      }
-
-      .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #f5a623;
-      }
-
-      .hero {
-        padding: 80px 0 60px;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        background: linear-gradient(90deg, #f5a623, #f7c56e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .hero p {
-        font-size: 1.25rem;
-        color: #b0b0b0;
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.6;
-      }
-
-      .apps {
-        padding: 60px 0;
-      }
-
-      .app-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-      }
-
-      .app-card {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
-        padding: 40px 30px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition:
-          transform 0.3s ease,
-          background 0.3s ease;
-        text-align: center;
-        text-decoration: none;
-        display: block;
-      }
-
-      .app-card:hover {
-        transform: translateY(-8px);
-        background: rgba(255, 255, 255, 0.08);
-      }
-
-      .app-card img.app-logo {
-        width: 100px;
-        height: 100px;
-        border-radius: 22px;
-        margin-bottom: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      }
-
-      .app-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 8px;
-        color: #fff;
-      }
-
-      .app-card .tagline {
-        font-size: 1rem;
-        margin-bottom: 20px;
-        font-weight: 500;
-      }
-
-      .app-card .description {
-        color: #888;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        font-size: 0.95rem;
-      }
-
-      .app-card .features-list {
-        list-style: none;
-        text-align: left;
-        margin-bottom: 25px;
-        padding: 0;
-      }
-
-      .app-card .features-list li {
-        color: #b0b0b0;
-        margin-bottom: 8px;
-        padding-left: 20px;
-        position: relative;
-        font-size: 0.9rem;
-      }
-
-      .app-card .features-list li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 10px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-      }
-
-      .app-card .store-info {
-        font-size: 0.85rem;
-        padding: 8px 20px;
-        border-radius: 20px;
-        display: inline-block;
-      }
-
-      .app-card .learn-more {
-        display: inline-block;
-        padding: 10px 28px;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        text-decoration: none;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-      }
-
-      .app-card .learn-more:hover {
-        transform: translateY(-2px);
-      }
-
-      .app-card.nerdy {
-        border-color: rgba(245, 166, 35, 0.2);
-      }
-      .app-card.nerdy:hover {
-        border-color: rgba(245, 166, 35, 0.4);
-      }
-      .app-card.nerdy h3 {
-        color: #f5a623;
-      }
-      .app-card.nerdy .tagline {
-        color: #f7c56e;
-      }
-      .app-card.nerdy .features-list li::before {
-        background: #f5a623;
-      }
-      .app-card.nerdy .store-info {
-        background: rgba(245, 166, 35, 0.15);
-        color: #f7c56e;
-      }
-      .app-card.nerdy .learn-more {
-        background: linear-gradient(90deg, #f5a623, #f7c56e);
-        color: #1a1a2e;
-      }
-      .app-card.nerdy .learn-more:hover {
-        box-shadow: 0 8px 20px rgba(245, 166, 35, 0.3);
-      }
-
-      .app-card.nerdy-lang {
-        border-color: rgba(46, 196, 182, 0.2);
-      }
-      .app-card.nerdy-lang:hover {
-        border-color: rgba(46, 196, 182, 0.4);
-      }
-      .app-card.nerdy-lang h3 {
-        color: #2ec4b6;
-      }
-      .app-card.nerdy-lang .tagline {
-        color: #6ee4d8;
-      }
-      .app-card.nerdy-lang .features-list li::before {
-        background: #2ec4b6;
-      }
-      .app-card.nerdy-lang .store-info {
-        background: rgba(46, 196, 182, 0.15);
-        color: #6ee4d8;
-      }
-      .app-card.nerdy-lang .learn-more {
-        background: linear-gradient(90deg, #2ec4b6, #6ee4d8);
-        color: #1a1a2e;
-      }
-      .app-card.nerdy-lang .learn-more:hover {
-        box-shadow: 0 8px 20px rgba(46, 196, 182, 0.3);
-      }
-
-      .app-card.wordsmith {
-        border-color: rgba(74, 144, 226, 0.2);
-      }
-      .app-card.wordsmith:hover {
-        border-color: rgba(74, 144, 226, 0.4);
-      }
-      .app-card.wordsmith h3 {
-        color: #4a90e2;
-      }
-      .app-card.wordsmith .tagline {
-        color: #7fb3f0;
-      }
-      .app-card.wordsmith .features-list li::before {
-        background: #4a90e2;
-      }
-      .app-card.wordsmith .store-info {
-        background: rgba(74, 144, 226, 0.15);
-        color: #7fb3f0;
-      }
-      .app-card.wordsmith .learn-more {
-        background: linear-gradient(90deg, #4a90e2, #7fb3f0);
-        color: #1a1a2e;
-      }
-      .app-card.wordsmith .learn-more:hover {
-        box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
-      }
-
-      .app-card.meva {
-        border-color: rgba(78, 205, 196, 0.2);
-      }
-      .app-card.meva:hover {
-        border-color: rgba(78, 205, 196, 0.4);
-      }
-      .app-card.meva h3 {
-        color: #4ecdc4;
-      }
-      .app-card.meva .tagline {
-        color: #8ee8e0;
-      }
-      .app-card.meva .features-list li::before {
-        background: #4ecdc4;
-      }
-      .app-card.meva .store-info {
-        background: rgba(78, 205, 196, 0.15);
-        color: #8ee8e0;
-      }
-      .app-card.meva .learn-more {
-        background: linear-gradient(90deg, #4ecdc4, #8ee8e0);
-        color: #1a1a2e;
-      }
-      .app-card.meva .learn-more:hover {
-        box-shadow: 0 8px 20px rgba(78, 205, 196, 0.3);
-      }
-
-      .app-card.voicesound {
-        border-color: rgba(236, 72, 153, 0.2);
-      }
-      .app-card.voicesound:hover {
-        border-color: rgba(236, 72, 153, 0.4);
-      }
-      .app-card.voicesound h3 {
-        color: #ec4899;
-      }
-      .app-card.voicesound .tagline {
-        color: #f9a8d4;
-      }
-      .app-card.voicesound .features-list li::before {
-        background: #ec4899;
-      }
-      .app-card.voicesound .store-info {
-        background: rgba(236, 72, 153, 0.15);
-        color: #f9a8d4;
-      }
-      .app-card.voicesound .learn-more {
-        background: linear-gradient(90deg, #ec4899, #f9a8d4);
-        color: #1a1a2e;
-      }
-      .app-card.voicesound .learn-more:hover {
-        box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
-      }
-
-      .app-card.ether {
-        border-color: rgba(155, 89, 182, 0.2);
-      }
-      .app-card.ether:hover {
-        border-color: rgba(155, 89, 182, 0.4);
-      }
-      .app-card.ether h3 {
-        color: #9b59b6;
-      }
-      .app-card.ether .tagline {
-        color: #c39bd3;
-      }
-      .app-card.ether .features-list li::before {
-        background: #9b59b6;
-      }
-      .app-card.ether .store-info {
-        background: rgba(155, 89, 182, 0.15);
-        color: #c39bd3;
-      }
-      .app-card.ether .learn-more {
-        background: linear-gradient(90deg, #9b59b6, #c39bd3);
-        color: #1a1a2e;
-      }
-      .app-card.ether .learn-more:hover {
-        box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3);
-      }
-
-      /* Younique - Green */
-      .app-card.younique {
-        border-color: rgba(46, 201, 107, 0.2);
-      }
-      .app-card.younique:hover {
-        border-color: rgba(46, 201, 107, 0.4);
-      }
-      .app-card.younique h3 {
-        color: #2ec96b;
-      }
-      .app-card.younique .tagline {
-        color: #ff9472;
-      }
-      .app-card.younique .features-list li::before {
-        background: #2ec96b;
-      }
-      .app-card.younique .store-info {
-        background: rgba(46, 201, 107, 0.15);
-        color: #7ee0a8;
-      }
-      .app-card.younique .learn-more {
-        background: linear-gradient(90deg, #2ec96b, #ff9472);
-        color: #1a1a2e;
-      }
-      .app-card.younique .learn-more:hover {
-        box-shadow: 0 8px 20px rgba(46, 201, 107, 0.3);
-      }
-
-      footer {
-        padding: 40px 0;
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 60px;
-      }
-
-      footer p {
-        color: #666;
-        margin-bottom: 15px;
-      }
-
-      footer a {
-        color: #f5a623;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      .lang-switcher {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-      }
-
-      .lang-btn {
-        padding: 5px 12px;
-        border-radius: 4px;
-        text-decoration: none;
-        color: #888;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-      }
-
-      .lang-btn:hover {
-        color: #f5a623;
-      }
-
-      .lang-btn.active {
-        background: rgba(245, 166, 35, 0.2);
-        color: #f5a623;
-      }
-
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2rem;
-        }
-
-        .hero p {
-          font-size: 1rem;
-        }
-
-        .app-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <link rel="preload" href="assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
   <body>
-    <header>
-      <div class="container" style="position: relative">
-        <div class="lang-switcher">
-          <a href="index.html" class="lang-btn">EN</a>
-          <a href="index-tr.html" class="lang-btn active">TR</a>
-        </div>
-        <div class="logo">Oğuz Can</div>
+    <a class="skip-link" href="#main">İçeriğe geç</a>
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <span class="brand"><span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>Oğuz Can</span>
+        <nav class="lang" aria-label="Dil"><a href="index.html" hreflang="en" lang="en">EN</a><a href="index-tr.html" hreflang="tr" lang="tr" aria-current="page">TR</a></nav>
       </div>
     </header>
-
-    <main>
-      <section class="hero">
-        <div class="container">
-          <h1>Oğuz Can Uygulamaları</h1>
-          <p>
-            Öğrenmeye, gelişime ve anlamlı bağlantılar kurmaya ilham veren
-            eğitim ve manevi deneyimler oluşturuyoruz.
-          </p>
+    <main id="main">
+      <section class="wrap intro">
+        <div>
+          <p class="eyebrow intro__eyebrow">Bağımsız uygulama geliştirici</p>
+          <h1>Özenle yapılmış, odaklı uygulamalar.</h1>
+          <p class="intro__lede">Ben Oğuz Can, bağımsız bir geliştiriciyim. Öğrenme, inanç, iyi yaşam ve oyun için mobil uygulamalar tasarlıyor ve geliştiriyorum.</p>
+          <ul class="tally"><li>iOS ve Android&rsquo;de 5 uygulama</li><li>2 uygulama yolda</li></ul>
+        </div>
+        <div class="phone">
+          <nav class="springboard" aria-label="Oğuz Can&rsquo;ın uygulamaları">
+            <div class="springboard__status" aria-hidden="true"><span>9:41</span><span><i style="height:5px"></i><i style="height:7px"></i><i style="height:9px"></i><i style="height:11px"></i><b></b></span></div>
+            <ul class="springboard__grid">
+            <li class="sb-app" style="--i: 0"><a href="younique/"><img src="assets/images/icons/younique.webp" alt="" width="72" height="72" /><span class="sb-app__name"><span class="sb-dot" aria-hidden="true"></span>Younique</span><span class="sr-only">, yakında</span></a></li>
+            <li class="sb-app" style="--i: 1"><a href="wordsmith/"><img src="assets/images/icons/wordsmith.webp" alt="" width="72" height="72" /><span class="sb-app__name">Letoria</span></a></li>
+            <li class="sb-app" style="--i: 2"><a href="meva/"><img src="assets/images/icons/meva.webp" alt="" width="72" height="72" /><span class="sb-app__name">Takva</span></a></li>
+            <li class="sb-app" style="--i: 3"><a href="nerdy/"><img src="assets/images/icons/nerdy.webp" alt="" width="72" height="72" /><span class="sb-app__name">Nerdy</span></a></li>
+            <li class="sb-app" style="--i: 4"><a href="nerdy-lang/"><img src="assets/images/icons/nerdy-lang.webp" alt="" width="72" height="72" /><span class="sb-app__name">Vocabulary</span></a></li>
+            <li class="sb-app" style="--i: 5"><a href="voicesound/"><img src="assets/images/icons/voicesound.webp" alt="" width="72" height="72" /><span class="sb-app__name">Voice Effect</span></a></li>
+            <li class="sb-app" style="--i: 6"><a href="ether/"><img src="assets/images/icons/ether.webp" alt="" width="72" height="72" /><span class="sb-app__name"><span class="sb-dot" aria-hidden="true"></span>Ether</span><span class="sr-only">, yakında</span></a></li>
+            </ul>
+            <div class="springboard__dock" aria-hidden="true"><span></span></div>
+          </nav>
+          <p class="phone__legend" aria-hidden="true"><span class="sb-dot"></span>Yakında</p>
         </div>
       </section>
-
-      <section class="apps">
-        <div class="container">
-          <div class="app-grid">
-            <div class="app-card younique">
-              <img
-                src="assets/images/younique-logo.png"
-                alt="Younique: Life Coach"
-                class="app-logo"
-              />
-              <h3>Younique: Life Coach</h3>
-              <p class="tagline">Tam Bir Yaşam Koçu</p>
-              <p class="description">
-                Spor, beslenme ve kalori takibi ile kötü alışkanlıkları bırakma
-                için tam bir yaşam koçluğu uygulaması &mdash; kendinin en iyi
-                versiyonu olman için.
-              </p>
-              <ul class="features-list">
-                <li>Kişiselleştirilmiş antrenman planları</li>
-                <li>Beslenme ve kalori takibi</li>
-                <li>Seri takibiyle kötü alışkanlıkları bırakma</li>
-                <li>Hedef belirleme, koçluk ipuçları ve ilerleme içgörüleri</li>
-              </ul>
-              <div style="margin-bottom: 15px">
-                <span class="store-info">Yakında</span>
-              </div>
-              <a href="younique/" class="learn-more">Daha Fazla</a>
-            </div>
-
-            <div class="app-card wordsmith">
-              <img
-                src="assets/images/wordsmith-logo.jpg"
-                alt="Letoria"
-                class="app-logo"
-              />
-              <h3>Letoria</h3>
-              <p class="tagline">Sürükle. Hecele. Kap.</p>
-              <p class="description">
-                4&times;4 ızgarada komşu harfleri sürükleyerek kelimeler
-                oluştur. Tek başına oyna ya da rakiplerinden kelimeleri gerçek
-                zamanlı kap.
-              </p>
-              <ul class="features-list">
-                <li>4&times;4 sürükle-hecele kelime tahtası</li>
-                <li>Kapma modu: kelimeleri genişleterek kap</li>
-                <li>Tek oyunculu ve gerçek zamanlı çok oyunculu</li>
-                <li>Liderlik tabloları ve ilerleme takibi</li>
-              </ul>
-              <div style="margin-bottom: 15px">
-                <span class="store-info"
-                  >App Store ve Google Play'de Mevcut</span
-                >
-              </div>
-              <a href="wordsmith/" class="learn-more">Daha Fazla</a>
-            </div>
-
-            <div class="app-card meva">
-              <img
-                src="assets/images/meva-logo.png"
-                alt="Takva"
-                class="app-logo"
-              />
-              <h3>Takva</h3>
-              <p class="tagline">Ruhunun Sığınağı</p>
-              <p class="description">
-                Meditasyon, namaz takibi, Kuran okuma ve anlamlı alışkanlıklar
-                oluşturma için manevi yol arkadaşınız.
-              </p>
-              <ul class="features-list">
-                <li>Meditasyon ve zikir sayacı</li>
-                <li>Namaz takibi ve kıble pusulası</li>
-                <li>Kuran okuma ve dua koleksiyonları</li>
-                <li>Topluluk, hikayeler ve 21 günlük yolculuklar</li>
-              </ul>
-              <div style="margin-bottom: 15px">
-                <span class="store-info"
-                  >App Store ve Google Play'de Mevcut</span
-                >
-              </div>
-              <a href="meva/" class="learn-more">Daha Fazla</a>
-            </div>
-
-            <div class="app-card nerdy">
-              <img
-                src="assets/images/nerdy-logo.png"
-                alt="Nerdy"
-                class="app-logo"
-              />
-              <h3>Nerdy</h3>
-              <p class="tagline">Eğlenerek Matematik Öğren</p>
-              <p class="description">
-                Üslü sayılar, karekök ve cebirsel ifadeler çalışın. Bilgi
-                kartlarıyla kendinizi geliştirin veya arkadaşlarınızla yarışın!
-              </p>
-              <ul class="features-list">
-                <li>Birden fazla matematik konusu ve oyun modu</li>
-                <li>İnteraktif bilgi kartlarıyla öğrenme</li>
-                <li>8 kişilik gerçek zamanlı çok oyunculu mod</li>
-                <li>Global liderlik tablosu ve başarılar</li>
-              </ul>
-              <div style="margin-bottom: 15px">
-                <span class="store-info"
-                  >App Store ve Google Play'de Mevcut</span
-                >
-              </div>
-              <a href="nerdy/" class="learn-more">Daha Fazla</a>
-            </div>
-
-            <div class="app-card nerdy-lang">
-              <img
-                src="assets/images/nerdy-lang-logo.png"
-                alt="Nerdy Lang"
-                class="app-logo"
-              />
-              <h3>Nerdy Lang</h3>
-              <p class="tagline">Eğlenerek İngilizce Öğren</p>
-              <p class="description">
-                İnteraktif bilgi kartları, video dersler ve gerçek zamanlı çok
-                oyunculu yarışlarla İngilizce kelime haznenizi geliştirin.
-              </p>
-              <ul class="features-list">
-                <li>300+ kelime kartı</li>
-                <li>İlgi çekici video dersler</li>
-                <li>Çok oyunculu yarış modu</li>
-                <li>Puanlar, yıldızlar, seviyeler ve liderlik tablosu</li>
-              </ul>
-              <div style="margin-bottom: 15px">
-                <span class="store-info"
-                  >App Store ve Google Play'de Mevcut</span
-                >
-              </div>
-              <a href="nerdy-lang/" class="learn-more">Daha Fazla</a>
-            </div>
-
-            <div class="app-card voicesound">
-              <img
-                src="assets/images/voicesound-logo.png"
-                alt="Voice Effect"
-                class="app-logo"
-              />
-              <h3>Voice Effect</h3>
-              <p class="tagline">Gerçek Zamanlı Ses Değiştirici &amp; Meme Ses Panosu</p>
-              <p class="description">
-                Sesini 15 çılgın efektle dönüştür ve 300+ meme sesine tek
-                dokunuşla ulaş. İçerik üreticileri, şakacılar ve oyuncular
-                için.
-              </p>
-              <ul class="features-list">
-                <li>15 gerçek zamanlı ses efekti (Robot, Uzaylı, Hayalet ve daha fazlası)</li>
-                <li>9 kategoride 300+ meme sesi</li>
-                <li>Efektli klipler kaydet ve paylaş</li>
-                <li>Cihaz üzerinde işleme &mdash; önce gizlilik</li>
-              </ul>
-              <div style="margin-bottom: 15px">
-                <span class="store-info"
-                  >App Store ve Google Play'de Mevcut</span
-                >
-              </div>
-              <a href="voicesound/" class="learn-more">Daha Fazla</a>
-            </div>
-
-            <div class="app-card ether">
-              <img
-                src="assets/images/ether-logo.png"
-                alt="Ether"
-                class="app-logo"
-              />
-              <h3>Ether</h3>
-              <p class="tagline">İç Işığını Uyandır</p>
-              <p class="description">
-                Meditasyon, farkındalık uygulamaları, manevi okumalar ve anlamlı
-                alışkanlıklar oluşturma için yol arkadaşınız.
-              </p>
-              <ul class="features-list">
-                <li>Rehberli meditasyon ve farkındalık egzersizleri</li>
-                <li>Günlük manevi pratikler takibi</li>
-                <li>Bilgelik okumaları ve olumlamalar</li>
-                <li>Topluluk hikayeleri ve ilham</li>
-              </ul>
-              <div style="margin-bottom: 15px">
-                <span class="store-info">Yakında</span>
-              </div>
-              <a href="ether/" class="learn-more">Daha Fazla</a>
-            </div>
+      <section class="section" aria-labelledby="apps-title">
+        <div class="wrap">
+          <div class="section__head">
+            <h2 id="apps-title">Tüm uygulamalar</h2>
+            <p>Ekran görüntüleri, özellikler ve indirme bağlantıları için bir uygulama seç.</p>
           </div>
+          <ul class="app-list">
+          <li class="app-card" data-app="younique">
+            <img class="app-card__icon" src="assets/images/icons/younique.webp" alt="" width="76" height="76" loading="lazy" />
+            <p class="eyebrow app-card__kind">Yaşam koçluğu</p>
+            <h3><a href="younique/">Younique: Life Coach</a></h3>
+            <p class="app-card__tagline">Tam bir yaşam koçu</p>
+            <p class="app-card__desc">Spor, beslenme ve kalori takibi ile kötü alışkanlıkları bırakmak için tek bir koçluk uygulaması &mdash; kendinin en iyi versiyonu olman için.</p>
+            <ul class="chips"><li>Antrenman planları</li><li>Kalori takibi</li><li>Alışkanlık serileri</li></ul>
+            <div class="app-card__side"><span class="app-card__status pill">Yakında</span><span class="app-card__go" aria-hidden="true">İncele<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div>
+          </li>
+          <li class="app-card" data-app="wordsmith">
+            <img class="app-card__icon" src="assets/images/icons/wordsmith.webp" alt="" width="76" height="76" loading="lazy" />
+            <p class="eyebrow app-card__kind">Kelime oyunu</p>
+            <h3><a href="wordsmith/">Letoria</a></h3>
+            <p class="app-card__tagline">Sürükle. Hecele. Kap.</p>
+            <p class="app-card__desc">4&times;4 ızgarada komşu harfleri sürükleyerek kelimeler oluştur. Tek başına oyna ya da rakiplerinin kelimelerini gerçek zamanlı kap.</p>
+            <ul class="chips"><li>4&times;4 kelime tahtası</li><li>Kapma modu</li><li>Gerçek zamanlı çok oyunculu</li></ul>
+            <div class="app-card__side"><span class="app-card__status">iOS ve Android</span><span class="app-card__go" aria-hidden="true">İncele<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div>
+          </li>
+          <li class="app-card" data-app="meva">
+            <img class="app-card__icon" src="assets/images/icons/meva.webp" alt="" width="76" height="76" loading="lazy" />
+            <p class="eyebrow app-card__kind">İbadet ve tefekkür</p>
+            <h3><a href="meva/">Takva</a></h3>
+            <p class="app-card__tagline">Ruhunun sığınağı</p>
+            <p class="app-card__desc">Namaz takibi, Kuran okuma, zikir ve meditasyon ile anlamlı alışkanlıklar için manevi yol arkadaşınız.</p>
+            <ul class="chips"><li>Namaz vakitleri ve kıble</li><li>Kuran ve dualar</li><li>Zikir sayacı</li></ul>
+            <div class="app-card__side"><span class="app-card__status">iOS ve Android</span><span class="app-card__go" aria-hidden="true">İncele<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div>
+          </li>
+          <li class="app-card" data-app="nerdy">
+            <img class="app-card__icon" src="assets/images/icons/nerdy.webp" alt="" width="76" height="76" loading="lazy" />
+            <p class="eyebrow app-card__kind">Matematik oyunu</p>
+            <h3><a href="nerdy/">Nerdy</a></h3>
+            <p class="app-card__tagline">Eğlenerek matematik öğren</p>
+            <p class="app-card__desc">Üslü sayılar, karekök ve cebirsel ifadeleri bilgi kartlarıyla çalışın ya da 8 arkadaşınızla gerçek zamanlı yarışın.</p>
+            <ul class="chips"><li>Bilgi kartları</li><li>8 kişilik çok oyunculu</li><li>Global liderlik tablosu</li></ul>
+            <div class="app-card__side"><span class="app-card__status">iOS ve Android</span><span class="app-card__go" aria-hidden="true">İncele<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div>
+          </li>
+          <li class="app-card" data-app="nerdy-lang">
+            <img class="app-card__icon" src="assets/images/icons/nerdy-lang.webp" alt="" width="76" height="76" loading="lazy" />
+            <p class="eyebrow app-card__kind">İngilizce kelime</p>
+            <h3><a href="nerdy-lang/">Language Vocabulary Game</a></h3>
+            <p class="app-card__tagline">Eğlenerek İngilizce öğren</p>
+            <p class="app-card__desc">İnteraktif bilgi kartları, video dersler ve gerçek zamanlı çok oyunculu yarışlarla İngilizce kelime hazinenizi geliştirin.</p>
+            <ul class="chips"><li>300+ kelime kartı</li><li>Video dersler</li><li>Çok oyunculu yarış</li></ul>
+            <div class="app-card__side"><span class="app-card__status">iOS ve Android</span><span class="app-card__go" aria-hidden="true">İncele<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div>
+          </li>
+          <li class="app-card" data-app="voicesound">
+            <img class="app-card__icon" src="assets/images/icons/voicesound.webp" alt="" width="76" height="76" loading="lazy" />
+            <p class="eyebrow app-card__kind">Ses değiştirici</p>
+            <h3><a href="voicesound/">Voice Effect</a></h3>
+            <p class="app-card__tagline">Gerçek zamanlı ses değiştirici ve meme ses panosu</p>
+            <p class="app-card__desc">Sesini 15 çılgın efektle dönüştür, 300+ meme sesine tek dokunuşla ulaş. Biraz kaostan hoşlanan içerik üreticileri, şakacılar ve oyuncular için.</p>
+            <ul class="chips"><li>15 ses efekti</li><li>300+ meme sesi</li><li>Cihaz üzerinde işleme</li></ul>
+            <div class="app-card__side"><span class="app-card__status">iOS ve Android</span><span class="app-card__go" aria-hidden="true">İncele<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div>
+          </li>
+          <li class="app-card" data-app="ether">
+            <img class="app-card__icon" src="assets/images/icons/ether.webp" alt="" width="76" height="76" loading="lazy" />
+            <p class="eyebrow app-card__kind">Meditasyon</p>
+            <h3><a href="ether/">Ether</a></h3>
+            <p class="app-card__tagline">İç ışığını uyandır</p>
+            <p class="app-card__desc">Meditasyon, farkındalık pratikleri, manevi okumalar ve anlamlı alışkanlıklar için yol arkadaşınız.</p>
+            <ul class="chips"><li>Rehberli meditasyon</li><li>Şükür günlüğü</li><li>21 günlük yolculuklar</li></ul>
+            <div class="app-card__side"><span class="app-card__status pill">Yakında</span><span class="app-card__go" aria-hidden="true">İncele<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div>
+          </li>
+          </ul>
         </div>
       </section>
     </main>
-
-    <footer>
-      <div class="container">
-        <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" target="_blank" rel="noopener noreferrer">Oğuz Can</a> &middot; <a href="https://github.com/oguzcc" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-        <p>&copy; 2026 Oğuz Can. Tüm hakları saklıdır.</p>
-        <p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
-      </div>
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+          <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oğuz Can</a> · <a href="https://github.com/oguzcc" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+          <p>© 2026 Oğuz Can. Tüm hakları saklıdır.</p>
+          <p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
+        </div>
     </footer>
   </body>
 </html>

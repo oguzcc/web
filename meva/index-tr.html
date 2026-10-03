@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takva - Ruhunun Sığınağı</title>
     <link rel="canonical" href="https://oguzcc.github.io/web/meva/index-tr.html" />
+    <link rel="alternate" hreflang="en" href="https://oguzcc.github.io/web/meva/" />
+    <link rel="alternate" hreflang="tr" href="https://oguzcc.github.io/web/meva/index-tr.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oguzcc.github.io/web/meva/" />
     <link rel="icon" type="image/png" href="https://oguzcc.github.io/web/assets/images/favicons/meva.png" />
     <meta name="author" content="Oguz Can" />
-    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1014" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Oguz Can — Apps" />
     <meta property="og:locale" content="tr_TR" />
@@ -17,386 +22,72 @@
     <meta property="og:image" content="https://oguzcc.github.io/web/assets/images/og/meva.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="description" content="Takva, meditasyon, namaz takibi, Kuran okuma ve anlamlı alışkanlıklar oluşturma için manevi yol arkadaşınız. Gelişimi ilham veren bir toplulukla bağlanın.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #4ecdc4;
-        }
-
-        .back-to-apps {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #4ecdc4;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .back-to-apps:hover {
-            text-decoration: underline;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #4ecdc4, #8ee8e0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: #b0b0b0;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-
-        .store-badges {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .app-store-badge {
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-
-        .app-store-badge:hover {
-            transform: scale(1.05);
-        }
-
-        .app-store-badge img {
-            display: block;
-            height: 50px;
-        }
-
-        /* Screenshots */
-        .screenshots {
-            padding: 60px 0;
-        }
-
-        .screenshots h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: #4ecdc4;
-        }
-
-        .screenshot-scroll {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 20px 0;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .screenshot-scroll::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .screenshot-scroll::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-        }
-
-        .screenshot-scroll::-webkit-scrollbar-thumb {
-            background: #4ecdc4;
-            border-radius: 4px;
-        }
-
-        .screenshot-item {
-            flex: 0 0 auto;
-            scroll-snap-align: center;
-            text-align: center;
-        }
-
-        .screenshot-item img {
-            width: 250px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .screenshot-item p {
-            margin-top: 15px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        /* Features */
-        .features {
-            padding: 60px 0;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: #4ecdc4;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.08);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .feature-card p {
-            color: #888;
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 60px;
-        }
-
-        footer p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        footer a {
-            color: #4ecdc4;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            margin: 0 15px;
-            color: #888;
-        }
-
-        /* Language Switcher */
-        .lang-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .lang-btn {
-            padding: 5px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #888;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            color: #4ecdc4;
-        }
-
-        .lang-btn.active {
-            background: rgba(78, 205, 196, 0.2);
-            color: #4ecdc4;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .back-to-apps {
-                position: static;
-                transform: none;
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            .screenshot-item img {
-                width: 200px;
-            }
-        }
-
-        .app-store-badge img.badge-play {
-            height: 74px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container" style="position: relative;">
-            <a href="../index-tr.html" class="back-to-apps">&larr; Tüm Uygulamalar</a>
-            <div class="lang-switcher">
-                <a href="index.html" class="lang-btn">EN</a>
-                <a href="index-tr.html" class="lang-btn active">TR</a>
-            </div>
-            <div class="logo">Takva</div>
-        </div>
+    <link rel="preload" href="../assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-app="meva">
+    <a class="skip-link" href="#main">İçeriğe geç</a>
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <a class="back" href="../index-tr.html"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Tüm uygulamalar</a>
+        <nav class="lang" aria-label="Dil"><a href="index.html" hreflang="en" lang="en">EN</a><a href="index-tr.html" hreflang="tr" lang="tr" aria-current="page">TR</a></nav>
+      </div>
     </header>
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Ruhunun Sığınağı</h1>
-                <p>Meditasyon, namaz takibi, Kuran okuma ve anlamlı alışkanlıklar oluşturma için manevi yol arkadaşınız. Gelişimi ilham veren bir toplulukla bağlanın.</p>
-                <div class="store-badges">
-                    <a href="https://apps.apple.com/us/app/taqwa-islamic-app/id6740774651" class="app-store-badge" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/images/badges/app-store.svg" alt="Download on the App Store" width="150" height="50" />
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=app.ai.taqwa" class="app-store-badge" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/images/badges/google-play.png" class="badge-play" alt="Get it on Google Play" width="191" height="74" />
-                    </a>
-                </div>
+    <main id="main">
+      <section class="app-hero">
+        <div class="wrap app-hero__grid">
+          <div>
+            <div class="app-id">
+              <img src="../assets/images/icons/meva.webp" alt="" width="64" height="64" />
+              <div>
+                <p class="app-id__name">Takva</p>
+                <p class="eyebrow app-id__kind">İbadet ve tefekkür</p>
+              </div>
             </div>
-        </section>
-
-        <section class="screenshots">
-            <div class="container">
-                <h2>Uygulama Önizlemesi</h2>
-                <div class="screenshot-scroll">
-                    <div class="screenshot-item">
-                        <img src="screenshots/tr/1.png" alt="Günlük Rehber">
-                        <p>Günlük Rehberiniz</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="screenshots/tr/2.png" alt="Tutarlı Kal">
-                        <p>Tutarlı Kalın</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="screenshots/tr/3.png" alt="Topluluk">
-                        <p>Paylaşın &amp; Bağlanın</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="screenshots/tr/4.png" alt="Namaz Vakitleri">
-                        <p>Namaz &amp; Kıble</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="screenshots/tr/5.png" alt="Dualar">
-                        <p>Dualar</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
-                <h2>Özellikler</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128591;</div>
-                        <h3>Meditasyon ve Zikir</h3>
-                        <p>Rehberli meditasyon seansları ve birden fazla modlu zikir sayacı. Huzur ve farkındalık bulun.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128336;</div>
-                        <h3>Namaz Takibi</h3>
-                        <p>Günlük namazlarınızı ve manevi alışkanlıklarınızı takip edin. Hatırlatıcılar ve ilerleme bilgileriyle tutarlı kalın.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128214;</div>
-                        <h3>Kuran ve Dua</h3>
-                        <p>Kuran okuyun, tilavet dinleyin ve her durum için seçilmiş dua koleksiyonlarını keşfedin.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#129517;</div>
-                        <h3>Kıble Pusulası</h3>
-                        <p>Dünyanın her yerinde kıble yönünü bulun. Doğruyu, hızlı ve kolay kullanımlı.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128101;</div>
-                        <h3>Topluluk</h3>
-                        <p>Hikayeler paylaşın, arkadaşlarla bağlanın ve manevi yolculuğunuzda birbirinize ilham verin.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#127793;</div>
-                        <h3>21 Günlük Yolculuklar</h3>
-                        <p>Rehberli 21 günlük programlarla kalıcı manevi alışkanlıklar oluşturun. Zincirinizi takip edin ve motive kalın.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" target="_blank" rel="noopener noreferrer">Oğuz Can</a> &middot; <a href="https://github.com/oguzcc" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-            <p>&copy; 2026 Takva. Tüm hakları saklıdır.</p>
-            <div class="footer-links">
-                <a href="privacy-tr.html">Gizlilik Politikası</a>
-                <a href="terms-tr.html">Kullanım Koşulları</a>
-                <a href="delete-account-tr.html">Hesap Silme</a>
-                <a href="mailto:oguzcc@icloud.com">İletişim</a>
-            </div>
+            <h1>Ruhunun sığınağı</h1>
+            <p class="app-hero__lede">Meditasyon, namaz takibi, Kuran okuma ve anlamlı alışkanlıklar edinmek için manevi yol arkadaşınız &mdash; gelişiminize ilham veren bir toplulukla birlikte.</p>
+            <div class="store-badges"><a href="https://apps.apple.com/us/app/taqwa-islamic-app/id6740774651" target="_blank" rel="noopener noreferrer"><img src="../assets/images/badges/app-store.svg" alt="Download on the App Store" width="150" height="50" /></a><a href="https://play.google.com/store/apps/details?id=app.ai.taqwa" target="_blank" rel="noopener noreferrer"><img src="../assets/images/badges/google-play.png" class="badge-play" alt="Get it on Google Play" width="191" height="74" /></a></div>
+          </div>
+          <div class="app-hero__visual" aria-hidden="true"><div class="poster"><picture><source srcset="screenshots/tr/1.webp" type="image/webp" /><img src="screenshots/tr/1.png" alt="" width="640" height="1390" decoding="async" /></picture></div></div>
         </div>
+      </section>
+      <section class="section" aria-labelledby="shots-title">
+        <div class="wrap">
+          <div class="section__head"><h2 id="shots-title">Uygulamadan kareler</h2></div>
+        </div>
+        <div class="shots" role="region" tabindex="0" aria-label="Takva ekran görüntüleri, yana kaydırın">
+            <figure><picture><source srcset="screenshots/tr/1.webp" type="image/webp" /><img src="screenshots/tr/1.png" alt="Günlük Rehber" width="640" height="1390" loading="lazy" decoding="async" /></picture><figcaption>Günlük rehberiniz</figcaption></figure>
+            <figure><picture><source srcset="screenshots/tr/2.webp" type="image/webp" /><img src="screenshots/tr/2.png" alt="Tutarlı Kal" width="640" height="1390" loading="lazy" decoding="async" /></picture><figcaption>İstikrarlı kalın</figcaption></figure>
+            <figure><picture><source srcset="screenshots/tr/3.webp" type="image/webp" /><img src="screenshots/tr/3.png" alt="Topluluk" width="640" height="1390" loading="lazy" decoding="async" /></picture><figcaption>Paylaşın ve bağlanın</figcaption></figure>
+            <figure><picture><source srcset="screenshots/tr/4.webp" type="image/webp" /><img src="screenshots/tr/4.png" alt="Namaz Vakitleri" width="640" height="1390" loading="lazy" decoding="async" /></picture><figcaption>Namaz ve kıble</figcaption></figure>
+            <figure><picture><source srcset="screenshots/tr/5.webp" type="image/webp" /><img src="screenshots/tr/5.png" alt="Dualar" width="640" height="1390" loading="lazy" decoding="async" /></picture><figcaption>Dualar</figcaption></figure>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="features-title">
+        <div class="wrap">
+          <div class="section__head"><h2 id="features-title">Neler yapabilirsiniz</h2></div>
+          <ul class="features">
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95"/><path d="m2 15 6 6"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91"/></svg></span><h3>Meditasyon ve zikir</h3><p>Rehberli meditasyon seansları ve birden fazla modu olan zikir sayacı. Huzur ve farkındalık bulun.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><h3>Namaz takibi</h3><p>Günlük namazlarınızı ve manevi alışkanlıklarınızı takip edin. Hatırlatıcılar ve ilerleme bilgileriyle istikrarlı kalın.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16"/><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"/></svg></span><h3>Kuran ve dua</h3><p>Kuran okuyun, tilavet dinleyin ve her durum için seçilmiş dua koleksiyonlarını keşfedin.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span><h3>Kıble pusulası</h3><p>Dünyanın her yerinde kıble yönünü bulun. Doğru, hızlı ve kullanımı kolay.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><h3>Topluluk</h3><p>Hikâyeler paylaşın, arkadaşlarınızla bağlanın ve manevi yolculuğunuzda birbirinize ilham verin.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></svg></span><h3>21 günlük yolculuklar</h3><p>Rehberli 21 günlük programlarla kalıcı manevi alışkanlıklar edinin. Zincirinizi koruyun, motive kalın.</p></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <nav class="footer-nav" aria-label="Yasal bilgiler ve iletişim">
+          <ul><li><a href="privacy-tr.html">Gizlilik Politikası</a></li><li><a href="terms-tr.html">Kullanım Koşulları</a></li><li><a href="delete-account-tr.html">Hesap Silme</a></li><li><a href="mailto:oguzcc@icloud.com">İletişim</a></li></ul>
+        </nav>
+        <div class="site-footer__meta">
+          <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oğuz Can</a> · <a href="https://github.com/oguzcc" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+          <p>© 2026 Takva. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

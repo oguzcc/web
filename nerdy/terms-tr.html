@@ -1,14 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kullanım Koşulları - Nerdy</title>
     <meta name="description" content="Nerdy mobil uygulamasının kullanım koşulları. Geliştirici: Oğuz Can." />
     <link rel="canonical" href="https://oguzcc.github.io/web/nerdy/terms-tr.html" />
+    <link rel="alternate" hreflang="en" href="https://oguzcc.github.io/web/nerdy/terms.html" />
+    <link rel="alternate" hreflang="tr" href="https://oguzcc.github.io/web/nerdy/terms-tr.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oguzcc.github.io/web/nerdy/terms.html" />
     <link rel="icon" type="image/png" href="https://oguzcc.github.io/web/assets/images/favicons/nerdy.png" />
     <meta name="author" content="Oguz Can" />
-    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1014" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Oguz Can — Apps" />
     <meta property="og:locale" content="tr_TR" />
@@ -17,314 +22,151 @@
     <meta property="og:url" content="https://oguzcc.github.io/web/nerdy/terms-tr.html" />
     <meta property="og:image" content="https://oguzcc.github.io/web/assets/images/og/nerdy.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-            line-height: 1.8;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-        }
-
-        .lang-switcher {
-            position: absolute;
-            top: 40px;
-            right: 20px;
-        }
-
-        .lang-btn {
-            padding: 5px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #888;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            color: #f5a623;
-        }
-
-        .lang-btn.active {
-            background: rgba(245, 166, 35, 0.2);
-            color: #f5a623;
-        }
-
-        header {
-            margin-bottom: 40px;
-        }
-
-        .back-link {
-            color: #f5a623;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin: 20px 0;
-            background: linear-gradient(90deg, #f5a623, #f7c56e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .last-updated {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            color: #f5a623;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            color: #f7c56e;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #b0b0b0;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            color: #b0b0b0;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #f5a623;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-        }
-
-        footer p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            margin: 0 15px;
-            color: #888;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-            color: #f5a623;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .lang-switcher {
-                top: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="lang-switcher">
-            <a href="terms.html" class="lang-btn">EN</a>
-            <a href="terms-tr.html" class="lang-btn active">TR</a>
-        </div>
-
-        <header>
-            <a href="../index-tr.html" class="back-link">&larr; Tüm Uygulamalar</a>
-            <br>
-            <a href="index-tr.html" class="back-link">&larr; Ana Sayfaya Dön</a>
-            <h1>Kullanım Koşulları</h1>
-            <p class="last-updated">Son Güncelleme: Aralık 2024</p>
+    <link rel="preload" href="../assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-app="nerdy">
+    <a class="skip-link" href="#main">İçeriğe geç</a>
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <a class="back" href="../index-tr.html"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Tüm uygulamalar</a>
+        <nav class="lang" aria-label="Dil"><a href="terms.html" hreflang="en" lang="en">EN</a><a href="terms-tr.html" hreflang="tr" lang="tr" aria-current="page">TR</a></nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="wrap wrap--narrow">
+        <header class="doc-head">
+          <nav class="crumb" aria-label="Breadcrumb">
+            <a href="index-tr.html"><img src="../assets/images/icons/nerdy.webp" alt="" width="32" height="32" /><span>Nerdy</span></a>
+            <span class="crumb__sep" aria-hidden="true">/</span>
+            <span aria-current="page">Kullanım Koşulları</span>
+          </nav>
+          <h1>Kullanım Koşulları</h1>
+          <p class="doc-meta">Son Güncelleme: Aralık 2024</p>
         </header>
-
-        <main>
-            <section>
-                <h2>Koşulların Kabulü</h2>
-                <p>Nerdy'yi ("Uygulama") indirerek, yükleyerek veya kullanarak bu Kullanım Koşullarına ("Koşullar") bağlı olmayı kabul etmiş olursunuz. Bu Koşulları kabul etmiyorsanız, Uygulamayı kullanmayın.</p>
-            </section>
-
-            <section>
-                <h2>Hizmet Açıklaması</h2>
-                <p>Nerdy, kullanıcıların interaktif oyunlar ve meydan okumalar aracılığıyla matematik becerilerini geliştirmelerine yardımcı olan bir matematik öğrenme oyunu uygulamasıdır. Uygulama şunları sunar:</p>
-                <ul>
-                    <li>Çeşitli matematik oyun modları (toplama, çıkarma, çarpma, bölme, kesirler ve daha fazlası)</li>
-                    <li>Tek oyunculu ve çok oyunculu oyun</li>
-                    <li>Video tabanlı öğrenme içeriği</li>
-                    <li>İlerleme takibi ve başarılar</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Kullanıcı Hesapları</h2>
-
-                <h3>Hesap Oluşturma</h3>
-                <p>Şunları kullanarak hesap oluşturabilirsiniz:</p>
-                <ul>
-                    <li>Google ile Giriş</li>
-                    <li>Apple ile Giriş</li>
-                    <li>Anonim mod (sınırlı işlevsellik)</li>
-                </ul>
-                <p>Hesap kimlik bilgilerinizin gizliliğini korumaktan ve hesabınız altında gerçekleşen tüm etkinliklerden siz sorumlusunuz.</p>
-
-                <h3>Hesap Bağlama</h3>
-                <p>Anonim kullanıcılar, ilerlemelerini korumak ve ek özellikleri etkinleştirmek için hesaplarını Google veya Apple'a bağlayabilir.</p>
-
-                <h3>Hesap Feshi</h3>
-                <p>Hesabınızı istediğiniz zaman Uygulama ayarlarından silebilirsiniz. Bu Koşulları ihlal eden hesapları askıya alma veya feshetme hakkını saklı tutarız.</p>
-            </section>
-
-            <section>
-                <h2>Abonelikler ve Ödemeler</h2>
-
-                <h3>Premium Abonelik</h3>
-                <p>Uygulama premium abonelik planları sunar:</p>
-                <ul>
-                    <li>Aylık abonelik</li>
-                    <li>Yıllık abonelik</li>
-                </ul>
-
-                <h3>Ödeme İşleme</h3>
-                <p>Tüm ödemeler Apple App Store veya Google Play Store üzerinden işlenir. Fiyatlandırma ve yenileme politikaları dahil abonelik koşulları, ilgili uygulama mağazasının koşullarına tabidir.</p>
-
-                <h3>Otomatik Yenileme</h3>
-                <p>Abonelikler, mevcut dönemin bitiminden en az 24 saat önce iptal edilmedikçe otomatik olarak yenilenir. Abonelikleri uygulama mağazası hesap ayarlarınızdan yönetebilirsiniz.</p>
-
-                <h3>İadeler</h3>
-                <p>İade talepleri, Apple veya Google'ın ilgili iade politikalarına göre işlenir.</p>
-            </section>
-
-            <section>
-                <h2>Kullanıcı Davranışı</h2>
-                <p>Şunları yapmamayı kabul etmiş olursunuz:</p>
-                <ul>
-                    <li>Uygulamayı yasadışı bir amaç için kullanmak</li>
-                    <li>Uygulamaya veya sistemlerine yetkisiz erişim sağlamaya çalışmak</li>
-                    <li>Uygulamayı veya sunucuları engellemek veya bozmak</li>
-                    <li>Başka bir kişi veya kuruluşu taklit etmek</li>
-                    <li>Hileler, açıklar veya yetkisiz değişiklikler kullanmak</li>
-                    <li>Çok oyunculu modlarda diğer kullanıcılara karşı kötüye kullanım davranışı sergilemek</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Fikri Mülkiyet</h2>
-
-                <h3>Bizim İçeriğimiz</h3>
-                <p>Tasarımı, grafikleri, oyunları, sesi ve içeriği dahil olmak üzere Uygulama bize aittir ve fikri mülkiyet yasaları tarafından korunmaktadır. İznimiz olmadan kopyalayamaz, değiştiremez, dağıtamaz veya türev eserler oluşturamazsınız.</p>
-
-                <h3>Kullanıcı İçeriği</h3>
-                <p>Uygulama içinde oluşturduğunuz herhangi bir içeriğin mülkiyeti size aittir. Uygulamayı kullanarak, hizmetlerimizi geliştirmek için oyun verilerinizi kullanmamız için bize lisans vermiş olursunuz.</p>
-            </section>
-
-            <section>
-                <h2>Çok Oyunculu Özellikler</h2>
-
-                <h3>Oda Kodları ve QR Kodları</h3>
-                <p>Çok oyunculu odalar, katılım için benzersiz kodlar ve QR kodları kullanır. Bunları yalnızca hedeflenen katılımcılarla paylaşın.</p>
-
-                <h3>Adil Oyun</h3>
-                <p>Kullanıcılar çok oyunculu oturumlar sırasında adil oyuna katılmalıdır. Hile yapmak veya hataları istismar etmek hesap askıya alınmasına neden olabilir.</p>
-            </section>
-
-            <section>
-                <h2>Sorumluluk Reddi</h2>
-
-                <h3>"Olduğu Gibi" Esası</h3>
-                <p>Uygulama, açık veya zımni herhangi bir garanti olmaksızın "olduğu gibi" ve "mevcut olduğu şekliyle" sağlanmaktadır.</p>
-
-                <h3>Eğitim Amacı</h3>
-                <p>Uygulama, eğitici eğlence için tasarlanmıştır. Belirli eğitim sonuçlarını veya akademik gelişimi garanti etmiyoruz.</p>
-
-                <h3>Hizmet Kullanılabilirliği</h3>
-                <p>Uygulamaya kesintisiz erişimi garanti etmiyoruz. Herhangi bir özelliği istediğimiz zaman değiştirebilir, askıya alabilir veya durdurabiliriz.</p>
-            </section>
-
-            <section>
-                <h2>Sorumluluk Sınırlaması</h2>
-                <p>Yasaların izin verdiği azami ölçüde, Uygulamayı kullanımınızdan kaynaklanan dolaylı, arızi, özel, sonuçsal veya cezai zararlardan sorumlu olmayacağız.</p>
-            </section>
-
-            <section>
-                <h2>Tazminat</h2>
-                <p>Uygulamayı kullanımınızdan veya bu Koşulları ihlal etmenizden kaynaklanan herhangi bir talep, zarar veya masraftan bizi zararsız tutmayı ve tazmin etmeyi kabul edersiniz.</p>
-            </section>
-
-            <section>
-                <h2>Koşullardaki Değişiklikler</h2>
-                <p>Bu Koşulları istediğimiz zaman değiştirebiliriz. Değişikliklerden sonra Uygulamayı kullanmaya devam etmeniz, yeni Koşulların kabul edildiği anlamına gelir. Önemli değişiklikleri Uygulama aracılığıyla kullanıcılara bildireceğiz.</p>
-            </section>
-
-            <section>
-                <h2>Geçerli Yasa</h2>
-                <p>Bu Koşullar, yasa çatışması ilkeleri dikkate alınmaksızın, geçerli yasalara göre yönetilecek ve yorumlanacaktır.</p>
-            </section>
-
-            <section>
-                <h2>Bölünebilirlik</h2>
-                <p>Bu Koşulların herhangi bir hükmünün uygulanamaz bulunması durumunda, kalan hükümler yürürlükte kalmaya devam edecektir.</p>
-            </section>
-
-            <section>
-                <h2>Tam Anlaşma</h2>
-                <p>Bu Koşullar, Gizlilik Politikamızla birlikte, Uygulama ile ilgili olarak sizinle aramızdaki tam anlaşmayı oluşturur.</p>
-            </section>
-
-            <section>
-                <h2>Bize Ulaşın</h2>
-                <p>Bu Koşullar hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
-                <p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
-            </section>
-        </main>
-
-        <footer>
-            <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" target="_blank" rel="noopener noreferrer">Oğuz Can</a> &middot; <a href="https://github.com/oguzcc" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-            <p>&copy; 2026 Nerdy. Tüm hakları saklıdır.</p>
-            <div class="footer-links">
-                <a href="privacy-tr.html">Gizlilik Politikası</a>
-                <a href="terms-tr.html">Kullanım Koşulları</a>
-                <a href="delete-account-tr.html">Hesap Silme</a>
-                <a href="mailto:oguzcc@icloud.com">İletişim</a>
-            </div>
-        </footer>
-    </div>
-</body>
+        <div class="prose">
+<section>
+<h2>Koşulların Kabulü</h2>
+<p>Nerdy'yi ("Uygulama") indirerek, yükleyerek veya kullanarak bu Kullanım Koşullarına ("Koşullar") bağlı olmayı kabul etmiş olursunuz. Bu Koşulları kabul etmiyorsanız, Uygulamayı kullanmayın.</p>
+</section>
+<section>
+<h2>Hizmet Açıklaması</h2>
+<p>Nerdy, kullanıcıların interaktif oyunlar ve meydan okumalar aracılığıyla matematik becerilerini geliştirmelerine yardımcı olan bir matematik öğrenme oyunu uygulamasıdır. Uygulama şunları sunar:</p>
+<ul>
+<li>Çeşitli matematik oyun modları (toplama, çıkarma, çarpma, bölme, kesirler ve daha fazlası)</li>
+<li>Tek oyunculu ve çok oyunculu oyun</li>
+<li>Video tabanlı öğrenme içeriği</li>
+<li>İlerleme takibi ve başarılar</li>
+</ul>
+</section>
+<section>
+<h2>Kullanıcı Hesapları</h2>
+<h3>Hesap Oluşturma</h3>
+<p>Şunları kullanarak hesap oluşturabilirsiniz:</p>
+<ul>
+<li>Google ile Giriş</li>
+<li>Apple ile Giriş</li>
+<li>Anonim mod (sınırlı işlevsellik)</li>
+</ul>
+<p>Hesap kimlik bilgilerinizin gizliliğini korumaktan ve hesabınız altında gerçekleşen tüm etkinliklerden siz sorumlusunuz.</p>
+<h3>Hesap Bağlama</h3>
+<p>Anonim kullanıcılar, ilerlemelerini korumak ve ek özellikleri etkinleştirmek için hesaplarını Google veya Apple'a bağlayabilir.</p>
+<h3>Hesap Feshi</h3>
+<p>Hesabınızı istediğiniz zaman Uygulama ayarlarından silebilirsiniz. Bu Koşulları ihlal eden hesapları askıya alma veya feshetme hakkını saklı tutarız.</p>
+</section>
+<section>
+<h2>Abonelikler ve Ödemeler</h2>
+<h3>Premium Abonelik</h3>
+<p>Uygulama premium abonelik planları sunar:</p>
+<ul>
+<li>Aylık abonelik</li>
+<li>Yıllık abonelik</li>
+</ul>
+<h3>Ödeme İşleme</h3>
+<p>Tüm ödemeler Apple App Store veya Google Play Store üzerinden işlenir. Fiyatlandırma ve yenileme politikaları dahil abonelik koşulları, ilgili uygulama mağazasının koşullarına tabidir.</p>
+<h3>Otomatik Yenileme</h3>
+<p>Abonelikler, mevcut dönemin bitiminden en az 24 saat önce iptal edilmedikçe otomatik olarak yenilenir. Abonelikleri uygulama mağazası hesap ayarlarınızdan yönetebilirsiniz.</p>
+<h3>İadeler</h3>
+<p>İade talepleri, Apple veya Google'ın ilgili iade politikalarına göre işlenir.</p>
+</section>
+<section>
+<h2>Kullanıcı Davranışı</h2>
+<p>Şunları yapmamayı kabul etmiş olursunuz:</p>
+<ul>
+<li>Uygulamayı yasadışı bir amaç için kullanmak</li>
+<li>Uygulamaya veya sistemlerine yetkisiz erişim sağlamaya çalışmak</li>
+<li>Uygulamayı veya sunucuları engellemek veya bozmak</li>
+<li>Başka bir kişi veya kuruluşu taklit etmek</li>
+<li>Hileler, açıklar veya yetkisiz değişiklikler kullanmak</li>
+<li>Çok oyunculu modlarda diğer kullanıcılara karşı kötüye kullanım davranışı sergilemek</li>
+</ul>
+</section>
+<section>
+<h2>Fikri Mülkiyet</h2>
+<h3>Bizim İçeriğimiz</h3>
+<p>Tasarımı, grafikleri, oyunları, sesi ve içeriği dahil olmak üzere Uygulama bize aittir ve fikri mülkiyet yasaları tarafından korunmaktadır. İznimiz olmadan kopyalayamaz, değiştiremez, dağıtamaz veya türev eserler oluşturamazsınız.</p>
+<h3>Kullanıcı İçeriği</h3>
+<p>Uygulama içinde oluşturduğunuz herhangi bir içeriğin mülkiyeti size aittir. Uygulamayı kullanarak, hizmetlerimizi geliştirmek için oyun verilerinizi kullanmamız için bize lisans vermiş olursunuz.</p>
+</section>
+<section>
+<h2>Çok Oyunculu Özellikler</h2>
+<h3>Oda Kodları ve QR Kodları</h3>
+<p>Çok oyunculu odalar, katılım için benzersiz kodlar ve QR kodları kullanır. Bunları yalnızca hedeflenen katılımcılarla paylaşın.</p>
+<h3>Adil Oyun</h3>
+<p>Kullanıcılar çok oyunculu oturumlar sırasında adil oyuna katılmalıdır. Hile yapmak veya hataları istismar etmek hesap askıya alınmasına neden olabilir.</p>
+</section>
+<section>
+<h2>Sorumluluk Reddi</h2>
+<h3>"Olduğu Gibi" Esası</h3>
+<p>Uygulama, açık veya zımni herhangi bir garanti olmaksızın "olduğu gibi" ve "mevcut olduğu şekliyle" sağlanmaktadır.</p>
+<h3>Eğitim Amacı</h3>
+<p>Uygulama, eğitici eğlence için tasarlanmıştır. Belirli eğitim sonuçlarını veya akademik gelişimi garanti etmiyoruz.</p>
+<h3>Hizmet Kullanılabilirliği</h3>
+<p>Uygulamaya kesintisiz erişimi garanti etmiyoruz. Herhangi bir özelliği istediğimiz zaman değiştirebilir, askıya alabilir veya durdurabiliriz.</p>
+</section>
+<section>
+<h2>Sorumluluk Sınırlaması</h2>
+<p>Yasaların izin verdiği azami ölçüde, Uygulamayı kullanımınızdan kaynaklanan dolaylı, arızi, özel, sonuçsal veya cezai zararlardan sorumlu olmayacağız.</p>
+</section>
+<section>
+<h2>Tazminat</h2>
+<p>Uygulamayı kullanımınızdan veya bu Koşulları ihlal etmenizden kaynaklanan herhangi bir talep, zarar veya masraftan bizi zararsız tutmayı ve tazmin etmeyi kabul edersiniz.</p>
+</section>
+<section>
+<h2>Koşullardaki Değişiklikler</h2>
+<p>Bu Koşulları istediğimiz zaman değiştirebiliriz. Değişikliklerden sonra Uygulamayı kullanmaya devam etmeniz, yeni Koşulların kabul edildiği anlamına gelir. Önemli değişiklikleri Uygulama aracılığıyla kullanıcılara bildireceğiz.</p>
+</section>
+<section>
+<h2>Geçerli Yasa</h2>
+<p>Bu Koşullar, yasa çatışması ilkeleri dikkate alınmaksızın, geçerli yasalara göre yönetilecek ve yorumlanacaktır.</p>
+</section>
+<section>
+<h2>Bölünebilirlik</h2>
+<p>Bu Koşulların herhangi bir hükmünün uygulanamaz bulunması durumunda, kalan hükümler yürürlükte kalmaya devam edecektir.</p>
+</section>
+<section>
+<h2>Tam Anlaşma</h2>
+<p>Bu Koşullar, Gizlilik Politikamızla birlikte, Uygulama ile ilgili olarak sizinle aramızdaki tam anlaşmayı oluşturur.</p>
+</section>
+<section>
+<h2>Bize Ulaşın</h2>
+<p>Bu Koşullar hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
+<p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
+</section>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <nav class="footer-nav" aria-label="Yasal bilgiler ve iletişim">
+          <ul><li><a href="privacy-tr.html">Gizlilik Politikası</a></li><li><a href="terms-tr.html" aria-current="page">Kullanım Koşulları</a></li><li><a href="delete-account-tr.html">Hesap Silme</a></li><li><a href="mailto:oguzcc@icloud.com">İletişim</a></li></ul>
+        </nav>
+        <div class="site-footer__meta">
+          <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oğuz Can</a> · <a href="https://github.com/oguzcc" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+          <p>© 2026 Nerdy. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

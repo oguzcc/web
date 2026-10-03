@@ -1,14 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Nerdy</title>
     <meta name="description" content="Privacy policy for Nerdy, a mobile app by Oguz Can. Explains what data is processed and your rights." />
     <link rel="canonical" href="https://oguzcc.github.io/web/nerdy/privacy.html" />
+    <link rel="alternate" hreflang="en" href="https://oguzcc.github.io/web/nerdy/privacy.html" />
+    <link rel="alternate" hreflang="tr" href="https://oguzcc.github.io/web/nerdy/privacy-tr.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oguzcc.github.io/web/nerdy/privacy.html" />
     <link rel="icon" type="image/png" href="https://oguzcc.github.io/web/assets/images/favicons/nerdy.png" />
     <meta name="author" content="Oguz Can" />
-    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1014" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Oguz Can — Apps" />
     <meta property="og:locale" content="en_US" />
@@ -17,310 +22,158 @@
     <meta property="og:url" content="https://oguzcc.github.io/web/nerdy/privacy.html" />
     <meta property="og:image" content="https://oguzcc.github.io/web/assets/images/og/nerdy.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-            line-height: 1.8;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-        }
-
-        .lang-switcher {
-            position: absolute;
-            top: 40px;
-            right: 20px;
-        }
-
-        .lang-btn {
-            padding: 5px 12px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: #888;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            color: #f5a623;
-        }
-
-        .lang-btn.active {
-            background: rgba(245, 166, 35, 0.2);
-            color: #f5a623;
-        }
-
-        header {
-            margin-bottom: 40px;
-        }
-
-        .back-link {
-            color: #f5a623;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin: 20px 0;
-            background: linear-gradient(90deg, #f5a623, #f7c56e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .last-updated {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            color: #f5a623;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            color: #f7c56e;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            margin-top: 20px;
-        }
-
-        p {
-            color: #b0b0b0;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            color: #b0b0b0;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #f5a623;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-        }
-
-        footer p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            margin: 0 15px;
-            color: #888;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-            color: #f5a623;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .lang-switcher {
-                top: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="lang-switcher">
-            <a href="privacy.html" class="lang-btn active">EN</a>
-            <a href="privacy-tr.html" class="lang-btn">TR</a>
-        </div>
-
-        <header>
-            <a href="../index.html" class="back-link">&larr; All Apps</a>
-            <br>
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: December 2024</p>
+    <link rel="preload" href="../assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+  <body data-app="nerdy">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <a class="back" href="../index.html"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>All apps</a>
+        <nav class="lang" aria-label="Language"><a href="privacy.html" hreflang="en" lang="en" aria-current="page">EN</a><a href="privacy-tr.html" hreflang="tr" lang="tr">TR</a></nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="wrap wrap--narrow">
+        <header class="doc-head">
+          <nav class="crumb" aria-label="Breadcrumb">
+            <a href="index.html"><img src="../assets/images/icons/nerdy.webp" alt="" width="32" height="32" /><span>Nerdy</span></a>
+            <span class="crumb__sep" aria-hidden="true">/</span>
+            <span aria-current="page">Privacy Policy</span>
+          </nav>
+          <h1>Privacy Policy</h1>
+          <p class="doc-meta">Last Updated: December 2024</p>
         </header>
-
-        <main>
-            <section>
-                <h2>Introduction</h2>
-                <p>Nerdy ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application Nerdy (the "App").</p>
-                <p>Please read this Privacy Policy carefully. By using the App, you agree to the collection and use of information in accordance with this policy.</p>
-            </section>
-
-            <section>
-                <h2>Information We Collect</h2>
-
-                <h3>Information You Provide to Us</h3>
-                <p><strong>Account Information:</strong> When you create an account using Google Sign-In or Apple Sign-In, we may collect:</p>
-                <ul>
-                    <li>Email address</li>
-                    <li>Display name</li>
-                    <li>Profile photo URL</li>
-                </ul>
-
-                <p><strong>Anonymous Usage:</strong> You may use the App without creating an account. In this case, we create an anonymous user identifier to save your game progress locally and in the cloud.</p>
-
-                <h3>Information Automatically Collected</h3>
-                <p><strong>Game Data:</strong></p>
-                <ul>
-                    <li>Game progress and statistics</li>
-                    <li>Points, stars, and levels earned</li>
-                    <li>Completed game cards and achievements</li>
-                    <li>Accuracy percentages and performance metrics</li>
-                    <li>Multiplayer match history</li>
-                </ul>
-
-                <p><strong>Device Information:</strong></p>
-                <ul>
-                    <li>Device type and operating system</li>
-                    <li>Unique device identifiers (for Firebase authentication)</li>
-                    <li>Network connection status</li>
-                </ul>
-
-                <h3>Information Collected by Third Parties</h3>
-                <p><strong>RevenueCat (In-App Purchases):</strong> When you make a purchase, RevenueCat collects:</p>
-                <ul>
-                    <li>Transaction identifiers</li>
-                    <li>Subscription status and renewal information</li>
-                    <li>Purchase history</li>
-                </ul>
-                <p>RevenueCat's privacy policy can be found at: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">https://www.revenuecat.com/privacy</a></p>
-
-                <p><strong>Firebase (Google):</strong> We use Firebase for authentication and data storage. Firebase may collect:</p>
-                <ul>
-                    <li>Authentication tokens</li>
-                    <li>User identifiers</li>
-                    <li>Crash reports (if enabled)</li>
-                </ul>
-                <p>Google's privacy policy can be found at: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-            </section>
-
-            <section>
-                <h2>How We Use Your Information</h2>
-                <p>We use the information we collect to:</p>
-                <ul>
-                    <li>Create and manage your user account</li>
-                    <li>Save and synchronize your game progress across devices</li>
-                    <li>Provide multiplayer gaming functionality</li>
-                    <li>Process in-app purchases and manage subscriptions</li>
-                    <li>Improve and optimize the App</li>
-                    <li>Communicate with you about your account or the App</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Data Storage and Security</h2>
-                <p>Your data is stored using:</p>
-                <ul>
-                    <li><strong>Firebase Cloud Firestore:</strong> Secure cloud storage hosted by Google</li>
-                    <li><strong>Local Device Storage:</strong> Cached data for offline functionality</li>
-                </ul>
-                <p>We implement appropriate technical and organizational security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
-            </section>
-
-            <section>
-                <h2>Data Retention</h2>
-                <p>We retain your personal information for as long as your account is active or as needed to provide you services. You may delete your account at any time through the App settings, which will remove your data from our systems.</p>
-            </section>
-
-            <section>
-                <h2>Your Rights and Choices</h2>
-                <p><strong>Account Deletion:</strong> You can delete your account and all associated data through the App's settings menu (Settings > Delete Account).</p>
-                <p><strong>Account Linking:</strong> Anonymous users can link their account to Google or Apple to secure their progress.</p>
-                <p><strong>Data Access:</strong> You can view your profile information within the App.</p>
-            </section>
-
-            <section>
-                <h2>Children's Privacy</h2>
-                <p>The App is designed for users of all ages, including children. We do not knowingly collect personal information from children under 13 without parental consent. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
-                <p>For users under 13, we recommend:</p>
-                <ul>
-                    <li>Using the App in anonymous mode</li>
-                    <li>Parental supervision during account creation</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Permissions We Request</h2>
-                <p><strong>Camera Permission:</strong> Used solely for scanning QR codes to join multiplayer game rooms. We do not store or transmit camera data.</p>
-                <p><strong>Internet Access:</strong> Required to sync game progress, authenticate users, and enable multiplayer features.</p>
-            </section>
-
-            <section>
-                <h2>Third-Party Services</h2>
-                <p>The App integrates with the following third-party services:</p>
-                <ul>
-                    <li><strong>Google Sign-In:</strong> For account authentication</li>
-                    <li><strong>Apple Sign-In:</strong> For account authentication</li>
-                    <li><strong>Firebase:</strong> For data storage and authentication</li>
-                    <li><strong>RevenueCat:</strong> For subscription and purchase management</li>
-                </ul>
-                <p>Each service has its own privacy policy governing the use of your information.</p>
-            </section>
-
-            <section>
-                <h2>International Data Transfers</h2>
-                <p>Your information may be transferred to and processed in countries other than your own. Firebase and other third-party services may store data in various locations worldwide.</p>
-            </section>
-
-            <section>
-                <h2>Changes to This Privacy Policy</h2>
-                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
-            </section>
-
-            <section>
-                <h2>Contact Us</h2>
-                <p>If you have questions about this Privacy Policy, please contact us at:</p>
-                <p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
-            </section>
-        </main>
-
-        <footer>
-            <p>Developed by <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" target="_blank" rel="noopener noreferrer">Oguz Can</a> &middot; <a href="https://github.com/oguzcc" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-            <p>&copy; 2026 Nerdy. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="delete-account.html">Delete Account</a>
-                <a href="mailto:oguzcc@icloud.com">Contact</a>
-            </div>
-        </footer>
-    </div>
-</body>
+        <div class="prose">
+<section>
+<h2>Introduction</h2>
+<p>Nerdy ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application Nerdy (the "App").</p>
+<p>Please read this Privacy Policy carefully. By using the App, you agree to the collection and use of information in accordance with this policy.</p>
+</section>
+<section>
+<h2>Information We Collect</h2>
+<h3>Information You Provide to Us</h3>
+<p><strong>Account Information:</strong> When you create an account using Google Sign-In or Apple Sign-In, we may collect:</p>
+<ul>
+<li>Email address</li>
+<li>Display name</li>
+<li>Profile photo URL</li>
+</ul>
+<p><strong>Anonymous Usage:</strong> You may use the App without creating an account. In this case, we create an anonymous user identifier to save your game progress locally and in the cloud.</p>
+<h3>Information Automatically Collected</h3>
+<p><strong>Game Data:</strong></p>
+<ul>
+<li>Game progress and statistics</li>
+<li>Points, stars, and levels earned</li>
+<li>Completed game cards and achievements</li>
+<li>Accuracy percentages and performance metrics</li>
+<li>Multiplayer match history</li>
+</ul>
+<p><strong>Device Information:</strong></p>
+<ul>
+<li>Device type and operating system</li>
+<li>Unique device identifiers (for Firebase authentication)</li>
+<li>Network connection status</li>
+</ul>
+<h3>Information Collected by Third Parties</h3>
+<p><strong>RevenueCat (In-App Purchases):</strong> When you make a purchase, RevenueCat collects:</p>
+<ul>
+<li>Transaction identifiers</li>
+<li>Subscription status and renewal information</li>
+<li>Purchase history</li>
+</ul>
+<p>RevenueCat's privacy policy can be found at: <a href="https://www.revenuecat.com/privacy" rel="noopener" target="_blank">https://www.revenuecat.com/privacy</a></p>
+<p><strong>Firebase (Google):</strong> We use Firebase for authentication and data storage. Firebase may collect:</p>
+<ul>
+<li>Authentication tokens</li>
+<li>User identifiers</li>
+<li>Crash reports (if enabled)</li>
+</ul>
+<p>Google's privacy policy can be found at: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">https://policies.google.com/privacy</a></p>
+</section>
+<section>
+<h2>How We Use Your Information</h2>
+<p>We use the information we collect to:</p>
+<ul>
+<li>Create and manage your user account</li>
+<li>Save and synchronize your game progress across devices</li>
+<li>Provide multiplayer gaming functionality</li>
+<li>Process in-app purchases and manage subscriptions</li>
+<li>Improve and optimize the App</li>
+<li>Communicate with you about your account or the App</li>
+</ul>
+</section>
+<section>
+<h2>Data Storage and Security</h2>
+<p>Your data is stored using:</p>
+<ul>
+<li><strong>Firebase Cloud Firestore:</strong> Secure cloud storage hosted by Google</li>
+<li><strong>Local Device Storage:</strong> Cached data for offline functionality</li>
+</ul>
+<p>We implement appropriate technical and organizational security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+</section>
+<section>
+<h2>Data Retention</h2>
+<p>We retain your personal information for as long as your account is active or as needed to provide you services. You may delete your account at any time through the App settings, which will remove your data from our systems.</p>
+</section>
+<section>
+<h2>Your Rights and Choices</h2>
+<p><strong>Account Deletion:</strong> You can delete your account and all associated data through the App's settings menu (Settings &gt; Delete Account).</p>
+<p><strong>Account Linking:</strong> Anonymous users can link their account to Google or Apple to secure their progress.</p>
+<p><strong>Data Access:</strong> You can view your profile information within the App.</p>
+</section>
+<section>
+<h2>Children's Privacy</h2>
+<p>The App is designed for users of all ages, including children. We do not knowingly collect personal information from children under 13 without parental consent. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+<p>For users under 13, we recommend:</p>
+<ul>
+<li>Using the App in anonymous mode</li>
+<li>Parental supervision during account creation</li>
+</ul>
+</section>
+<section>
+<h2>Permissions We Request</h2>
+<p><strong>Camera Permission:</strong> Used solely for scanning QR codes to join multiplayer game rooms. We do not store or transmit camera data.</p>
+<p><strong>Internet Access:</strong> Required to sync game progress, authenticate users, and enable multiplayer features.</p>
+</section>
+<section>
+<h2>Third-Party Services</h2>
+<p>The App integrates with the following third-party services:</p>
+<ul>
+<li><strong>Google Sign-In:</strong> For account authentication</li>
+<li><strong>Apple Sign-In:</strong> For account authentication</li>
+<li><strong>Firebase:</strong> For data storage and authentication</li>
+<li><strong>RevenueCat:</strong> For subscription and purchase management</li>
+</ul>
+<p>Each service has its own privacy policy governing the use of your information.</p>
+</section>
+<section>
+<h2>International Data Transfers</h2>
+<p>Your information may be transferred to and processed in countries other than your own. Firebase and other third-party services may store data in various locations worldwide.</p>
+</section>
+<section>
+<h2>Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+</section>
+<section>
+<h2>Contact Us</h2>
+<p>If you have questions about this Privacy Policy, please contact us at:</p>
+<p><a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a></p>
+</section>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <nav class="footer-nav" aria-label="Legal and contact">
+          <ul><li><a href="privacy.html" aria-current="page">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="delete-account.html">Delete Account</a></li><li><a href="mailto:oguzcc@icloud.com">Contact</a></li></ul>
+        </nav>
+        <div class="site-footer__meta">
+          <p>Developed by <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oguz Can</a> · <a href="https://github.com/oguzcc" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+          <p>© 2026 Nerdy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

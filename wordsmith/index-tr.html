@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Letoria - Sürükle. Hecele. Kap.</title>
     <link rel="canonical" href="https://oguzcc.github.io/web/wordsmith/index-tr.html" />
+    <link rel="alternate" hreflang="en" href="https://oguzcc.github.io/web/wordsmith/" />
+    <link rel="alternate" hreflang="tr" href="https://oguzcc.github.io/web/wordsmith/index-tr.html" />
+    <link rel="alternate" hreflang="x-default" href="https://oguzcc.github.io/web/wordsmith/" />
     <link rel="icon" type="image/png" href="https://oguzcc.github.io/web/assets/images/favicons/wordsmith.png" />
     <meta name="author" content="Oguz Can" />
-    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1014" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Oguz Can — Apps" />
     <meta property="og:locale" content="tr_TR" />
@@ -17,381 +22,74 @@
     <meta property="og:image" content="https://oguzcc.github.io/web/assets/images/og/wordsmith.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
-      name="description"
-      content="4x4 ızgarada komşu harfleri sürükleyerek kelimeler oluştur. Tek başına oyna ya da rakiplerinden kelimeleri gerçek zamanlı kap."
+    name="description"
+    content="4x4 ızgarada komşu harfleri sürükleyerek kelimeler oluştur. Tek başına oyna ya da rakiplerinden kelimeleri gerçek zamanlı kap."
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-          sans-serif;
-        background: linear-gradient(
-          135deg,
-          #1a1a2e 0%,
-          #16213e 50%,
-          #0f3460 100%
-        );
-        color: #fff;
-        min-height: 100vh;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      header {
-        padding: 20px 0;
-        text-align: center;
-      }
-      .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #4a90e2;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo img {
-        height: 40px;
-        width: 40px;
-        border-radius: 8px;
-      }
-      .back-to-apps {
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #4a90e2;
-        text-decoration: none;
-        font-size: 0.9rem;
-      }
-      .back-to-apps:hover {
-        text-decoration: underline;
-      }
-      .hero {
-        padding: 60px 0;
-        text-align: center;
-      }
-      .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        background: linear-gradient(90deg, #4a90e2, #7fb3f0);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .hero p {
-        font-size: 1.25rem;
-        color: #b0b0b0;
-        max-width: 600px;
-        margin: 0 auto 40px;
-        line-height: 1.6;
-      }
-      .app-store-badge {
-        display: inline-block;
-        transition: transform 0.3s ease;
-      }
-      .app-store-badge:hover {
-        transform: scale(1.05);
-      }
-      .app-store-badge img {
-        display: block;
-        height: 50px;
-      }
-      .store-badges {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .screenshots {
-        padding: 60px 0;
-      }
-      .screenshots h2 {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
-        color: #4a90e2;
-      }
-      .screenshot-scroll {
-        display: flex;
-        gap: 20px;
-        overflow-x: auto;
-        padding: 20px 0;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-      }
-      .screenshot-scroll::-webkit-scrollbar {
-        height: 8px;
-      }
-      .screenshot-scroll::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 4px;
-      }
-      .screenshot-scroll::-webkit-scrollbar-thumb {
-        background: #4a90e2;
-        border-radius: 4px;
-      }
-      .screenshot-item {
-        flex: 0 0 auto;
-        scroll-snap-align: center;
-        text-align: center;
-      }
-      .screenshot-item img {
-        width: 250px;
-        border-radius: 24px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      }
-      .screenshot-item p {
-        margin-top: 15px;
-        color: #888;
-        font-size: 0.9rem;
-      }
-      .features {
-        padding: 60px 0;
-      }
-      .features h2 {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
-        color: #4a90e2;
-      }
-      .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-      }
-      .feature-card {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 16px;
-        padding: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition:
-          transform 0.3s ease,
-          background 0.3s ease;
-      }
-      .feature-card:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.08);
-      }
-      .feature-icon {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-      }
-      .feature-card h3 {
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-        color: #fff;
-      }
-      .feature-card p {
-        color: #888;
-        line-height: 1.6;
-      }
-      footer {
-        padding: 40px 0;
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 60px;
-      }
-      footer p {
-        color: #666;
-        margin-bottom: 15px;
-      }
-      footer a {
-        color: #4a90e2;
-        text-decoration: none;
-      }
-      footer a:hover {
-        text-decoration: underline;
-      }
-      .footer-links {
-        margin-top: 20px;
-      }
-      .footer-links a {
-        margin: 0 15px;
-        color: #888;
-      }
-      .lang-switcher {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-      }
-      .lang-btn {
-        padding: 5px 12px;
-        border-radius: 4px;
-        text-decoration: none;
-        color: #888;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-      }
-      .lang-btn:hover {
-        color: #4a90e2;
-      }
-      .lang-btn.active {
-        background: rgba(74, 144, 226, 0.2);
-        color: #4a90e2;
-      }
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2rem;
-        }
-        .hero p {
-          font-size: 1rem;
-        }
-        .back-to-apps {
-          position: static;
-          transform: none;
-          display: block;
-          margin-bottom: 10px;
-        }
-        .screenshot-item img {
-          width: 200px;
-        }
-      }
-
-      .app-store-badge img.badge-play {
-        height: 74px;
-      }
-    </style>
+    <link rel="preload" href="../assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/site.css" />
   </head>
-  <body>
-    <header>
-      <div class="container" style="position: relative">
-        <a href="../index-tr.html" class="back-to-apps"
-          >&larr; Tüm Uygulamalar</a
-        >
-        <div class="lang-switcher">
-          <a href="index.html" class="lang-btn">EN</a>
-          <a href="index-tr.html" class="lang-btn active">TR</a>
-        </div>
-        <div class="logo">
-          <img src="../assets/images/wordsmith-logo.jpg" alt="Letoria" />
-          Letoria
-        </div>
+  <body data-app="wordsmith">
+    <a class="skip-link" href="#main">İçeriğe geç</a>
+    <header class="topbar">
+      <div class="wrap topbar__inner">
+        <a class="back" href="../index-tr.html"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Tüm uygulamalar</a>
+        <nav class="lang" aria-label="Dil"><a href="index.html" hreflang="en" lang="en">EN</a><a href="index-tr.html" hreflang="tr" lang="tr" aria-current="page">TR</a></nav>
       </div>
     </header>
-    <main>
-      <section class="hero">
-        <div class="container">
-          <h1>Sürükle. Hecele. Kap.</h1>
-          <p>
-            4&times;4 ızgarada komşu harfleri sürükleyerek kelimeler oluştur.
-            Tek başına oyna ya da rakiplerinden kelimeleri gerçek zamanlı kap.
-          </p>
-          <div class="store-badges">
-            <a
-              href="https://apps.apple.com/us/app/wordsmith-word-puzzle/id6762276085"
-              class="app-store-badge"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="../assets/images/badges/app-store.svg" alt="Download on the App Store" width="150" height="50" />
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.oguzcc.wordsmith"
-              class="app-store-badge"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="../assets/images/badges/google-play.png" class="badge-play" alt="Get it on Google Play" width="191" height="74" />
-            </a>
+    <main id="main">
+      <section class="app-hero">
+        <div class="wrap app-hero__grid">
+          <div>
+            <div class="app-id">
+              <img src="../assets/images/icons/wordsmith.webp" alt="" width="64" height="64" />
+              <div>
+                <p class="app-id__name">Letoria</p>
+                <p class="eyebrow app-id__kind">Kelime oyunu</p>
+              </div>
+            </div>
+            <h1>Sürükle. Hecele. Kap.</h1>
+            <p class="app-hero__lede">4&times;4 ızgarada komşu harfleri sürükleyerek kelimeler oluştur. Tek başına oyna ya da rakiplerinin kelimelerini gerçek zamanlı kap.</p>
+            <div class="store-badges"><a href="https://apps.apple.com/us/app/wordsmith-word-puzzle/id6762276085" target="_blank" rel="noopener noreferrer"><img src="../assets/images/badges/app-store.svg" alt="Download on the App Store" width="150" height="50" /></a><a href="https://play.google.com/store/apps/details?id=com.oguzcc.wordsmith" target="_blank" rel="noopener noreferrer"><img src="../assets/images/badges/google-play.png" class="badge-play" alt="Get it on Google Play" width="191" height="74" /></a></div>
           </div>
+          <div class="app-hero__visual" aria-hidden="true"><div class="poster"><picture><source srcset="screenshots/1.webp" type="image/webp" /><img src="screenshots/1.png" alt="" width="640" height="1387" decoding="async" /></picture></div></div>
         </div>
       </section>
-      <section class="screenshots">
-        <div class="container">
-          <h2>Uygulama Önizlemesi</h2>
-          <div class="screenshot-scroll">
-            <div class="screenshot-item">
-              <img src="screenshots/1.png" alt="Canlı tur" loading="lazy" />
-              <p>Herkes Aynı Tahtada</p>
-            </div>
-            <div class="screenshot-item">
-              <img src="screenshots/2.png" alt="Bulmaca seviyeleri" loading="lazy" />
-              <p>Süresiz Bulmacalar</p>
-            </div>
-            <div class="screenshot-item">
-              <img src="screenshots/3.png" alt="Harfleri kaydırarak kelime oluşturma" loading="lazy" />
-              <p>Harflerden Kelimelere</p>
-            </div>
-            <div class="screenshot-item">
-              <img src="screenshots/4.png" alt="Dünya sıralaması" loading="lazy" />
-              <p>Dünyayı Geride Bırak</p>
-            </div>
-            <div class="screenshot-item">
-              <img src="screenshots/5.png" alt="Tur özeti" loading="lazy" />
-              <p>Her Kelime Açıklamalı</p>
-            </div>
-            <div class="screenshot-item">
-              <img src="screenshots/6.png" alt="Kelime puanlama" loading="lazy" />
-              <p>Her Kelime Sayılır</p>
-            </div>
-            <div class="screenshot-item">
-              <img src="screenshots/7.png" alt="Tur liderlik tablosu" loading="lazy" />
-              <p>Rakiplerini Selamla</p>
-            </div>
-            <div class="screenshot-item">
-              <img src="screenshots/8.png" alt="Dil seçimi" loading="lazy" />
-              <p>16 Dilde Yerel Sözlük</p>
-            </div>
-          </div>
+      <section class="section" aria-labelledby="shots-title">
+        <div class="wrap">
+          <div class="section__head"><h2 id="shots-title">Uygulamadan kareler</h2></div>
+        </div>
+        <div class="shots" role="region" tabindex="0" aria-label="Letoria ekran görüntüleri, yana kaydırın">
+            <figure><picture><source srcset="screenshots/1.webp" type="image/webp" /><img src="screenshots/1.png" alt="Canlı tur" width="640" height="1387" loading="lazy" decoding="async" /></picture><figcaption>Herkes aynı tahtada</figcaption></figure>
+            <figure><picture><source srcset="screenshots/2.webp" type="image/webp" /><img src="screenshots/2.png" alt="Bulmaca seviyeleri" width="640" height="1387" loading="lazy" decoding="async" /></picture><figcaption>Süresiz bulmacalar</figcaption></figure>
+            <figure><picture><source srcset="screenshots/3.webp" type="image/webp" /><img src="screenshots/3.png" alt="Harfleri kaydırarak kelime oluşturma" width="640" height="1387" loading="lazy" decoding="async" /></picture><figcaption>Harflerden kelimelere</figcaption></figure>
+            <figure><picture><source srcset="screenshots/4.webp" type="image/webp" /><img src="screenshots/4.png" alt="Dünya sıralaması" width="640" height="1387" loading="lazy" decoding="async" /></picture><figcaption>Dünyayı geride bırak</figcaption></figure>
+            <figure><picture><source srcset="screenshots/5.webp" type="image/webp" /><img src="screenshots/5.png" alt="Tur özeti" width="640" height="1387" loading="lazy" decoding="async" /></picture><figcaption>Her kelime açıklamalı</figcaption></figure>
+            <figure><picture><source srcset="screenshots/6.webp" type="image/webp" /><img src="screenshots/6.png" alt="Kelime puanlama" width="640" height="1387" loading="lazy" decoding="async" /></picture><figcaption>Her kelime sayılır</figcaption></figure>
+            <figure><picture><source srcset="screenshots/7.webp" type="image/webp" /><img src="screenshots/7.png" alt="Tur liderlik tablosu" width="640" height="1387" loading="lazy" decoding="async" /></picture><figcaption>Rakiplerini selamla</figcaption></figure>
+            <figure><picture><source srcset="screenshots/8.webp" type="image/webp" /><img src="screenshots/8.png" alt="Dil seçimi" width="640" height="1387" loading="lazy" decoding="async" /></picture><figcaption>16 dilde yerel sözlük</figcaption></figure>
         </div>
       </section>
-      <section class="features">
-        <div class="container">
-          <h2>Özellikler</h2>
-          <div class="feature-grid">
-            <div class="feature-card">
-              <div class="feature-icon">&#128292;</div>
-              <h3>4&times;4 Kelime Tahtası</h3>
-              <p>
-                4&times;4 ızgarada komşu harfleri sürükleyerek kelimeler
-                oluştur. Öğrenmesi kolay, bitmeyen bir oyun keyfi.
-              </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">&#9889;</div>
-              <h3>Kapma Modu</h3>
-              <p>
-                Rakiplerinin kelimelerini genişleterek kap. Hızlı düşün, daha
-                hızlı hecele.
-              </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">&#127942;</div>
-              <h3>Yarış &amp; Yüksel</h3>
-              <p>
-                Liderlik tablosunda yüksel ve ilerlemeni takip et. Kelime dağarcığın
-                ve reflekslerin birlikte gelişsin.
-              </p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">&#9729;</div>
-              <h3>İlerlemen Seninle</h3>
-              <p>
-                İstatistiklerin, serilerin ve sıralaman oynadığın her cihazda
-                senkron kalır.
-              </p>
-            </div>
-          </div>
+      <section class="section" aria-labelledby="features-title">
+        <div class="wrap">
+          <div class="section__head"><h2 id="features-title">Neler yapabilirsin</h2></div>
+          <ul class="features">
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 12h18"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span><h3>4&times;4 kelime tahtası</h3><p>4&times;4 ızgarada komşu harfleri sürükleyerek kelimeler oluştur. Öğrenmesi kolay, keyfi bitmeyen bir oyun.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg></span><h3>Kapma modu</h3><p>Rakiplerinin kelimelerini uzatarak kap. Hızlı düşün, daha hızlı hecele.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2"/><path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2"/><path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></svg></span><h3>Yarış ve yüksel</h3><p>Liderlik tablosunda yüksel, ilerlemeni takip et. Kelime dağarcığın ve reflekslerin birlikte gelişsin.</p></li>
+            <li class="feature"><span class="feature__icon"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span><h3>İlerlemen seninle</h3><p>İstatistiklerin, serilerin ve sıralaman oynadığın her cihazda eşitlenir.</p></li>
+          </ul>
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container">
-        <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" target="_blank" rel="noopener noreferrer">Oğuz Can</a> &middot; <a href="https://github.com/oguzcc" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-        <p>&copy; 2026 Letoria. Tüm hakları saklıdır.</p>
-        <div class="footer-links">
-          <a href="privacy-tr.html">Gizlilik Politikası</a>
-          <a href="terms-tr.html">Kullanım Koşulları</a>
-          <a href="delete-account-tr.html">Hesap Silme</a>
-          <a href="mailto:oguzcc@icloud.com">İletişim</a>
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <nav class="footer-nav" aria-label="Yasal bilgiler ve iletişim">
+          <ul><li><a href="privacy-tr.html">Gizlilik Politikası</a></li><li><a href="terms-tr.html">Kullanım Koşulları</a></li><li><a href="delete-account-tr.html">Hesap Silme</a></li><li><a href="mailto:oguzcc@icloud.com">İletişim</a></li></ul>
+        </nav>
+        <div class="site-footer__meta">
+          <p>Geliştirici: <a href="https://apps.apple.com/us/developer/oguz-can/id1692066345" rel="noopener noreferrer" target="_blank">Oğuz Can</a> · <a href="https://github.com/oguzcc" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+          <p>© 2026 Letoria. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>
