@@ -100,6 +100,7 @@
 [data-app="voicesound"] { --accent: #ec4899; --accent-ink: #cf1671; --on-accent: #14161b; }
 [data-app="ether"]      { --accent: #9b59b6; --accent-ink: #954eb1; --on-accent: #ffffff; }
 [data-app="younique"]   { --accent: #2ec96b; --accent-ink: #1c7c42; --on-accent: #14161b; }
+[data-app="mathlon"]    { --accent: #d9532b; --accent-ink: #b8441f; --on-accent: #14161b; }
 
 @media (prefers-color-scheme: dark) {
   [data-app="nerdy"]      { --accent-ink: #f5a623; }
@@ -109,6 +110,7 @@
   [data-app="voicesound"] { --accent-ink: #ef68ab; }
   [data-app="ether"]      { --accent-ink: #b787ca; }
   [data-app="younique"]   { --accent-ink: #2ec96b; }
+  [data-app="mathlon"]    { --accent-ink: #e46c45; }
 }
 
 /* ---------- Base ---------- */
