@@ -69,6 +69,7 @@
 <li>Çözülen soru, doğru cevap ve çalışma süresi gibi toplamlar</li>
 <li>XP, seviye, jeton, can, rozetler, Max için kozmetik öğeler ve diğer sayaçlar</li>
 <li>Günlük seri, görevler ve lig kademesi</li>
+<li>Ücretsiz Mathlon Pro seri onarımını kullandığınız ay</li>
 </ul>
 <h3>Ayarlar</h3>
 <ul>
@@ -76,18 +77,29 @@
 <li>Ses, titreşim ve sesli anlatım tercihleri</li>
 <li>Günlük hatırlatma saati</li>
 </ul>
+<h3>Satın Almalar ve Abonelikler</h3>
+<p>Mathlon Pro isteğe bağlı bir aboneliktir. Satın almalar kullandığınız uygulama mağazası (Apple App Store veya Mathlon Pro'nun sunulduğu yerlerde Google Play) tarafından işlenir; kart bilgileriniz bize hiçbir zaman ulaşmaz. Abonelik hizmet sağlayıcımız RevenueCat şunları alır:</p>
+<ul>
+<li>Uygulama kullanıcı kimliğiniz (hesabınız veya misafir oturumunuz için kullanılan kimlikle aynı)</li>
+<li>İşlem ve makbuz bilgileri: plan, satın alma, yenileme ve bitiş tarihleri, deneme durumu, mağaza ülkesi ve para birimi</li>
+<li>Abonelik durumunuz ve satın alma geçmişiniz</li>
+<li>Cihaz modeli, işletim sistemi, Uygulama sürümü ve dil gibi cihaz bilgileri</li>
+</ul>
+<p>Adınızı veya e-posta adresinizi RevenueCat'e göndermeyiz. Mathlon Pro durumunuz RevenueCat'ten okunur ve profilinizde saklanmaz; tek istisna, liderlik tablosunda abonelerin yanında gösterilen PRO rozetidir.</p>
 <h3>Kullanım Analitiği</h3>
 <p>Uygulamanın nasıl kullanıldığını anlamak için Firebase Analytics (Google) kullanırız. Görüntülenen ekranları, Uygulama sürümünü ve giriş yapma, kayıt olma, çıkış yapma, misafir oturumu başlatma ve hesap silme gibi birkaç olayı; cihaz modeli, işletim sistemi ve yaklaşık bölge gibi cihaz bilgileriyle birlikte kaydeder.</p>
+<h3>Çökme Raporları</h3>
+<p>Uygulama çöktüğünde rapor almak için Firebase Crashlytics (Google) kullanırız. Rapor; hata, cihaz modeli, işletim sistemi ve Uygulama sürümü gibi teknik ayrıntıları içerir. Çökme raporları adınız veya e-posta adresinizle ilişkilendirilmez.</p>
 <h3>Cihaz Bilgileri</h3>
 <ul>
 <li>Cihaz türü ve işletim sistemi</li>
-<li>Firebase'in kimlik doğrulama ve analitik için kullandığı tanımlayıcılar</li>
+<li>Firebase ve RevenueCat'in kimlik doğrulama, analitik, çökme raporlama ve satın almalar için kullandığı tanımlayıcılar</li>
 <li>Ağ bağlantı durumu</li>
 </ul>
 </section>
 <section>
 <h2>3. Liderlik Tabloları</h2>
-<p>Haftalık ve tüm zamanlar liderlik tablolarında görünen adınız veya kullanıcı adınız, profil fotoğrafınız (varsa), XP'niz ve lig kademeniz gösterilir. Bu bilgiler Uygulamanın diğer kullanıcıları tarafından görülebilir. Gerçek adınızın görünmesini istemiyorsanız misafir olarak devam edip bir kullanıcı adı seçin.</p>
+<p>Haftalık ve tüm zamanlar liderlik tablolarında görünen adınız veya kullanıcı adınız, profil fotoğrafınız (varsa), XP'niz, lig kademeniz ve abone iseniz PRO rozetiniz gösterilir. Bu bilgiler Uygulamanın diğer kullanıcıları tarafından görülebilir. Gerçek adınızın görünmesini istemiyorsanız misafir olarak devam edip bir kullanıcı adı seçin.</p>
 </section>
 <section>
 <h2>4. Bilgilerinizi Nasıl Kullanırız</h2>
@@ -96,9 +108,10 @@
 <li>İlerlemenizi kaydetmek ve cihazlarınız arasında senkronize etmek</li>
 <li>Konuları ve zorluğu seçtiğiniz sınava göre uyarlamak</li>
 <li>Ligleri ve liderlik tablolarını yürütmek</li>
+<li>Mathlon Pro'yu sunmak, satın almalarınızı geri yüklemek ve abonelik durumunuzu kontrol etmek</li>
 <li>Ayarladığınız günlük hatırlatmayı göndermek (cihazınızda zamanlanır)</li>
 <li>Yeni bir sürüm gerektiğinde güncelleme uyarısı göstermek</li>
-<li>Kullanımı anlamak ve Uygulamayı geliştirmek</li>
+<li>Kullanımı anlamak, çökmeleri gidermek ve Uygulamayı geliştirmek</li>
 </ul>
 <p>Kişisel bilgilerinizi satmayız, reklam göstermeyiz ve sizi başka şirketlerin uygulama veya web sitelerinde takip etmeyiz.</p>
 </section>
@@ -113,24 +126,26 @@
 <section>
 <h2>6. Üçüncü Taraf Hizmetler</h2>
 <ul>
-<li><strong>Firebase (Google):</strong> kimlik doğrulama, Cloud Firestore, Analytics, Cloud Messaging ve Remote Config. Remote Config yalnızca zorunlu güncellemeleri kontrol etmek için kullanılır. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Gizlilik Politikası</a></li>
+<li><strong>Firebase (Google):</strong> kimlik doğrulama, Cloud Firestore, Analytics, Crashlytics, Cloud Messaging ve Remote Config. Remote Config yalnızca zorunlu güncellemeleri kontrol etmek için kullanılır. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Gizlilik Politikası</a></li>
 <li><strong>Google ile Giriş</strong> ve <strong>Apple ile Giriş:</strong> oturum açmak için. <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple Gizlilik Politikası</a></li>
+<li><strong>Apple App Store</strong> ve <strong>Google Play:</strong> abonelik ödemelerini işlemek için; kendi koşulları ve gizlilik politikaları geçerlidir.</li>
+<li><strong>RevenueCat:</strong> abonelikleri yönetmek ve satın almaları geri yüklemek için. <a href="https://www.revenuecat.com/privacy" rel="noopener" target="_blank">RevenueCat Gizlilik Politikası</a></li>
 <li><strong>Hugging Face:</strong> sesli anlatımı açarsanız Uygulama, internetsiz ses paketini Hugging Face sunucularından indirir; bu sunucular IP adresiniz gibi standart istek verilerini alır. Kişisel veri gönderilmez. <a href="https://huggingface.co/privacy" rel="noopener" target="_blank">Hugging Face Gizlilik Politikası</a></li>
 </ul>
-<p>Uygulamada uygulama içi satın alma yoktur. Jetonlar oynayarak kazanılır ve satın alınamaz.</p>
+<p>Uygulamada reklam yoktur. Jetonlar ve mağaza öğeleri oynayarak kazanılır, gerçek parayla satın alınamaz; tek ücretli ürün isteğe bağlı Mathlon Pro aboneliğidir.</p>
 </section>
 <section>
 <h2>7. İzinler</h2>
 <p><strong>Bildirimler:</strong> isteğe bağlı günlük hatırlatma için kullanılır. Uygulamadan veya cihaz ayarlarınızdan kapatabilirsiniz.</p>
-<p><strong>İnternet erişimi:</strong> giriş yapmak, ilerlemeyi senkronize etmek, liderlik tablolarını yüklemek ve ses paketini indirmek için kullanılır.</p>
+<p><strong>İnternet erişimi:</strong> giriş yapmak, ilerlemeyi senkronize etmek, liderlik tablolarını yüklemek, aboneliğinizi kontrol etmek ve ses paketini indirmek için kullanılır.</p>
 </section>
 <section>
 <h2>8. Veri Saklama</h2>
-<p>Bilgilerinizi hesabınız veya misafir oturumunuz kullanımda olduğu sürece saklarız. Hesabınızı sildiğinizde bulut verileriniz ve liderlik tablosu kayıtlarınız silinir. Haftalık liderlik tabloları her hafta için ayrı oluşturulur ve kullanılmayan veriler zamanla kaldırılabilir.</p>
+<p>Bilgilerinizi hesabınız veya misafir oturumunuz kullanımda olduğu sürece saklarız. Hesabınızı sildiğinizde liderlik tablosu kayıtlarınız hemen kaldırılır, bulut verileriniz ise 30 gün sonra kalıcı olarak silinir. Satın alma ve abonelik kayıtları; faturalandırma, vergi ve muhasebe için gerektiği ölçüde uygulama mağazası ve RevenueCat tarafından kendi politikalarına göre saklanır. Haftalık liderlik tabloları her hafta için ayrı oluşturulur ve kullanılmayan veriler zamanla kaldırılabilir.</p>
 </section>
 <section>
 <h2>9. Haklarınız ve Seçimleriniz</h2>
-<p><strong>Hesabınızı silin:</strong> Uygulamada Ayarlar &gt; Hesap &gt; Hesabı sil yolunu izleyin. Bu işlem hesabınızı, bulut verilerinizi, liderlik tablosu kayıtlarınızı ve cihazınızdaki ilerlemeyi kalıcı olarak siler. Ayrıca <a href="delete-account-tr.html">e-postayla silme talebinde</a> de bulunabilirsiniz.</p>
+<p><strong>Hesabınızı silin:</strong> Uygulamada Ayarlar &gt; Hesap &gt; Hesabı sil yolunu izleyin. Bu işlem hesabınızı kapatır, liderlik tablosu kayıtlarınızı hemen kaldırır, cihazınızdaki ilerlemeyi siler ve bulut verilerinizi 30 gün sonra kalıcı olarak siler. Hesabınızı silmek Mathlon Pro aboneliğinizi iptal etmez; aboneliği App Store veya Google Play hesap ayarlarınızdan iptal edin. Ayrıca <a href="delete-account-tr.html">e-postayla silme talebinde</a> de bulunabilirsiniz.</p>
 <p><strong>İlerlemeyi sıfırlayın:</strong> cihazınızdaki ilerlemeyi Ayarlar'dan sıfırlayabilirsiniz.</p>
 <p><strong>Erişim ve düzeltme:</strong> yaşadığınız yere bağlı olarak (örneğin KVKK veya GDPR kapsamında) verilerinize erişme, düzeltme, silme, dışa aktarma ve işlenmesine itiraz etme haklarınız olabilir. Talepte bulunmak için bize e-posta gönderin.</p>
 </section>

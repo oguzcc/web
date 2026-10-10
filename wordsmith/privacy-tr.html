@@ -43,149 +43,126 @@
             <span aria-current="page">Gizlilik Politikası</span>
           </nav>
           <h1>Gizlilik Politikası</h1>
-          <p class="doc-meta">Son Güncelleme: Nisan 2026</p>
+          <p class="doc-meta">Son Güncelleme: Ekim 2026</p>
         </header>
         <div class="prose">
 <section>
 <h2>Giriş</h2>
-<p>
-          Letoria ("biz," "bizim," veya "bize"), gizliliğinizi korumayı
-          taahhüt eder. Bu Gizlilik Politikası, Letoria mobil uygulamamızı
-          ("Uygulama") kullandığınızda bilgilerinizin nasıl toplandığını,
-          kullanıldığını, açıklandığını ve korunduğunu açıklar.
-        </p>
-<p>
-          Lütfen bu Gizlilik Politikasını dikkatlice okuyun. Uygulamayı
-          kullanarak, bilgilerin bu politikaya uygun olarak toplanmasını ve
-          kullanılmasını kabul etmiş olursunuz.
-        </p>
+<p>Letoria ("biz," "bizim," veya "bize") gizliliğinize saygı duyar. Bu Gizlilik Politikası, Letoria mobil uygulamasını ("Uygulama") kullandığınızda hangi bilgileri topladığımızı, bunları nasıl kullandığımızı ve paylaştığımızı ve sahip olduğunuz seçenekleri açıklar.</p>
+<p>Uygulamayı kullanarak, bilgilerin bu politikaya uygun olarak toplanmasını ve kullanılmasını kabul etmiş olursunuz.</p>
 </section>
 <section>
 <h2>Topladığımız Bilgiler</h2>
-<h3>Bize Sağladığınız Bilgiler</h3>
-<p>
-<strong>Hesap Bilgileri:</strong> Google Sign-In veya Apple Sign-In
-          kullanarak bir hesap oluşturduğunuzda şunları toplayabiliriz:
-        </p>
+<h3>Misafir Kullanım</h3>
+<p>Hesap oluşturmadan oynayabilirsiniz. Uygulamayı ilk açtığınızda, ilerlemenizin kaydedilebilmesi için anonim bir kullanıcı tanımlayıcısı oluştururuz. Uygulama size rastgele bir görünen ad önerir; bu adı değiştirebilirsiniz.</p>
+<h3>Hesap Bilgileri</h3>
+<p>Google veya Apple ile giriş yaparsanız, ilgili sağlayıcıdan şunları alırız:</p>
 <ul>
+<li>Bir kullanıcı tanımlayıcısı</li>
+<li>Görünen ad</li>
 <li>E-posta adresi</li>
-<li>Görüntülenen ad</li>
-<li>Profil fotoğrafı URL'si</li>
+<li>Profil fotoğrafı URL'si (varsa)</li>
 </ul>
-<h3>Otomatik Olarak Toplanan Bilgiler</h3>
-<p><strong>Oyun Verileri:</strong></p>
+<p>E-posta adresiniz, girişinizi yönetmek için Firebase Authentication tarafından saklanır. Oyun profilinizde tutulmaz ve diğer oyunculara gösterilmez. Misafir olarak oynarken giriş yaptığınızda, misafir ilerlemeniz ve mücevherleriniz giriş yaptığınız hesaba aktarılır.</p>
+<h3>Profil ve Oyun Verileri</h3>
 <ul>
-<li>Oyun puanları ve istatistikleri</li>
-<li>Oluşturduğunuz ve keşfettiğiniz kelimeler</li>
-<li>Maç geçmişi ve sonuçları (tek oyunculu ve çok oyunculu)</li>
-<li>Liderlik tablosu sıralaması ve ilerleme</li>
+<li>Görünen ad, profil fotoğrafı veya emoji avatar ve oynadığınız diller</li>
+<li>Canlı turlardaki puanlar, bulunan kelimeler, en uzun kelimeler ve sonuçlar</li>
+<li>Günlük, haftalık ve aylık sıralamadaki yeriniz</li>
+<li>Bölüm ve bulmaca ilerlemesi, XP, başarımlar, günlük seri ve seri dondurucular</li>
+<li>Mücevher bakiyesi ile kazandığınız ve harcadığınız mücevherler</li>
+<li>Diğer oyunculara gönderdiğiniz tepkiler ve selamlar</li>
 </ul>
-<p><strong>Cihaz Bilgileri:</strong></p>
+<h3>Satın Alma Bilgileri</h3>
+<p>Uygulama isteğe bağlı uygulama içi satın almalar sunar: mücevher paketleri ve Letoria Pro aboneliği. Ödemeler Apple (App Store) veya Google (Google Play) tarafından işlenir. <strong>Kart veya fatura bilgilerinizi hiçbir zaman almayız.</strong> Her satın alma için biz ve satın alma hizmet sağlayıcımız RevenueCat şunları alırız:</p>
 <ul>
-<li>Cihaz türü ve işletim sistemi</li>
-<li>
-            Benzersiz cihaz tanımlayıcıları (Firebase kimlik doğrulaması için)
-          </li>
+<li>Satın aldığınız ürün, fiyatı, para birimi ve mağaza</li>
+<li>Mağaza işlem tanımlayıcısı ve satın alma tarihi</li>
+<li>Abonelik durumu, yenilenme ve bitiş tarihleri</li>
+<li>Mağazanın bildirdiği iadeler ve iptaller</li>
+</ul>
+<p>Satın almalar adınız veya e-posta adresinizle değil, yalnızca anonim Firebase kullanıcı tanımlayıcınızla ilişkilendirilir.</p>
+<h3>Kullanım Analitiği ve Tanılama</h3>
+<p>Uygulamanın nasıl kullanıldığını anlamak için Firebase Analytics kullanıyoruz. Görüntülenen ekranları, Uygulama sürümünü ve giriş yapma, bir turu veya bölümü bitirme, mücevher mağazasını açma, bir satın almanın sonucu, mücevher kazanma veya harcama gibi olayları; cihaz modeli, işletim sistemi ve yaklaşık bölge gibi cihaz bilgileriyle birlikte kaydeder. Uygulama çökerse Firebase Crashlytics, teknik ayrıntılar ve kullanıcı tanımlayıcınızı içeren bir çökme raporu gönderir.</p>
+<h3>Cihaz Bilgileri</h3>
+<ul>
+<li>Cihaz türü, işletim sistemi ve Uygulama sürümü</li>
+<li>Firebase'in kimlik doğrulama, analitik ve uygulama bütünlüğü kontrolleri için kullandığı tanımlayıcılar</li>
 <li>Ağ bağlantı durumu</li>
 </ul>
-<h3>Üçüncü Taraflarca Toplanan Bilgiler</h3>
-<p>
-<strong>Firebase (Google):</strong> Kimlik doğrulama ve veri depolama
-          için Firebase kullanıyoruz. Firebase kimlik doğrulama belirteçleri,
-          kullanıcı tanımlayıcıları ve kilitlenme raporları toplayabilir.
-          Google'ın gizlilik politikasına şu adresten ulaşılabilir:
-          <a href="https://policies.google.com/privacy" style="color: #4a90e2">https://policies.google.com/privacy</a>
-</p>
+</section>
+<section>
+<h2>Diğer Oyuncuların Görebildikleri</h2>
+<p>Görünen adınız, profil fotoğrafınız veya emoji avatarınız, seviyeniz, puanlarınız, sıralamadaki yeriniz, tur sonuçlarınız ve gönderdiğiniz tepkiler diğer oyuncular tarafından görülebilir. E-posta adresiniz hiçbir zaman gösterilmez. Gerçek adınızın veya fotoğrafınızın görünmesini istemiyorsanız görünen adınızı değiştirip bir emoji avatar seçebilirsiniz.</p>
 </section>
 <section>
 <h2>Bilgilerinizi Nasıl Kullanıyoruz</h2>
-<p>Topladığımız bilgileri şu amaçlarla kullanıyoruz:</p>
 <ul>
-<li>Kullanıcı hesabınızı oluşturmak ve yönetmek</li>
-<li>
-            Oyun ilerlemenizi cihazlar arasında kaydetmek ve senkronize etmek
-          </li>
-<li>Çok oyunculu oyun işlevselliği sağlamak</li>
-<li>Uygulamayı geliştirmek ve optimize etmek</li>
-<li>Hesabınız veya Uygulama hakkında sizinle iletişim kurmak</li>
+<li>Hesabınızı veya misafir oturumunuzu oluşturmak ve yönetmek</li>
+<li>İlerlemenizi kaydetmek ve cihazlarınız arasında eşitlemek</li>
+<li>Canlı turları, sıralamaları ve liderlik tablolarını yürütmek</li>
+<li>Satın aldığınız mücevherleri ve Letoria Pro özelliklerini sağlamak, satın almaları doğrulamak, dolandırıcılığı ve mükerrer yüklemeyi önlemek ve iadeleri işlemek</li>
+<li>İzin verdiğiniz hatırlatmaları göndermek (cihazınızda planlanır)</li>
+<li>Yeni bir sürüm gerektiğinde güncelleme uyarısı göstermek</li>
+<li>Çökmeleri gidermek, kullanımı anlamak ve Uygulamayı geliştirmek</li>
 </ul>
+<p>Kişisel bilgilerinizi satmıyoruz, reklam göstermiyoruz ve sizi diğer şirketlerin uygulamalarında veya web sitelerinde izlemiyoruz.</p>
 </section>
 <section>
 <h2>Veri Depolama ve Güvenlik</h2>
-<p>
-          Verileriniz <strong>Firebase Cloud Firestore</strong> (Google
-          tarafından barındırılan güvenli bulut depolama) ve
-          <strong>Yerel Cihaz Depolama Alanı</strong> (çevrimdışı işlevsellik
-          için önbelleğe alınmış veriler) kullanılarak saklanır.
-        </p>
-<p>
-          Kişisel bilgilerinizi korumak için uygun teknik ve kurumsal güvenlik
-          önlemleri uyguluyoruz. Ancak, internet üzerinden iletim veya
-          elektronik depolama yöntemlerinin hiçbiri %100 güvenli değildir.
-        </p>
+<ul>
+<li><strong>Firebase Cloud Firestore ve Realtime Database:</strong> Google tarafından barındırılan bulut depolama</li>
+<li><strong>Yerel cihaz depolama alanı:</strong> Uygulamanın çevrimdışı çalışabilmesi için ayarlar ve önbelleğe alınmış ilerleme</li>
+</ul>
+<p>Mücevherler, ödeme mağaza ve RevenueCat tarafından onaylandıktan sonra yalnızca sunucularımız tarafından hesabınıza eklenir. Bilgilerinizi korumak için uygun teknik ve kurumsal önlemler uyguluyoruz. Ancak internet üzerinden iletim veya elektronik depolama yöntemlerinin hiçbiri %100 güvenli değildir.</p>
+</section>
+<section>
+<h2>Üçüncü Taraf Hizmetler</h2>
+<ul>
+<li><strong>Firebase (Google):</strong> kimlik doğrulama, Cloud Firestore, Realtime Database, Cloud Functions, Analytics, Crashlytics, Remote Config ve App Check. App Check, isteklerin gerçek Uygulamadan geldiğini doğrulamak için Play Integrity (Android) veya App Attest ve DeviceCheck (Apple) kullanır. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Gizlilik Politikası</a></li>
+<li><strong>Google ile Giriş</strong> ve <strong>Apple ile Giriş:</strong> giriş yapmak için. <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple Gizlilik Politikası</a></li>
+<li><strong>RevenueCat:</strong> uygulama içi satın alma ve abonelik kayıtlarını işler. <a href="https://www.revenuecat.com/privacy" rel="noopener" target="_blank">RevenueCat Gizlilik Politikası</a></li>
+<li><strong>Apple App Store ve Google Play:</strong> ödemeleri kendi koşulları ve gizlilik politikaları kapsamında işler.</li>
+<li><strong>Game Center ve Google Play Games:</strong> kullanırsanız puanlarınız ve başarımlarınız, kendi gizlilik politikaları kapsamında Apple veya Google ile paylaşılır.</li>
+<li><strong>Google Fonts:</strong> Uygulama bazı yazı tiplerini Google sunucularından indirir; bu sunucular IP adresiniz gibi standart istek verilerini alır.</li>
+</ul>
+</section>
+<section>
+<h2>İzinler</h2>
+<p><strong>Bildirimler:</strong> serinizi korumak gibi isteğe bağlı hatırlatmalar için kullanılır. Hatırlatmalar cihazınızda planlanır. Bunları Uygulamadan veya cihaz ayarlarınızdan kapatabilirsiniz.</p>
+<p><strong>İnternet erişimi:</strong> giriş yapmak, ilerlemeyi eşitlemek, canlı turlarda oynamak, sıralamaları yüklemek ve satın alma yapmak için kullanılır.</p>
+<p>Uygulama kameranıza, mikrofonunuza, konumunuza veya kişilerinize erişim istemez.</p>
 </section>
 <section>
 <h2>Veri Saklama</h2>
-<p>
-          Kişisel bilgilerinizi, hesabınız aktif olduğu sürece veya size hizmet
-          sunmak için gerekli olduğu sürece saklarız. Hesabınızı istediğiniz
-          zaman Uygulama ayarları üzerinden silebilirsiniz; bu işlem
-          verilerinizi sistemlerimizden kaldıracaktır.
-        </p>
+<ul>
+<li><strong>Hesap ve ilerleme:</strong> hesabınız kullanımda olduğu sürece saklanır ve hesabınızı sildiğinizde silinir.</li>
+<li><strong>Turlar ve sıralamalar:</strong> tur puanları 30 gün, günlük sıralamalar 35 gün, haftalık sıralamalar 70 gün ve aylık sıralamalar 13 ay sonra kaldırılır.</li>
+<li><strong>Etkin olmayan misafirler:</strong> bir misafir oturumu 30 gün boyunca kullanılmazsa ve hiçbir ilerlemesi yoksa (seçilmiş ad veya avatar, puan, seri, abonelik ya da ek mücevher yoksa) verileri silinir.</li>
+<li><strong>Satın alma kayıtları:</strong> mükerrer yüklemeyi ve dolandırıcılığı önlemek, iadeleri işlemek ve muhasebe ile yasal yükümlülükleri yerine getirmek için hesap silindikten sonra da, yalnızca eski anonim kullanıcı tanımlayıcısıyla ilişkili olarak saklanır. RevenueCat kendi kayıtlarını kendi gizlilik politikası kapsamında saklar.</li>
+</ul>
 </section>
 <section>
 <h2>Haklarınız ve Seçenekleriniz</h2>
-<p>
-<strong>Hesap Silme:</strong> Hesabınızı ve tüm ilişkili verileri
-          Uygulamanın ayarlar menüsünden (Profil &gt; Ayarlar &gt; Hesabı Sil)
-          silebilirsiniz.
-        </p>
-<p>
-<strong>Veri Erişimi:</strong> Profil bilgilerinizi Uygulama içinden
-          görüntüleyebilirsiniz.
-        </p>
+<p><strong>Hesabınızı silme:</strong> Uygulamada Ayarlar &gt; Hesabı Sil yolunu izleyin. Bu işlem profilinizi, puanlarınızı, sıralamalarınızı, ilerlemenizi, başarımlarınızı, serinizi ve mücevher bakiyenizi kalıcı olarak siler. <a href="delete-account-tr.html">E-postayla silme talebinde</a> de bulunabilirsiniz. Hesabınızı silmek Letoria Pro aboneliğinizi iptal etmez; aboneliği App Store veya Google Play hesap ayarlarınızdan iptal edin.</p>
+<p><strong>Başkalarının gördüklerini değiştirme:</strong> görünen adınızı ve avatarınızı Uygulamadan değiştirebilirsiniz.</p>
+<p><strong>Erişim ve düzeltme:</strong> yaşadığınız yere bağlı olarak (örneğin KVKK veya GDPR kapsamında) verilerinize erişme, düzeltme, silme veya dışa aktarma ve işlenmesine itiraz etme hakkına sahip olabilirsiniz. Talepte bulunmak için bize e-posta gönderin.</p>
 </section>
 <section>
 <h2>Çocukların Gizliliği</h2>
-<p>
-          Uygulama her yaştan kullanıcı için tasarlanmıştır. Ebeveyn izni
-          olmadan 13 yaşın altındaki çocuklardan bilerek kişisel bilgi
-          toplamıyoruz. Bir ebeveyn veya vasi iseniz ve çocuğunuzun bize
-          kişisel bilgi sağladığını düşünüyorsanız, lütfen bizimle iletişime
-          geçin.
-        </p>
+<p>Uygulama her yaştan oyuncu için uygundur. Ebeveyn izni olmadan 13 yaşın (veya ülkenizdeki asgari yaşın) altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. Çocuklar misafir olarak oynamalı ve yalnızca bir ebeveynin veya vasinin izniyle satın alma yapmalıdır; ebeveynler satın almaları App Store veya Google Play'in ebeveyn denetimleriyle kontrol edebilir. Bir çocuğun bize kişisel bilgi verdiğini düşünüyorsanız bizimle iletişime geçin, bu bilgileri sileriz.</p>
 </section>
 <section>
-<h2>Talep Ettiğimiz İzinler</h2>
-<p>
-          Bu uygulama aşağıdaki izinleri <strong>talep etmez</strong> ve
-          kullanmaz:
-        </p>
-<ul>
-<li>
-<strong>Kamera İzni Yok:</strong> Uygulama kameranıza erişim
-            gerektirmez.
-          </li>
-<li>
-<strong>Mikrofon İzni Yok:</strong> Uygulama mikrofonunuza erişim
-            gerektirmez.
-          </li>
-<li>
-<strong>Konum İzni Yok:</strong> Uygulama konumunuzu talep etmez.
-          </li>
-</ul>
-<p>
-          Uygulama temel olarak internet erişimine ve yerel depolama alanına
-          dayanır.
-        </p>
+<h2>Uluslararası Veri Aktarımları</h2>
+<p>Bilgileriniz, hizmet sağlayıcılarımız tarafından Amerika Birleşik Devletleri dahil olmak üzere kendi ülkeniz dışındaki ülkelere aktarılabilir ve orada işlenebilir. Gerektiğinde bu aktarımlar uygun güvencelerle korunur.</p>
+</section>
+<section>
+<h2>Bu Gizlilik Politikasındaki Değişiklikler</h2>
+<p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Yeni sürümü bu sayfada yayımlar ve "Son Güncelleme" tarihini güncelleriz.</p>
 </section>
 <section>
 <h2>Bize Ulaşın</h2>
-<p>
-          Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen bize
-          <a href="mailto:oguzcc@icloud.com" style="color: #4a90e2">oguzcc@icloud.com</a>
-          adresinden ulaşın.
-        </p>
+<p>Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen bize <a href="mailto:oguzcc@icloud.com">oguzcc@icloud.com</a> adresinden ulaşın.</p>
 </section>
         </div>
       </div>
