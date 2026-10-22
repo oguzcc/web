@@ -4,11 +4,11 @@
 
 ## Agreement to Terms
 
-By downloading, installing, or using Language Vocabulary Game (the "App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, do not use the App.
+By downloading, installing, or using Kalimo (the "App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, do not use the App.
 
 ## Description of Service
 
-Language Vocabulary Game is an English vocabulary learning application that helps users master English through interactive games and challenges. The App offers:
+Kalimo is an English vocabulary learning application that helps users master English through interactive games and challenges. The App offers:
 
 - Various learning modes (Flashcards, Word Scramble, Memory Match, and more)
 - Levels and progress tracking
